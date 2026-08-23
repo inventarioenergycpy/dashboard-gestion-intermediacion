@@ -1,0 +1,12 @@
+{
+  "name": "dashboard-gestion-intermediacion",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Dashboard de Gestión de Proyectos e Intermediación Financiera",
+  "scripts": {
+    "test": "node docs/test_modules.mjs",
+    "start": "python -m http.server 8080"
+  },
+  "author": "inventarioenergycpy",
+  "license": "MIT"
+}

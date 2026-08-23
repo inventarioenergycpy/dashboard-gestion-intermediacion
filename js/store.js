@@ -270,9 +270,11 @@ class Store {
 
   loadData() {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        return JSON.parse(saved);
+      if (typeof localStorage !== 'undefined') {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          return JSON.parse(saved);
+        }
       }
     } catch (e) {
       console.warn('Error loading data from localStorage, using defaults', e);
@@ -294,7 +296,9 @@ class Store {
 
   saveData(data = this.data) {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      }
       this.data = data;
     } catch (e) {
       console.error('Error saving data to localStorage', e);
