@@ -462,6 +462,16 @@ class Store {
     this.saveData();
   }
 
+  // Configuración del Sistema
+  getSettings() {
+    return this.data.settings || DEFAULT_SETTINGS;
+  }
+
+  updateSettings(updated) {
+    this.data.settings = { ...(this.data.settings || DEFAULT_SETTINGS), ...updated };
+    this.saveData();
+  }
+
   // Schema Dinámico
   getDynamicSchema() {
     return DATA_SCHEMA;
