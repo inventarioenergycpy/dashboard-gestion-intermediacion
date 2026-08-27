@@ -1,9 +1,10 @@
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
- * Almacenamiento Local Reactivo y Datos Semilla
+ * Almacenamiento Local Reactivo, Esquema Dinámico y Datos Semilla
  */
 
 const STORAGE_KEY = 'antigravity_intermediacion_data_v1';
+const SNAPSHOT_KEY = 'antigravity_snapshots_v1';
 
 export const DEFAULT_USERS = [
   {
@@ -99,12 +100,12 @@ export const DEFAULT_INTERLOCUTORS = [
     id: 'inter_01',
     name: 'Dr. Roberto Salcedo',
     company: 'Salta Solar Energy S.A.',
-    type: 'dueño_directo', // dueño_directo | consultora_mandato | consultora_puente | broker_buyside | broker_sellside | fondo_directo
+    type: 'dueño_directo',
     email: 'rsalcedo@saltasolar.com',
     phone: '+54 9 387 452 8900',
     contractSigned: 'Mandato de Venta No Exclusivo con Overprice',
     signatureDate: '2026-03-15',
-    expirationDate: '2026-09-15', // Alerta por vencer (< 30 días)
+    expirationDate: '2026-09-15',
     tailPeriodMonths: 24,
     driveDocUrl: 'https://drive.google.com/file/d/mandato_salta_solar_salcedo',
     notes: 'Dueño directo muy receptivo. Autorizado overprice sobre USD 42M.'
@@ -132,7 +133,7 @@ export const DEFAULT_INTERLOCUTORS = [
     phone: '+54 9 341 588 2300',
     contractSigned: 'Mandato de Intermediación con Overprice',
     signatureDate: '2026-01-20',
-    expirationDate: '2026-08-30', // Vence en pocos días
+    expirationDate: '2026-08-30',
     tailPeriodMonths: 24,
     driveDocUrl: 'https://drive.google.com/file/d/mandato_valenzuela_puerto',
     notes: 'Requiere renovación urgente del mandato antes de fin de mes.'
@@ -193,7 +194,7 @@ export const DEFAULT_DEALS = [
     presentationDate: '2026-06-15',
     controlDate: '2026-08-28',
     meetingDate: '2026-08-26',
-    stage: 'Due Diligence', // Contacto Inicial | Teaser Enviado | NDA Firmado | En Análisis | Due Diligence | Oferta Vinculante | Cierre
+    stage: 'Due Diligence',
     checklist: {
       ndaSigned: true,
       blindTeaserSent: true,
@@ -222,7 +223,7 @@ export const DEFAULT_DEALS = [
       ndaSigned: true,
       blindTeaserSent: true,
       infoMemoApproved: true,
-      dealLogNotified: false, // Alerta: Falta enviar Carta de Registro
+      dealLogNotified: false,
       mandateValid: true,
       feeProtectionConfirmed: true
     },
@@ -261,6 +262,76 @@ export const DEFAULT_SETTINGS = {
   alertDaysCritical: 10,
   googleDriveEmail: 'inventario.energycpy@gmail.com',
   githubRepoUrl: 'https://github.com/inventarioenergycpy/dashboard-gestion-intermediacion'
+};
+
+export const DATA_SCHEMA = {
+  projects: {
+    sheetName: 'PROYECTOS_OFERTA',
+    title: 'Proyectos de Inversión (Lado Oferta / Sell-Side)',
+    idField: 'id',
+    nameField: 'title',
+    fields: [
+      { key: 'id', label: 'ID_Proyecto', type: 'string', required: true, example: 'proj_01', desc: 'Identificador único del proyecto (ej. proj_05)' },
+      { key: 'title', label: 'Titulo_Proyecto', type: 'string', required: true, example: 'Parque Eólico Vientos del Sur 100 MW', desc: 'Nombre ejecutivo del proyecto' },
+      { key: 'sector', label: 'Sector_Industria', type: 'string', required: true, example: 'Energía Renovable', desc: 'Energía Renovable, Pesca, Real Estate, Minería, etc.' },
+      { key: 'basePrice', label: 'Precio_Base_USD', type: 'number', required: true, example: 45000000, desc: 'Precio neto base solicitado por el titular en USD' },
+      { key: 'overpriceTarget', label: 'Overprice_Objetivo_USD', type: 'number', required: false, example: 2500000, desc: 'Sobreprecio u honorario proyectado para la consultora en USD' },
+      { key: 'currency', label: 'Moneda', type: 'string', required: false, example: 'USD', desc: 'USD / EUR / ARS' },
+      { key: 'status', label: 'Estado', type: 'string', required: true, example: 'activo', desc: 'activo | suspendido | bloqueado_por_gestion | vendido' },
+      { key: 'ownerName', label: 'Nombre_Titular_o_Mandatario', type: 'string', required: false, example: 'Dr. Roberto Salcedo', desc: 'Nombre del dueño o consultora con mandato' },
+      { key: 'ownerType', label: 'Tipo_Titular', type: 'string', required: false, example: 'dueño_directo', desc: 'dueño_directo | consultora_mandato | broker_sellside' },
+      { key: 'description', label: 'Descripcion_Resumen', type: 'string', required: false, example: 'Proyecto Ready to Build con PPA a 15 años', desc: 'Descripción técnica resumida' },
+      { key: 'driveFolderUrl', label: 'Enlace_Carpeta_Drive', type: 'string', required: false, example: 'https://drive.google.com/drive/folders/...', desc: 'URL de Google Drive oficial' },
+      { key: 'createdAt', label: 'Fecha_Alta_Proyecto', type: 'date', isContractDate: true, required: false, example: '2026-03-15', desc: 'Fecha de ingreso al portfolio (YYYY-MM-DD)' }
+    ]
+  },
+  interlocutors: {
+    sheetName: 'INTERLOCUTORES_Y_FONDOS',
+    title: 'Interlocutores, Fondos y Brokers (Oferta y Demanda)',
+    idField: 'id',
+    nameField: 'company',
+    fields: [
+      { key: 'id', label: 'ID_Interlocutor', type: 'string', required: true, example: 'inter_07', desc: 'Identificador único (ej. inter_07 o FONDO-01)' },
+      { key: 'company', label: 'Empresa_o_Fondo', type: 'string', required: true, example: 'Green Infra Partners Ltd', desc: 'Razón social o nombre institucional del fondo o consultora' },
+      { key: 'name', label: 'Nombre_Contacto_Principal', type: 'string', required: true, example: 'Mark Robinson', desc: 'Nombre y apellido del ejecutivo de cuenta o titular' },
+      { key: 'type', label: 'Tipo_Interlocutor', type: 'string', required: true, example: 'fondo_directo', desc: 'fondo_directo | broker_buyside | dueño_directo | consultora_mandato | consultora_puente | broker_sellside' },
+      { key: 'country', label: 'Pais_Origen', type: 'string', required: false, example: 'Reino Unido', desc: 'País de radicación o jurisdicción' },
+      { key: 'email', label: 'Email_Contacto', type: 'string', required: false, example: 'invest@greeninfra.co.uk', desc: 'Correo electrónico institucional' },
+      { key: 'phone', label: 'Telefono', type: 'string', required: false, example: '+44 20 7946 0912', desc: 'Teléfono con código de país' },
+      { key: 'ticketTarget', label: 'Ticket_Inversion_Objetivo', type: 'string', required: false, example: 'USD 30M a 100M', desc: 'Rango de inversión buscado o capacidad financiera' },
+      { key: 'sectorsTarget', label: 'Sectores_Interes', type: 'string', required: false, example: 'Solar, Eólica, Infraestructura', desc: 'Sectores económicos de foco' },
+      { key: 'contractSigned', label: 'Contrato_o_Acuerdo_Firmado', type: 'string', required: false, example: 'NDA Bilateral con Cláusula de No Circunvención & Buy-side Fee', desc: 'Mandato / Co-Brokering / NDA Bilateral / NCNDA / MFPA' },
+      { key: 'signatureDate', label: 'Fecha_Firma_Contrato', type: 'date', isContractDate: true, required: false, example: '2026-06-01', desc: 'Fecha de firma del acuerdo (YYYY-MM-DD)' },
+      { key: 'expirationDate', label: 'Fecha_Vencimiento_Contrato', type: 'date', isContractDate: true, required: false, example: '2028-06-01', desc: 'Fecha de expiración contractual (YYYY-MM-DD)' },
+      { key: 'tailPeriodMonths', label: 'Tail_Period_Meses', type: 'number', required: false, example: 24, desc: 'Período de protección post-vencimiento (meses: 12, 18, 24)' },
+      { key: 'driveDocUrl', label: 'Enlace_Documento_Drive', type: 'string', required: false, example: 'https://drive.google.com/file/d/...', desc: 'Enlace a PDF firmado en Google Drive' },
+      { key: 'notes', label: 'Notas_Estrategicas', type: 'string', required: false, example: 'Fondo institucional europeo. Ticket USD 30M-100M.', desc: 'Comentarios, mandatos o pautas de negociación' }
+    ]
+  },
+  deals: {
+    sheetName: 'SUBGESTIONES_Y_DEALS',
+    title: 'Sub-Gestiones y Deals Activos (Pipeline de Inversión)',
+    idField: 'id',
+    nameField: 'objective',
+    fields: [
+      { key: 'id', label: 'ID_Deal', type: 'string', required: true, example: 'deal_04', desc: 'Identificador único del deal (ej. deal_04)' },
+      { key: 'projectId', label: 'ID_Proyecto_Asociado', type: 'string', required: true, example: 'proj_01', desc: 'ID del proyecto de inversión vinculado (debe coincidir con Hoja Proyectos)' },
+      { key: 'projectTitle', label: 'Titulo_Proyecto_Referencia', type: 'string', required: false, example: 'Parque Solar Fotovoltaico MATER 50 MW - Salta', desc: 'Nombre del proyecto para lectura humana' },
+      { key: 'interlocutorId', label: 'ID_Fondo_o_Broker_Asociado', type: 'string', required: true, example: 'inter_05', desc: 'ID del fondo/broker vinculado (debe coincidir con Hoja Interlocutores)' },
+      { key: 'targetName', label: 'Nombre_Fondo_o_Inversor', type: 'string', required: false, example: 'Green Infrastructure Fund UK', desc: 'Nombre del fondo/broker de destino' },
+      { key: 'targetType', label: 'Tipo_Entidad_Destino', type: 'string', required: false, example: 'Fondo Institucional Directo', desc: 'Fondo Directo, Broker Buy-side, etc.' },
+      { key: 'objective', label: 'Objetivo_de_la_Gestion', type: 'string', required: true, example: 'Presentación formal de Info Memo y validación PPA', desc: 'Propósito u objetivo de la presentación' },
+      { key: 'stage', label: 'Etapa_Pipeline', type: 'string', required: true, example: 'Due Diligence', desc: 'Contacto Inicial | Teaser Enviado | NDA Firmado | En Análisis | Due Diligence | Oferta Vinculante | Cierre' },
+      { key: 'presentationDate', label: 'Fecha_Presentacion_Formal', type: 'date', isContractDate: true, required: false, example: '2026-06-15', desc: 'Fecha de envío formal del Teaser / Deal Log (YYYY-MM-DD)' },
+      { key: 'blindTeaserSent', label: 'Capa1_Blind_Teaser_Enviado', type: 'boolean', required: false, example: true, desc: 'SI / NO (o TRUE / FALSE)' },
+      { key: 'ndaSigned', label: 'Capa1_NDA_Firmado', type: 'boolean', required: false, example: true, desc: 'SI / NO (o TRUE / FALSE)' },
+      { key: 'dealLogNotified', label: 'Capa3_Deal_Log_Notificado', type: 'boolean', required: false, example: true, desc: 'SI / NO (o TRUE / FALSE) - Notificación formal fehaciente' },
+      { key: 'mandateValid', label: 'Capa2_Mandato_Vigente', type: 'boolean', required: false, example: true, desc: 'SI / NO (o TRUE / FALSE)' },
+      { key: 'feeProtectionConfirmed', label: 'Capa2_Overprice_Protegido', type: 'boolean', required: false, example: true, desc: 'SI / NO (o TRUE / FALSE)' },
+      { key: 'driveFolderUrl', label: 'Enlace_Carpeta_Drive_Deal', type: 'string', required: false, example: 'https://drive.google.com/drive/folders/...', desc: 'Carpeta de la sub-gestión en Google Drive' },
+      { key: 'observations', label: 'Observaciones_y_Minuta', type: 'string', required: false, example: 'Reunión acordada para discutir estructura de deuda y WACC 9.5%', desc: 'Notas de avance o acuerdos' }
+    ]
+  }
 };
 
 class Store {
@@ -348,7 +419,6 @@ class Store {
   }
   deleteProject(id) {
     this.data.projects = this.data.projects.filter(p => p.id !== id);
-    // Eliminar sub-gestiones asociadas
     this.data.deals = this.data.deals.filter(d => d.projectId !== id);
     this.saveData();
   }
@@ -391,78 +461,6 @@ class Store {
     this.data.deals = this.data.deals.filter(d => d.id !== id);
     this.saveData();
   }
-
-const SNAPSHOT_KEY = 'antigravity_snapshots_v1';
-
-export const DATA_SCHEMA = {
-  projects: {
-    sheetName: 'PROYECTOS_OFERTA',
-    title: 'Proyectos de Inversión (Lado Oferta / Sell-Side)',
-    idField: 'id',
-    nameField: 'title',
-    fields: [
-      { key: 'id', label: 'ID_Proyecto', type: 'string', required: true, example: 'proj_01', desc: 'Identificador único del proyecto (ej. proj_05)' },
-      { key: 'title', label: 'Titulo_Proyecto', type: 'string', required: true, example: 'Parque Eólico Vientos del Sur 100 MW', desc: 'Nombre ejecutivo del proyecto' },
-      { key: 'sector', label: 'Sector_Industria', type: 'string', required: true, example: 'Energía Renovable', desc: 'Energía Renovable, Pesca, Real Estate, Minería, etc.' },
-      { key: 'basePrice', label: 'Precio_Base_USD', type: 'number', required: true, example: 45000000, desc: 'Precio neto base solicitado por el titular en USD' },
-      { key: 'overpriceTarget', label: 'Overprice_Objetivo_USD', type: 'number', required: false, example: 2500000, desc: 'Sobreprecio u honorario proyectado para la consultora en USD' },
-      { key: 'currency', label: 'Moneda', type: 'string', required: false, example: 'USD', desc: 'USD / EUR / ARS' },
-      { key: 'status', label: 'Estado', type: 'string', required: true, example: 'activo', desc: 'activo | suspendido | bloqueado_por_gestion | vendido' },
-      { key: 'ownerName', label: 'Nombre_Titular_o_Mandatario', type: 'string', required: false, example: 'Dr. Roberto Salcedo', desc: 'Nombre del dueño o consultora con mandato' },
-      { key: 'ownerType', label: 'Tipo_Titular', type: 'string', required: false, example: 'dueño_directo', desc: 'dueño_directo | consultora_mandato | broker_sellside' },
-      { key: 'description', label: 'Descripcion_Resumen', type: 'string', required: false, example: 'Proyecto Ready to Build con PPA a 15 años', desc: 'Descripción técnica resumida' },
-      { key: 'driveFolderUrl', label: 'Enlace_Carpeta_Drive', type: 'string', required: false, example: 'https://drive.google.com/drive/folders/...', desc: 'URL de Google Drive oficial' },
-      { key: 'createdAt', label: 'Fecha_Alta_Proyecto', type: 'date', isContractDate: true, required: false, example: '2026-03-15', desc: 'Fecha de ingreso al portfolio (YYYY-MM-DD)' }
-    ]
-  },
-  interlocutors: {
-    sheetName: 'INTERLOCUTORES_Y_FONDOS',
-    title: 'Interlocutores, Fondos y Brokers (Oferta y Demanda)',
-    idField: 'id',
-    nameField: 'company',
-    fields: [
-      { key: 'id', label: 'ID_Interlocutor', type: 'string', required: true, example: 'inter_07', desc: 'Identificador único (ej. inter_07 o FONDO-01)' },
-      { key: 'company', label: 'Empresa_o_Fondo', type: 'string', required: true, example: 'Green Infra Partners Ltd', desc: 'Razón social o nombre institucional del fondo o consultora' },
-      { key: 'name', label: 'Nombre_Contacto_Principal', type: 'string', required: true, example: 'Mark Robinson', desc: 'Nombre y apellido del ejecutivo de cuenta o titular' },
-      { key: 'type', label: 'Tipo_Interlocutor', type: 'string', required: true, example: 'fondo_directo', desc: 'fondo_directo | broker_buyside | dueño_directo | consultora_mandato | consultora_puente | broker_sellside' },
-      { key: 'country', label: 'Pais_Origen', type: 'string', required: false, example: 'Reino Unido', desc: 'País de radicación o jurisdicción' },
-      { key: 'email', label: 'Email_Contacto', type: 'string', required: false, example: 'invest@greeninfra.co.uk', desc: 'Correo electrónico institucional' },
-      { key: 'phone', label: 'Telefono', type: 'string', required: false, example: '+44 20 7946 0912', desc: 'Teléfono con código de país' },
-      { key: 'ticketTarget', label: 'Ticket_Inversion_Objetivo', type: 'string', required: false, example: 'USD 30M a 100M', desc: 'Rango de inversión buscado o capacidad financiera' },
-      { key: 'sectorsTarget', label: 'Sectores_Interes', type: 'string', required: false, example: 'Solar, Eólica, Infraestructura', desc: 'Sectores económicos de foco' },
-      { key: 'contractSigned', label: 'Contrato_o_Acuerdo_Firmado', type: 'string', required: false, example: 'NDA Bilateral con Cláusula de No Circunvención & Buy-side Fee', desc: 'Mandato / Co-Brokering / NDA Bilateral / NCNDA / MFPA' },
-      { key: 'signatureDate', label: 'Fecha_Firma_Contrato', type: 'date', isContractDate: true, required: false, example: '2026-06-01', desc: 'Fecha de firma del acuerdo (YYYY-MM-DD)' },
-      { key: 'expirationDate', label: 'Fecha_Vencimiento_Contrato', type: 'date', isContractDate: true, required: false, example: '2028-06-01', desc: 'Fecha de expiración contractual (YYYY-MM-DD)' },
-      { key: 'tailPeriodMonths', label: 'Tail_Period_Meses', type: 'number', required: false, example: 24, desc: 'Período de protección post-vencimiento (meses: 12, 18, 24)' },
-      { key: 'driveDocUrl', label: 'Enlace_Documento_Drive', type: 'string', required: false, example: 'https://drive.google.com/file/d/...', desc: 'Enlace a PDF firmado en Google Drive' },
-      { key: 'notes', label: 'Notas_Estrategicas', type: 'string', required: false, example: 'Fondo institucional europeo. Ticket USD 30M-100M.', desc: 'Comentarios, mandatos o pautas de negociación' }
-    ]
-  },
-  deals: {
-    sheetName: 'SUBGESTIONES_Y_DEALS',
-    title: 'Sub-Gestiones y Deals Activos (Pipeline de Inversión)',
-    idField: 'id',
-    nameField: 'objective',
-    fields: [
-      { key: 'id', label: 'ID_Deal', type: 'string', required: true, example: 'deal_04', desc: 'Identificador único del deal (ej. deal_04)' },
-      { key: 'projectId', label: 'ID_Proyecto_Asociado', type: 'string', required: true, example: 'proj_01', desc: 'ID del proyecto de inversión vinculado (debe coincidir con Hoja Proyectos)' },
-      { key: 'projectTitle', label: 'Titulo_Proyecto_Referencia', type: 'string', required: false, example: 'Parque Solar Fotovoltaico MATER 50 MW - Salta', desc: 'Nombre del proyecto para lectura humana' },
-      { key: 'interlocutorId', label: 'ID_Fondo_o_Broker_Asociado', type: 'string', required: true, example: 'inter_05', desc: 'ID del fondo/broker vinculado (debe coincidir con Hoja Interlocutores)' },
-      { key: 'targetName', label: 'Nombre_Fondo_o_Inversor', type: 'string', required: false, example: 'Green Infrastructure Fund UK', desc: 'Nombre del fondo/broker de destino' },
-      { key: 'targetType', label: 'Tipo_Entidad_Destino', type: 'string', required: false, example: 'Fondo Institucional Directo', desc: 'Fondo Directo, Broker Buy-side, etc.' },
-      { key: 'objective', label: 'Objetivo_de_la_Gestion', type: 'string', required: true, example: 'Presentación formal de Info Memo y validación PPA', desc: 'Propósito u objetivo de la presentación' },
-      { key: 'stage', label: 'Etapa_Pipeline', type: 'string', required: true, example: 'Due Diligence', desc: 'Contacto Inicial | Teaser Enviado | NDA Firmado | En Análisis | Due Diligence | Oferta Vinculante | Cierre' },
-      { key: 'presentationDate', label: 'Fecha_Presentacion_Formal', type: 'date', isContractDate: true, required: false, example: '2026-06-15', desc: 'Fecha de envío formal del Teaser / Deal Log (YYYY-MM-DD)' },
-      { key: 'blindTeaserSent', label: 'Capa1_Blind_Teaser_Enviado', type: 'boolean', required: false, example: true, desc: 'SI / NO (o TRUE / FALSE)' },
-      { key: 'ndaSigned', label: 'Capa1_NDA_Firmado', type: 'boolean', required: false, example: true, desc: 'SI / NO (o TRUE / FALSE)' },
-      { key: 'dealLogNotified', label: 'Capa3_Deal_Log_Notificado', type: 'boolean', required: false, example: true, desc: 'SI / NO (o TRUE / FALSE) - Notificación formal fehaciente' },
-      { key: 'mandateValid', label: 'Capa2_Mandato_Vigente', type: 'boolean', required: false, example: true, desc: 'SI / NO (o TRUE / FALSE)' },
-      { key: 'feeProtectionConfirmed', label: 'Capa2_Overprice_Protegido', type: 'boolean', required: false, example: true, desc: 'SI / NO (o TRUE / FALSE)' },
-      { key: 'driveFolderUrl', label: 'Enlace_Carpeta_Drive_Deal', type: 'string', required: false, example: 'https://drive.google.com/drive/folders/...', desc: 'Carpeta de la sub-gestión en Google Drive' },
-      { key: 'observations', label: 'Observaciones_y_Minuta', type: 'string', required: false, example: 'Reunión acordada para discutir estructura de deuda y WACC 9.5%', desc: 'Notas de avance o acuerdos' }
-    ]
-  }
-};
 
   // Schema Dinámico
   getDynamicSchema() {
@@ -519,7 +517,6 @@ export const DATA_SCHEMA = {
       const snapshots = this.getSnapshots();
       const target = snapshots.find(s => s.id === snapshotId);
       if (target && target.data) {
-        // Generar un snapshot de seguridad antes de revertir
         this.createSnapshot(`Respaldo automático previo a reversión al snapshot: ${target.description}`);
         this.saveData(target.data);
         return true;
@@ -547,19 +544,16 @@ export const DATA_SCHEMA = {
   // Batch Diff Application (Impactar Cambios Seleccionados)
   applyBatchDiff(approvedDiff) {
     try {
-      // 1. Snapshot de resguardo automático
       this.createSnapshot(`Carga Masiva Excel/CSV: ${approvedDiff.summary || 'Actualización de datos'}`);
 
-      // 2. Procesar Proyectos
+      // Procesar Proyectos
       if (approvedDiff.projects) {
-        // Altas
         if (approvedDiff.projects.toAdd && approvedDiff.projects.toAdd.length > 0) {
           approvedDiff.projects.toAdd.forEach(item => {
             const exists = this.data.projects.some(p => p.id === item.id);
             if (!exists) this.data.projects.unshift(item);
           });
         }
-        // Modificaciones
         if (approvedDiff.projects.toUpdate && approvedDiff.projects.toUpdate.length > 0) {
           approvedDiff.projects.toUpdate.forEach(item => {
             const idx = this.data.projects.findIndex(p => p.id === item.id);
@@ -570,16 +564,14 @@ export const DATA_SCHEMA = {
         }
       }
 
-      // 3. Procesar Interlocutores
+      // Procesar Interlocutores
       if (approvedDiff.interlocutors) {
-        // Altas
         if (approvedDiff.interlocutors.toAdd && approvedDiff.interlocutors.toAdd.length > 0) {
           approvedDiff.interlocutors.toAdd.forEach(item => {
             const exists = this.data.interlocutors.some(i => i.id === item.id);
             if (!exists) this.data.interlocutors.unshift(item);
           });
         }
-        // Modificaciones
         if (approvedDiff.interlocutors.toUpdate && approvedDiff.interlocutors.toUpdate.length > 0) {
           approvedDiff.interlocutors.toUpdate.forEach(item => {
             const idx = this.data.interlocutors.findIndex(i => i.id === item.id);
@@ -590,16 +582,14 @@ export const DATA_SCHEMA = {
         }
       }
 
-      // 4. Procesar Deals
+      // Procesar Deals
       if (approvedDiff.deals) {
-        // Altas
         if (approvedDiff.deals.toAdd && approvedDiff.deals.toAdd.length > 0) {
           approvedDiff.deals.toAdd.forEach(item => {
             const exists = this.data.deals.some(d => d.id === item.id);
             if (!exists) this.data.deals.unshift(item);
           });
         }
-        // Modificaciones
         if (approvedDiff.deals.toUpdate && approvedDiff.deals.toUpdate.length > 0) {
           approvedDiff.deals.toUpdate.forEach(item => {
             const idx = this.data.deals.findIndex(d => d.id === item.id);
@@ -610,7 +600,6 @@ export const DATA_SCHEMA = {
         }
       }
 
-      // 5. Guardar estado
       this.saveData(this.data);
       return true;
     } catch (e) {
@@ -640,10 +629,11 @@ export const DATA_SCHEMA = {
 
   resetToDefaults() {
     this.createSnapshot('Respaldo previo a restablecer valores semilla');
-    localStorage.removeItem(STORAGE_KEY);
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem(STORAGE_KEY);
+    }
     this.data = this.loadData();
   }
 }
 
 export const store = new Store();
-
