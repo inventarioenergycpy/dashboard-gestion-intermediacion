@@ -4,6 +4,8 @@
  */
 
 import { store } from '../store.js';
+import { TemplateManager } from './templateManager.js';
+import { smartImporter } from './smartImporter.js';
 
 export class DealsModule {
   constructor() {
@@ -39,10 +41,21 @@ export class DealsModule {
               Seguimiento multi-deal: presentaciones en paralelo de proyectos a Fondos e Inversores con control de gatekeeper legal.
             </p>
           </div>
-          <button class="btn btn-primary" id="btnNewDeal">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            Nueva Sub-Gestión
-          </button>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn btn-secondary btn-sm" id="btnDealsDownloadTemplate" title="Descargar plantilla Excel oficial">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Plantilla Excel
+            </button>
+            <label class="btn btn-secondary btn-sm" style="cursor: pointer; display: inline-flex; align-items: center; gap: 6px;" title="Cargar archivo Excel/CSV con Diff y validación">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              Importar Excel
+              <input type="file" id="inpDealsImportExcel" accept=".xlsx, .xls, .csv" style="display: none;">
+            </label>
+            <button class="btn btn-primary btn-sm" id="btnNewDeal">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Nueva Sub-Gestión
+            </button>
+          </div>
         </div>
 
         <div class="card-body">
@@ -187,6 +200,24 @@ export class DealsModule {
       stageFilter.addEventListener('change', (e) => {
         this.stageFilter = e.target.value;
         this.render();
+      });
+    }
+
+    // Descargar plantilla desde Deals
+    const btnDownload = this.container.querySelector('#btnDealsDownloadTemplate');
+    if (btnDownload) {
+      btnDownload.addEventListener('click', () => TemplateManager.downloadExcelTemplate());
+    }
+
+    // Importar Excel desde Deals
+    const inpImport = this.container.querySelector('#inpDealsImportExcel');
+    if (inpImport) {
+      inpImport.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          smartImporter.processFile(file);
+          e.target.value = '';
+        }
       });
     }
 
