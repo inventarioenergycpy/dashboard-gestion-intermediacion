@@ -3,13 +3,21 @@ chcp 65001 >nul
 title Despliegue Automatizado - Dashboard de Gestión
 color 0A
 
+:: Asegurar que git esté disponible en PATH si está en la ruta estándar de usuario
+if exist "%LOCALAPPDATA%\Programs\Git\cmd" (
+    set "PATH=%LOCALAPPDATA%\Programs\Git\cmd;%PATH%"
+)
+if exist "%ProgramFiles%\Git\cmd" (
+    set "PATH=%ProgramFiles%\Git\cmd;%PATH%"
+)
+
 echo ==============================================================================
 echo       🚀 PUBLICACIÓN AUTOMÁTICA DEL DASHBOARD EN GITHUB PAGES
 echo ==============================================================================
 echo.
 
 echo [PASO 1/3] Verificando si el repositorio ya existe en GitHub...
-powershell -Command "try { $r = Invoke-RestMethod -Uri 'https://api.github.com/repos/inventarioenergycpy/dashboard-gestion-intermediacion' -Method Get -ErrorAction Stop; exit 0 } catch { exit 1 }"
+git ls-remote https://github.com/inventarioenergycpy/dashboard-gestion-intermediacion.git >nul 2>&1
 if %ERRORLEVEL% equ 0 (
     echo ✔ El repositorio 'dashboard-gestion-intermediacion' ya existe en GitHub.
 ) else (
