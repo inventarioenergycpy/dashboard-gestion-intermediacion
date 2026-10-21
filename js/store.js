@@ -754,15 +754,26 @@ class Store {
         if (saved) {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed.projects)) {
-            const existingIds = new Set(parsed.projects.map(p => p.id));
-            let added = false;
+            let modified = false;
+            // Purge any legacy dummy prototype IDs (proj_01..proj_05)
+            const prevCount = parsed.projects.length;
+            parsed.projects = parsed.projects.filter(p => !p.id || !p.id.startsWith('proj_0'));
+            if (parsed.projects.length !== prevCount) modified = true;
+
+            const existingMap = new Map(parsed.projects.map(p => [p.id, p]));
             DEFAULT_PROJECTS.forEach(dp => {
-              if (!existingIds.has(dp.id)) {
+              const existing = existingMap.get(dp.id);
+              if (!existing) {
                 parsed.projects.push(dp);
-                added = true;
+                modified = true;
+              } else if (!existing.basePrice || Number(existing.basePrice) < Number(dp.basePrice)) {
+                existing.basePrice = dp.basePrice;
+                existing.overpriceTarget = dp.overpriceTarget;
+                modified = true;
               }
             });
-            if (added) {
+
+            if (modified || parsed.projects.length < DEFAULT_PROJECTS.length) {
               this.saveData(parsed);
             }
           }
