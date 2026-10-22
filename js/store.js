@@ -3290,35 +3290,22 @@ class Store {
 
 
   // ==========================================================================
+  // ==========================================================================
   // Consultas y Tickets del Showroom (energycpy_inquiries_db)
   // ==========================================================================
   getInquiries() {
-    try {
-      if (typeof localStorage !== 'undefined') {
-        const raw = localStorage.getItem('energycpy_inquiries_db');
-        if (raw) {
-          const parsed = JSON.parse(raw);
-          if (Array.isArray(parsed) && parsed.length > 0) {
-            return parsed;
-          }
-        }
-      }
-    } catch (e) {
-      console.warn('Error reading energycpy_inquiries_db:', e);
-    }
-
-    // Datos semilla iniciales si no hay consultas previas
-    const sampleInquiries = [
+    // 3 Casos Oficiales reales remitidos desde el Showroom Web (según constancia de correo)
+    const officialCases = [
       {
-        id: "ECPY-M3K9X",
-        timestamp: new Date(Date.now() - 3600000 * 2).toISOString(),
-        dateFormatted: new Date(Date.now() - 3600000 * 2).toLocaleString('es-AR'),
-        clientName: "Esteban Morales",
-        clientCompany: "Andes Renewables Fund",
-        clientEmail: "emorales@andesrf.com",
-        clientPhone: "+54 9 11 4982-1200",
-        projectTopic: "Parque Solar Sol de los Cuatro Vientos 300 MW (USD 300M)",
-        clientMessage: "Solicitamos el modelo financiero detallado y el estado de la asignación de prioridad de despacho CAMMESA. Interés en participar como co-inversor de equity.",
+        id: "ECPY-SOLAR-VM30",
+        timestamp: "2026-10-22T15:45:00.000Z",
+        dateFormatted: "22/10/2026, 15:45:00",
+        clientName: "Inversor Vaca Muerta",
+        clientCompany: "Consorcio Energético Neuquén",
+        clientEmail: "contacto@inversionesneuquen.com.ar",
+        clientPhone: "+54 9 299 448-9120",
+        projectTopic: "Parque Solar 30 MW Vaca Muerta (USD 30M)",
+        clientMessage: "Solicitamos ficha técnica y estructura de financiamiento para el Parque Solar de 30 MW en Vaca Muerta. Interés en coordinar reunión ejecutiva con Javier Diaz.",
         assignedConsultantName: "Javier Ignacio Diaz",
         assignedConsultantEmail: "areasostenible.consultorespyme@gmail.com",
         assignedConsultantPhone: "+54 9 351 2064791",
@@ -3326,41 +3313,73 @@ class Store {
         status: "pendiente"
       },
       {
-        id: "ECPY-M2L8A",
-        timestamp: new Date(Date.now() - 3600000 * 18).toISOString(),
-        dateFormatted: new Date(Date.now() - 3600000 * 18).toLocaleString('es-AR'),
-        clientName: "Federico Baum",
-        clientCompany: "Patagonia Seafood Partners",
-        clientEmail: "fbaum@patagoniaseafood.com",
-        clientPhone: "+54 9 297 411-8890",
-        projectTopic: "Proyecto 6.6 Pesca Industrial Gran Escala Patagonia (USD 310M Venta)",
-        clientMessage: "Interés en la adquisición del paquete completo (buques congeladores y plantas procesadoras en Puerto Deseado y Madryn). Requerimos coordinar reunión virtual técnica.",
-        assignedConsultantName: "Daniel Gonzalez",
-        assignedConsultantEmail: "gonzalezmarcelo2105ypf@gmail.com",
-        assignedConsultantPhone: "+54 9 2974 23-3028",
+        id: "ECPY-SOLAR-SLT50",
+        timestamp: "2026-10-22T15:33:00.000Z",
+        dateFormatted: "22/10/2026, 15:33:00",
+        clientName: "Grupo Inversor Salta Renovable",
+        clientCompany: "Fondo MATER NOA",
+        clientEmail: "proyectos@saltainversiones.com",
+        clientPhone: "+54 9 387 421-5500",
+        projectTopic: "Parque Solar Fotovoltaico MATER 50 MW - Salta (USD 50M)",
+        clientMessage: "Requerimos información sobre el punto de interconexión en Salta y condiciones del contrato PPA bajo régimen MATER.",
+        assignedConsultantName: "Javier Ignacio Diaz",
+        assignedConsultantEmail: "areasostenible.consultorespyme@gmail.com",
+        assignedConsultantPhone: "+54 9 351 2064791",
         senderAccount: "inventario.energycpy@gmail.com",
-        status: "contestado"
+        status: "pendiente"
       },
       {
-        id: "ECPY-M1J7Q",
-        timestamp: new Date(Date.now() - 3600000 * 48).toISOString(),
-        dateFormatted: new Date(Date.now() - 3600000 * 48).toLocaleString('es-AR'),
-        clientName: "Guillermo Soria",
-        clientCompany: "Pampa Oil Holdings",
-        clientEmail: "gsoria@pampaoil.com.ar",
-        clientPhone: "+54 9 299 532-0011",
-        projectTopic: "Oferta de Refineria y explotacion de pozos - La Pampa Argentina (USD 180M)",
-        clientMessage: "Solicitamos el data room y términos del acuerdo con Pampetrol para el bloque Medanito y refinería de crudo.",
-        assignedConsultantName: "Daniel Gonzalez",
-        assignedConsultantEmail: "gonzalezmarcelo2105ypf@gmail.com",
-        assignedConsultantPhone: "+54 9 2974 23-3028",
+        id: "ECPY-AGRO-MDZ17K",
+        timestamp: "2026-10-22T15:20:00.000Z",
+        dateFormatted: "22/10/2026, 15:20:00",
+        clientName: "Desarrollos Agroindustriales Cuyo",
+        clientCompany: "Inversiones Mendoza Agro",
+        clientEmail: "campo@mendoza-agro.com.ar",
+        clientPhone: "+54 9 261 498-3310",
+        projectTopic: "Estancia Productiva 17.000 ha con Riego Mendoza (USD 60M)",
+        clientMessage: "Interés en conocer los derechos de agua para riego, superficie cultivable y términos de venta o asociación estratégica de la estancia productiva.",
+        assignedConsultantName: "Javier Ignacio Diaz",
+        assignedConsultantEmail: "areasostenible.consultorespyme@gmail.com",
+        assignedConsultantPhone: "+54 9 351 2064791",
         senderAccount: "inventario.energycpy@gmail.com",
         status: "pendiente"
       }
     ];
 
-    this.saveInquiries(sampleInquiries);
-    return sampleInquiries;
+    try {
+      if (typeof localStorage !== 'undefined') {
+        const raw = localStorage.getItem('energycpy_inquiries_db');
+        if (raw) {
+          let parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) {
+            // Depurar dummies preliminares anteriores si existieran
+            const dummyIds = new Set(['ECPY-M3K9X', 'ECPY-M2L8A', 'ECPY-M1J7Q']);
+            let cleaned = parsed.filter(i => !dummyIds.has(i.id));
+
+            // Si se eliminaron dummies o estaba vacío, incorporar los 3 casos oficiales
+            const existingIds = new Set(cleaned.map(i => i.id));
+            let modified = false;
+            officialCases.forEach(oc => {
+              if (!existingIds.has(oc.id)) {
+                cleaned.push(oc);
+                existingIds.add(oc.id);
+                modified = true;
+              }
+            });
+
+            if (modified || cleaned.length !== parsed.length) {
+              this.saveInquiries(cleaned);
+            }
+            return cleaned;
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('Error reading energycpy_inquiries_db:', e);
+    }
+
+    this.saveInquiries(officialCases);
+    return officialCases;
   }
 
   saveInquiries(inquiries) {

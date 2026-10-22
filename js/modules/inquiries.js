@@ -1,6 +1,7 @@
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
  * Módulo de Gestión de Consultas del Showroom Web (Tickets Únicos ECPY)
+ * Con Sincronización Automática en Tiempo Real (BroadcastChannel, Storage Events y Polling)
  */
 
 import { store } from '../store.js';
@@ -12,6 +13,85 @@ export class InquiriesModule {
     this.consultantFilter = 'all';
     this.searchQuery = '';
     this.selectedInquiry = null;
+    this.lastDataHash = '';
+    this.pollingTimer = null;
+    this.channel = null;
+
+    this.initRealtimeSync();
+  }
+
+  initRealtimeSync() {
+    // 1. Canal en tiempo real entre pestañas y ventanas
+    if (typeof BroadcastChannel !== 'undefined') {
+      try {
+        this.channel = new BroadcastChannel('energycpy_inquiries_channel');
+        this.channel.onmessage = (event) => {
+          if (event.data?.ticket || event.data?.type === 'INQUIRY_CREATED') {
+            console.log('⚡ BroadcastChannel: Nueva consulta recibida desde Showroom Web:', event.data.ticket);
+            this.refreshFromStorage(true);
+            this.showToast(`¡Nueva consulta generada en el Showroom: ${event.data.ticket?.id || 'Ticket'}!`);
+          }
+        };
+      } catch (e) {
+        console.warn('BroadcastChannel error:', e);
+      }
+    }
+
+    // 2. Escuchar cambios de almacenamiento en la misma sesión/origen
+    if (typeof window !== 'undefined') {
+      window.addEventListener('storage', (e) => {
+        if (e.key === 'energycpy_inquiries_db') {
+          console.log('⚡ Storage Event: Base de datos de consultas actualizada.');
+          this.refreshFromStorage(true);
+        }
+      });
+
+      // 3. Polling activo cada 2.5 segundos para detección instantánea sin recargar
+      if (!this.pollingTimer) {
+        this.pollingTimer = setInterval(() => {
+          this.checkAutoSync();
+        }, 2500);
+      }
+    }
+  }
+
+  checkAutoSync() {
+    try {
+      if (typeof localStorage === 'undefined') return;
+      const raw = localStorage.getItem('energycpy_inquiries_db') || '';
+      if (raw && raw !== this.lastDataHash) {
+        this.lastDataHash = raw;
+        // Solo re-renderizar si la sección de consultas está activa actualmente
+        const section = document.getElementById('view-inquiries');
+        if (section && section.classList.contains('active')) {
+          this.render();
+        } else {
+          // Actualizar contador del badge
+          this.updateSidebarBadge();
+        }
+      }
+    } catch (e) {}
+  }
+
+  refreshFromStorage(forceRender = false) {
+    if (typeof localStorage !== 'undefined') {
+      this.lastDataHash = localStorage.getItem('energycpy_inquiries_db') || '';
+    }
+    this.updateSidebarBadge();
+    const section = document.getElementById('view-inquiries');
+    if (forceRender || (section && section.classList.contains('active'))) {
+      this.render();
+    }
+  }
+
+  updateSidebarBadge() {
+    const inquiries = store.getInquiries();
+    const pendingCount = inquiries.filter(i => (i.status || 'pendiente').toLowerCase() === 'pendiente').length;
+    const sidebarBadge = document.getElementById('inquiriesPendingBadge');
+    if (sidebarBadge) {
+      sidebarBadge.innerText = pendingCount;
+      sidebarBadge.style.display = pendingCount > 0 ? 'inline-block' : 'none';
+    }
   }
 
   render() {
@@ -19,18 +99,19 @@ export class InquiriesModule {
 
     const inquiries = store.getInquiries();
 
+    // Guardar hash actual
+    if (typeof localStorage !== 'undefined') {
+      this.lastDataHash = localStorage.getItem('energycpy_inquiries_db') || '';
+    }
+
     // Contadores para KPIs
     const totalCount = inquiries.length;
     const pendingCount = inquiries.filter(i => (i.status || 'pendiente').toLowerCase() === 'pendiente').length;
     const answeredCount = inquiries.filter(i => (i.status || '').toLowerCase() === 'contestado').length;
     const deletedCount = inquiries.filter(i => (i.status || '').toLowerCase() === 'borrado').length;
 
-    // Actualizar badge en sidebar si existe
-    const sidebarBadge = document.getElementById('inquiriesPendingBadge');
-    if (sidebarBadge) {
-      sidebarBadge.innerText = pendingCount;
-      sidebarBadge.style.display = pendingCount > 0 ? 'inline-block' : 'none';
-    }
+    // Actualizar badge en sidebar
+    this.updateSidebarBadge();
 
     // Filtrado
     const q = this.searchQuery.toLowerCase().trim();
@@ -109,16 +190,27 @@ export class InquiriesModule {
       <div class="card">
         <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
           <div>
-            <h3 style="display: flex; align-items: center; gap: 10px; margin: 0; font-size: 1.2rem; color: #fff;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-main)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              Registro de Consultas y Tickets Únicos del Showroom Web
-            </h3>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <h3 style="margin: 0; font-size: 1.2rem; color: #fff; display: flex; align-items: center; gap: 8px;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-main, #eab308)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Registro de Consultas y Tickets Únicos del Showroom Web
+              </h3>
+              <!-- Live Sync Status Badge -->
+              <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.4); color: #4ade80; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 12px;">
+                <span style="width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; animation: pulse 1.8s infinite;"></span>
+                Sincronización en Vivo
+              </span>
+            </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; margin-bottom: 0;">
-              Control de solicitudes de inversión, prospectos calificados y cambio de estado directo (Pendiente, Contestado, Borrado).
+              Se actualiza automáticamente al generarse un ticket en el showroom. Control de estados directo (Pendiente, Contestado, Borrado).
             </p>
           </div>
 
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn btn-secondary btn-sm" id="btnForceSyncInquiries" title="Sincronizar y verificar nuevos tickets">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              Sincronizar Ahora
+            </button>
             <button class="btn btn-secondary btn-sm" id="btnExportInquiriesCSV" title="Exportar listado a CSV / Excel">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Exportar CSV
@@ -171,7 +263,7 @@ export class InquiriesModule {
           <table class="data-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem;">
             <thead>
               <tr style="border-bottom: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02);">
-                <th style="padding: 12px 16px; font-weight: 700; color: #94a3b8; width: 130px;">TICKET ÚNICO</th>
+                <th style="padding: 12px 16px; font-weight: 700; color: #94a3b8; width: 140px;">TICKET ÚNICO</th>
                 <th style="padding: 12px 16px; font-weight: 700; color: #94a3b8; width: 140px;">FECHA Y HORA</th>
                 <th style="padding: 12px 16px; font-weight: 700; color: #94a3b8;">INTERESADO / EMPRESA</th>
                 <th style="padding: 12px 16px; font-weight: 700; color: #94a3b8;">PROYECTO SELECCIONADO</th>
@@ -207,7 +299,7 @@ export class InquiriesModule {
                       </span>
                     </td>
                     <td style="padding: 14px 16px; font-size: 0.8rem; color: var(--text-muted); white-space: nowrap;">
-                      ${item.dateFormatted || item.timestamp ? new Date(item.timestamp).toLocaleDateString('es-AR') : 'Reciente'}
+                      ${item.dateFormatted || (item.timestamp ? new Date(item.timestamp).toLocaleString('es-AR') : 'Reciente')}
                     </td>
                     <td style="padding: 14px 16px;">
                       <div style="font-weight: 600; color: #fff;">${item.clientName || 'Anónimo'}</div>
@@ -293,6 +385,19 @@ export class InquiriesModule {
       consultantSelect.addEventListener('change', (e) => {
         this.consultantFilter = e.target.value;
         this.render();
+      });
+    }
+
+    // Force Sync Button
+    const btnSync = document.getElementById('btnForceSyncInquiries');
+    if (btnSync) {
+      btnSync.addEventListener('click', () => {
+        btnSync.classList.add('loading');
+        this.refreshFromStorage(true);
+        setTimeout(() => {
+          btnSync.classList.remove('loading');
+          this.showToast('Sincronización con Showroom completada.');
+        }, 500);
       });
     }
 
@@ -547,7 +652,7 @@ export class InquiriesModule {
     if (!container) return;
     const toast = document.createElement('div');
     toast.className = 'toast success';
-    toast.style.cssText = 'background: rgba(15, 23, 42, 0.95); border: 1px solid var(--gold-main); color: #fff; padding: 12px 18px; border-radius: 8px; margin-top: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: 0.88rem; display: flex; align-items: center; gap: 8px;';
+    toast.style.cssText = 'background: rgba(15, 23, 42, 0.95); border: 1px solid var(--gold-main); color: #fff; padding: 12px 18px; border-radius: 8px; margin-top: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: 0.88rem; display: flex; align-items: center; gap: 8px; z-index: 10001;';
     toast.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-main)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ${message}`;
     container.appendChild(toast);
     setTimeout(() => {

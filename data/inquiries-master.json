@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ECPY-SOLAR-VM30",
+    "timestamp": "2026-10-22T15:45:00.000Z",
+    "dateFormatted": "22/10/2026, 15:45:00",
+    "clientName": "Inversor Vaca Muerta",
+    "clientCompany": "Consorcio Energético Neuquén",
+    "clientEmail": "contacto@inversionesneuquen.com.ar",
+    "clientPhone": "+54 9 299 448-9120",
+    "projectTopic": "Parque Solar 30 MW Vaca Muerta (USD 30M)",
+    "clientMessage": "Solicitamos ficha técnica y estructura de financiamiento para el Parque Solar de 30 MW en Vaca Muerta. Interés en coordinar reunión ejecutiva con Javier Diaz.",
+    "assignedConsultantName": "Javier Ignacio Diaz",
+    "assignedConsultantEmail": "areasostenible.consultorespyme@gmail.com",
+    "assignedConsultantPhone": "+54 9 351 2064791",
+    "senderAccount": "inventario.energycpy@gmail.com",
+    "status": "pendiente"
+  },
+  {
+    "id": "ECPY-SOLAR-SLT50",
+    "timestamp": "2026-10-22T15:33:00.000Z",
+    "dateFormatted": "22/10/2026, 15:33:00",
+    "clientName": "Grupo Inversor Salta Renovable",
+    "clientCompany": "Fondo MATER NOA",
+    "clientEmail": "proyectos@saltainversiones.com",
+    "clientPhone": "+54 9 387 421-5500",
+    "projectTopic": "Parque Solar Fotovoltaico MATER 50 MW - Salta (USD 50M)",
+    "clientMessage": "Requerimos información sobre el punto de interconexión en Salta y condiciones del contrato PPA bajo régimen MATER.",
+    "assignedConsultantName": "Javier Ignacio Diaz",
+    "assignedConsultantEmail": "areasostenible.consultorespyme@gmail.com",
+    "assignedConsultantPhone": "+54 9 351 2064791",
+    "senderAccount": "inventario.energycpy@gmail.com",
+    "status": "pendiente"
+  },
+  {
+    "id": "ECPY-AGRO-MDZ17K",
+    "timestamp": "2026-10-22T15:20:00.000Z",
+    "dateFormatted": "22/10/2026, 15:20:00",
+    "clientName": "Desarrollos Agroindustriales Cuyo",
+    "clientCompany": "Inversiones Mendoza Agro",
+    "clientEmail": "campo@mendoza-agro.com.ar",
+    "clientPhone": "+54 9 261 498-3310",
+    "projectTopic": "Estancia Productiva 17.000 ha con Riego Mendoza (USD 60M)",
+    "clientMessage": "Interés en conocer los derechos de agua para riego, superficie cultivable y términos de venta o asociación estratégica de la estancia productiva.",
+    "assignedConsultantName": "Javier Ignacio Diaz",
+    "assignedConsultantEmail": "areasostenible.consultorespyme@gmail.com",
+    "assignedConsultantPhone": "+54 9 351 2064791",
+    "senderAccount": "inventario.energycpy@gmail.com",
+    "status": "pendiente"
+  }
+]

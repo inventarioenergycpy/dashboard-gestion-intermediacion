@@ -3299,35 +3299,22 @@ class Store {
 
 
   // ==========================================================================
+  // ==========================================================================
   // Consultas y Tickets del Showroom (energycpy_inquiries_db)
   // ==========================================================================
   getInquiries() {
-    try {
-      if (typeof localStorage !== 'undefined') {
-        const raw = localStorage.getItem('energycpy_inquiries_db');
-        if (raw) {
-          const parsed = JSON.parse(raw);
-          if (Array.isArray(parsed) && parsed.length > 0) {
-            return parsed;
-          }
-        }
-      }
-    } catch (e) {
-      console.warn('Error reading energycpy_inquiries_db:', e);
-    }
-
-    // Datos semilla iniciales si no hay consultas previas
-    const sampleInquiries = [
+    // 3 Casos Oficiales reales remitidos desde el Showroom Web (según constancia de correo)
+    const officialCases = [
       {
-        id: "ECPY-M3K9X",
-        timestamp: new Date(Date.now() - 3600000 * 2).toISOString(),
-        dateFormatted: new Date(Date.now() - 3600000 * 2).toLocaleString('es-AR'),
-        clientName: "Esteban Morales",
-        clientCompany: "Andes Renewables Fund",
-        clientEmail: "emorales@andesrf.com",
-        clientPhone: "+54 9 11 4982-1200",
-        projectTopic: "Parque Solar Sol de los Cuatro Vientos 300 MW (USD 300M)",
-        clientMessage: "Solicitamos el modelo financiero detallado y el estado de la asignación de prioridad de despacho CAMMESA. Interés en participar como co-inversor de equity.",
+        id: "ECPY-SOLAR-VM30",
+        timestamp: "2026-10-22T15:45:00.000Z",
+        dateFormatted: "22/10/2026, 15:45:00",
+        clientName: "Inversor Vaca Muerta",
+        clientCompany: "Consorcio Energético Neuquén",
+        clientEmail: "contacto@inversionesneuquen.com.ar",
+        clientPhone: "+54 9 299 448-9120",
+        projectTopic: "Parque Solar 30 MW Vaca Muerta (USD 30M)",
+        clientMessage: "Solicitamos ficha técnica y estructura de financiamiento para el Parque Solar de 30 MW en Vaca Muerta. Interés en coordinar reunión ejecutiva con Javier Diaz.",
         assignedConsultantName: "Javier Ignacio Diaz",
         assignedConsultantEmail: "areasostenible.consultorespyme@gmail.com",
         assignedConsultantPhone: "+54 9 351 2064791",
@@ -3335,41 +3322,73 @@ class Store {
         status: "pendiente"
       },
       {
-        id: "ECPY-M2L8A",
-        timestamp: new Date(Date.now() - 3600000 * 18).toISOString(),
-        dateFormatted: new Date(Date.now() - 3600000 * 18).toLocaleString('es-AR'),
-        clientName: "Federico Baum",
-        clientCompany: "Patagonia Seafood Partners",
-        clientEmail: "fbaum@patagoniaseafood.com",
-        clientPhone: "+54 9 297 411-8890",
-        projectTopic: "Proyecto 6.6 Pesca Industrial Gran Escala Patagonia (USD 310M Venta)",
-        clientMessage: "Interés en la adquisición del paquete completo (buques congeladores y plantas procesadoras en Puerto Deseado y Madryn). Requerimos coordinar reunión virtual técnica.",
-        assignedConsultantName: "Daniel Gonzalez",
-        assignedConsultantEmail: "gonzalezmarcelo2105ypf@gmail.com",
-        assignedConsultantPhone: "+54 9 2974 23-3028",
+        id: "ECPY-SOLAR-SLT50",
+        timestamp: "2026-10-22T15:33:00.000Z",
+        dateFormatted: "22/10/2026, 15:33:00",
+        clientName: "Grupo Inversor Salta Renovable",
+        clientCompany: "Fondo MATER NOA",
+        clientEmail: "proyectos@saltainversiones.com",
+        clientPhone: "+54 9 387 421-5500",
+        projectTopic: "Parque Solar Fotovoltaico MATER 50 MW - Salta (USD 50M)",
+        clientMessage: "Requerimos información sobre el punto de interconexión en Salta y condiciones del contrato PPA bajo régimen MATER.",
+        assignedConsultantName: "Javier Ignacio Diaz",
+        assignedConsultantEmail: "areasostenible.consultorespyme@gmail.com",
+        assignedConsultantPhone: "+54 9 351 2064791",
         senderAccount: "inventario.energycpy@gmail.com",
-        status: "contestado"
+        status: "pendiente"
       },
       {
-        id: "ECPY-M1J7Q",
-        timestamp: new Date(Date.now() - 3600000 * 48).toISOString(),
-        dateFormatted: new Date(Date.now() - 3600000 * 48).toLocaleString('es-AR'),
-        clientName: "Guillermo Soria",
-        clientCompany: "Pampa Oil Holdings",
-        clientEmail: "gsoria@pampaoil.com.ar",
-        clientPhone: "+54 9 299 532-0011",
-        projectTopic: "Oferta de Refineria y explotacion de pozos - La Pampa Argentina (USD 180M)",
-        clientMessage: "Solicitamos el data room y términos del acuerdo con Pampetrol para el bloque Medanito y refinería de crudo.",
-        assignedConsultantName: "Daniel Gonzalez",
-        assignedConsultantEmail: "gonzalezmarcelo2105ypf@gmail.com",
-        assignedConsultantPhone: "+54 9 2974 23-3028",
+        id: "ECPY-AGRO-MDZ17K",
+        timestamp: "2026-10-22T15:20:00.000Z",
+        dateFormatted: "22/10/2026, 15:20:00",
+        clientName: "Desarrollos Agroindustriales Cuyo",
+        clientCompany: "Inversiones Mendoza Agro",
+        clientEmail: "campo@mendoza-agro.com.ar",
+        clientPhone: "+54 9 261 498-3310",
+        projectTopic: "Estancia Productiva 17.000 ha con Riego Mendoza (USD 60M)",
+        clientMessage: "Interés en conocer los derechos de agua para riego, superficie cultivable y términos de venta o asociación estratégica de la estancia productiva.",
+        assignedConsultantName: "Javier Ignacio Diaz",
+        assignedConsultantEmail: "areasostenible.consultorespyme@gmail.com",
+        assignedConsultantPhone: "+54 9 351 2064791",
         senderAccount: "inventario.energycpy@gmail.com",
         status: "pendiente"
       }
     ];
 
-    this.saveInquiries(sampleInquiries);
-    return sampleInquiries;
+    try {
+      if (typeof localStorage !== 'undefined') {
+        const raw = localStorage.getItem('energycpy_inquiries_db');
+        if (raw) {
+          let parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) {
+            // Depurar dummies preliminares anteriores si existieran
+            const dummyIds = new Set(['ECPY-M3K9X', 'ECPY-M2L8A', 'ECPY-M1J7Q']);
+            let cleaned = parsed.filter(i => !dummyIds.has(i.id));
+
+            // Si se eliminaron dummies o estaba vacío, incorporar los 3 casos oficiales
+            const existingIds = new Set(cleaned.map(i => i.id));
+            let modified = false;
+            officialCases.forEach(oc => {
+              if (!existingIds.has(oc.id)) {
+                cleaned.push(oc);
+                existingIds.add(oc.id);
+                modified = true;
+              }
+            });
+
+            if (modified || cleaned.length !== parsed.length) {
+              this.saveInquiries(cleaned);
+            }
+            return cleaned;
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('Error reading energycpy_inquiries_db:', e);
+    }
+
+    this.saveInquiries(officialCases);
+    return officialCases;
   }
 
   saveInquiries(inquiries) {
@@ -6188,6 +6207,7 @@ class ComplianceModule {
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
  * Módulo de Gestión de Consultas del Showroom Web (Tickets Únicos ECPY)
+ * Con Sincronización Automática en Tiempo Real (BroadcastChannel, Storage Events y Polling)
  */
 
 
@@ -6198,6 +6218,85 @@ class InquiriesModule {
     this.consultantFilter = 'all';
     this.searchQuery = '';
     this.selectedInquiry = null;
+    this.lastDataHash = '';
+    this.pollingTimer = null;
+    this.channel = null;
+
+    this.initRealtimeSync();
+  }
+
+  initRealtimeSync() {
+    // 1. Canal en tiempo real entre pestañas y ventanas
+    if (typeof BroadcastChannel !== 'undefined') {
+      try {
+        this.channel = new BroadcastChannel('energycpy_inquiries_channel');
+        this.channel.onmessage = (event) => {
+          if (event.data?.ticket || event.data?.type === 'INQUIRY_CREATED') {
+            console.log('⚡ BroadcastChannel: Nueva consulta recibida desde Showroom Web:', event.data.ticket);
+            this.refreshFromStorage(true);
+            this.showToast(`¡Nueva consulta generada en el Showroom: ${event.data.ticket?.id || 'Ticket'}!`);
+          }
+        };
+      } catch (e) {
+        console.warn('BroadcastChannel error:', e);
+      }
+    }
+
+    // 2. Escuchar cambios de almacenamiento en la misma sesión/origen
+    if (typeof window !== 'undefined') {
+      window.addEventListener('storage', (e) => {
+        if (e.key === 'energycpy_inquiries_db') {
+          console.log('⚡ Storage Event: Base de datos de consultas actualizada.');
+          this.refreshFromStorage(true);
+        }
+      });
+
+      // 3. Polling activo cada 2.5 segundos para detección instantánea sin recargar
+      if (!this.pollingTimer) {
+        this.pollingTimer = setInterval(() => {
+          this.checkAutoSync();
+        }, 2500);
+      }
+    }
+  }
+
+  checkAutoSync() {
+    try {
+      if (typeof localStorage === 'undefined') return;
+      const raw = localStorage.getItem('energycpy_inquiries_db') || '';
+      if (raw && raw !== this.lastDataHash) {
+        this.lastDataHash = raw;
+        // Solo re-renderizar si la sección de consultas está activa actualmente
+        const section = document.getElementById('view-inquiries');
+        if (section && section.classList.contains('active')) {
+          this.render();
+        } else {
+          // Actualizar contador del badge
+          this.updateSidebarBadge();
+        }
+      }
+    } catch (e) {}
+  }
+
+  refreshFromStorage(forceRender = false) {
+    if (typeof localStorage !== 'undefined') {
+      this.lastDataHash = localStorage.getItem('energycpy_inquiries_db') || '';
+    }
+    this.updateSidebarBadge();
+    const section = document.getElementById('view-inquiries');
+    if (forceRender || (section && section.classList.contains('active'))) {
+      this.render();
+    }
+  }
+
+  updateSidebarBadge() {
+    const inquiries = store.getInquiries();
+    const pendingCount = inquiries.filter(i => (i.status || 'pendiente').toLowerCase() === 'pendiente').length;
+    const sidebarBadge = document.getElementById('inquiriesPendingBadge');
+    if (sidebarBadge) {
+      sidebarBadge.innerText = pendingCount;
+      sidebarBadge.style.display = pendingCount > 0 ? 'inline-block' : 'none';
+    }
   }
 
   render() {
@@ -6205,18 +6304,19 @@ class InquiriesModule {
 
     const inquiries = store.getInquiries();
 
+    // Guardar hash actual
+    if (typeof localStorage !== 'undefined') {
+      this.lastDataHash = localStorage.getItem('energycpy_inquiries_db') || '';
+    }
+
     // Contadores para KPIs
     const totalCount = inquiries.length;
     const pendingCount = inquiries.filter(i => (i.status || 'pendiente').toLowerCase() === 'pendiente').length;
     const answeredCount = inquiries.filter(i => (i.status || '').toLowerCase() === 'contestado').length;
     const deletedCount = inquiries.filter(i => (i.status || '').toLowerCase() === 'borrado').length;
 
-    // Actualizar badge en sidebar si existe
-    const sidebarBadge = document.getElementById('inquiriesPendingBadge');
-    if (sidebarBadge) {
-      sidebarBadge.innerText = pendingCount;
-      sidebarBadge.style.display = pendingCount > 0 ? 'inline-block' : 'none';
-    }
+    // Actualizar badge en sidebar
+    this.updateSidebarBadge();
 
     // Filtrado
     const q = this.searchQuery.toLowerCase().trim();
@@ -6295,16 +6395,27 @@ class InquiriesModule {
       <div class="card">
         <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
           <div>
-            <h3 style="display: flex; align-items: center; gap: 10px; margin: 0; font-size: 1.2rem; color: #fff;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-main)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              Registro de Consultas y Tickets Únicos del Showroom Web
-            </h3>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <h3 style="margin: 0; font-size: 1.2rem; color: #fff; display: flex; align-items: center; gap: 8px;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-main, #eab308)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Registro de Consultas y Tickets Únicos del Showroom Web
+              </h3>
+              <!-- Live Sync Status Badge -->
+              <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.4); color: #4ade80; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 12px;">
+                <span style="width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; animation: pulse 1.8s infinite;"></span>
+                Sincronización en Vivo
+              </span>
+            </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; margin-bottom: 0;">
-              Control de solicitudes de inversión, prospectos calificados y cambio de estado directo (Pendiente, Contestado, Borrado).
+              Se actualiza automáticamente al generarse un ticket en el showroom. Control de estados directo (Pendiente, Contestado, Borrado).
             </p>
           </div>
 
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn btn-secondary btn-sm" id="btnForceSyncInquiries" title="Sincronizar y verificar nuevos tickets">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              Sincronizar Ahora
+            </button>
             <button class="btn btn-secondary btn-sm" id="btnExportInquiriesCSV" title="Exportar listado a CSV / Excel">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Exportar CSV
@@ -6357,7 +6468,7 @@ class InquiriesModule {
           <table class="data-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem;">
             <thead>
               <tr style="border-bottom: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02);">
-                <th style="padding: 12px 16px; font-weight: 700; color: #94a3b8; width: 130px;">TICKET ÚNICO</th>
+                <th style="padding: 12px 16px; font-weight: 700; color: #94a3b8; width: 140px;">TICKET ÚNICO</th>
                 <th style="padding: 12px 16px; font-weight: 700; color: #94a3b8; width: 140px;">FECHA Y HORA</th>
                 <th style="padding: 12px 16px; font-weight: 700; color: #94a3b8;">INTERESADO / EMPRESA</th>
                 <th style="padding: 12px 16px; font-weight: 700; color: #94a3b8;">PROYECTO SELECCIONADO</th>
@@ -6393,7 +6504,7 @@ class InquiriesModule {
                       </span>
                     </td>
                     <td style="padding: 14px 16px; font-size: 0.8rem; color: var(--text-muted); white-space: nowrap;">
-                      ${item.dateFormatted || item.timestamp ? new Date(item.timestamp).toLocaleDateString('es-AR') : 'Reciente'}
+                      ${item.dateFormatted || (item.timestamp ? new Date(item.timestamp).toLocaleString('es-AR') : 'Reciente')}
                     </td>
                     <td style="padding: 14px 16px;">
                       <div style="font-weight: 600; color: #fff;">${item.clientName || 'Anónimo'}</div>
@@ -6479,6 +6590,19 @@ class InquiriesModule {
       consultantSelect.addEventListener('change', (e) => {
         this.consultantFilter = e.target.value;
         this.render();
+      });
+    }
+
+    // Force Sync Button
+    const btnSync = document.getElementById('btnForceSyncInquiries');
+    if (btnSync) {
+      btnSync.addEventListener('click', () => {
+        btnSync.classList.add('loading');
+        this.refreshFromStorage(true);
+        setTimeout(() => {
+          btnSync.classList.remove('loading');
+          this.showToast('Sincronización con Showroom completada.');
+        }, 500);
       });
     }
 
@@ -6733,7 +6857,7 @@ class InquiriesModule {
     if (!container) return;
     const toast = document.createElement('div');
     toast.className = 'toast success';
-    toast.style.cssText = 'background: rgba(15, 23, 42, 0.95); border: 1px solid var(--gold-main); color: #fff; padding: 12px 18px; border-radius: 8px; margin-top: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: 0.88rem; display: flex; align-items: center; gap: 8px;';
+    toast.style.cssText = 'background: rgba(15, 23, 42, 0.95); border: 1px solid var(--gold-main); color: #fff; padding: 12px 18px; border-radius: 8px; margin-top: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: 0.88rem; display: flex; align-items: center; gap: 8px; z-index: 10001;';
     toast.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-main)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ${message}`;
     container.appendChild(toast);
     setTimeout(() => {
