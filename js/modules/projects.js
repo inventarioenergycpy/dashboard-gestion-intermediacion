@@ -13,6 +13,10 @@ export class ProjectsModule {
     this.searchTerm = '';
     this.statusFilter = 'all';
     this.sectorFilter = 'all';
+    this.currentOnePagerProjectId = null;
+    this.currentOnePagerLang = 'es';
+    window.projectsModuleInstance = this;
+    this.initOnePagerGlobalEvents();
   }
 
   render() {
@@ -137,6 +141,10 @@ export class ProjectsModule {
                         </td>
                         <td>
                           <div style="display: flex; align-items: center; gap: 6px;">
+                            <button class="btn btn-sm btn-onepager-proj" data-id="${proj.id}" title="Ver Resumen Ejecutivo One-Pager (A4)" style="background: linear-gradient(135deg, var(--gold-main) 0%, #d97706 100%); color: #080d1a; font-weight: 700; border: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 4px; cursor: pointer;">
+                              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                              One-Pager
+                            </button>
                             <a href="${proj.driveFolderUrl || 'https://drive.google.com'}" target="_blank" class="btn btn-drive btn-sm" title="Abrir carpeta Google Drive">
                               Drive
                             </a>
@@ -223,6 +231,14 @@ export class ProjectsModule {
         const newStatus = e.target.value;
         store.updateProject(id, { status: newStatus });
         window.dispatchEvent(new CustomEvent('data-updated'));
+      });
+    });
+
+    // Botón Ver One-Pager
+    this.container.querySelectorAll('.btn-onepager-proj').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = e.currentTarget.dataset.id;
+        this.openOnePager(id);
       });
     });
 
@@ -382,4 +398,297 @@ export class ProjectsModule {
       window.dispatchEvent(new CustomEvent('data-updated'));
     });
   }
+
+  // ==========================================================================
+  // MÉTODOS DEL VISOR Y EXPORTADOR ONE-PAGER A4
+  // ==========================================================================
+
+  initOnePagerGlobalEvents() {
+    if (this._onePagerEventsBound) return;
+    this._onePagerEventsBound = true;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      this._bindModalDOMElements();
+    });
+    // In case DOM is already loaded
+    setTimeout(() => this._bindModalDOMElements(), 100);
+  }
+
+  _bindModalDOMElements() {
+    const btnClose = document.getElementById('btnOnePagerClose');
+    if (btnClose) {
+      btnClose.onclick = () => this.closeOnePager();
+    }
+    const btnPrint = document.getElementById('btnOnePagerPrint');
+    if (btnPrint) {
+      btnPrint.onclick = () => this.printOnePager();
+    }
+    const btnEs = document.getElementById('btnOnePagerLangEs');
+    if (btnEs) {
+      btnEs.onclick = () => this.toggleOnePagerLang('es');
+    }
+    const btnEn = document.getElementById('btnOnePagerLangEn');
+    if (btnEn) {
+      btnEn.onclick = () => this.toggleOnePagerLang('en');
+    }
+    const modal = document.getElementById('onePagerModal');
+    if (modal) {
+      modal.onclick = (e) => {
+        if (e.target === modal) this.closeOnePager();
+      };
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') this.closeOnePager();
+    });
+  }
+
+  openOnePager(projectId, lang = 'es') {
+    this.currentOnePagerProjectId = projectId;
+    this.currentOnePagerLang = lang;
+
+    const p = store.getProject(projectId);
+    if (!p) {
+      console.warn('Proyecto no encontrado:', projectId);
+      return;
+    }
+
+    const modal = document.getElementById('onePagerModal');
+    const container = document.getElementById('onePagerContent');
+    if (!modal || !container) {
+      console.warn('Elementos del modal One-Pager no encontrados en el DOM');
+      return;
+    }
+
+    // Toggle active state on language buttons
+    const btnEs = document.getElementById('btnOnePagerLangEs');
+    const btnEn = document.getElementById('btnOnePagerLangEn');
+    if (btnEs) btnEs.classList.toggle('active', lang === 'es');
+    if (btnEn) btnEn.classList.toggle('active', lang === 'en');
+
+    const isEn = (lang === 'en');
+    const langData = (isEn && p.en) ? p.en : (p.es || {
+      categoryTag: p.sector,
+      title: p.title,
+      location: 'Argentina',
+      statusLabel: p.statusProgress || 'Activo en Cartera',
+      description: p.description,
+      thesis: p.description,
+      highlights: [
+        `Modalidad de Inversión: ${p.modality || 'Direct Deal'}`,
+        `Horizonte de Recupero Estimado (ROI): ${p.roi || 'A convenir'}`,
+        `Estado Operativo: ${p.statusProgress || 'En cartera'}`,
+        `Estructuración y Mandato Protegido por ENERGY CPY`
+      ],
+      metrics: [
+        { label: "Ticket Inversión", val: p.amountDisplay || `$${Number(p.basePrice || 0).toLocaleString()} USD`, color: "gold" },
+        { label: "Modalidad", val: p.modality || "Direct Deal", color: "blue" },
+        { label: "Plazo / ROI", val: p.roi || "A Definir", color: "emerald" },
+        { label: "Gobernanza", val: "Bajo NDA / NCNDA", color: "rose" }
+      ]
+    });
+
+    const CONSULTANTS = {
+      javier: {
+        name: "Javier Ignacio Díaz",
+        role: "Director Ejecutivo & Consultor Principal",
+        email: "areasostenible.consultorespyme@gmail.com",
+        phone: "+54 9 351 2064791",
+        wsp: "5493512064791",
+        avatar: "J",
+        specialty: "Energía Renovable, Minería, Agroindustria, Proyectos de Ingeniería y Foreign Desk"
+      },
+      daniel: {
+        name: "Daniel González",
+        role: "Consultor Senior & Negociaciones Estratégicas",
+        email: "gonzalezmarcelo2105ypf@gmail.com",
+        phone: "+54 9 2974 23-3028",
+        wsp: "5492974233028",
+        avatar: "D",
+        specialty: "Petróleo & Gas, Refinerías, Hotelería, Pesca Industrial y Asesoramiento Financiero / REIT"
+      }
+    };
+
+    const agentKey = p.assignedAgent || (p.ownerId === 'user_javier' ? 'javier' : 'daniel');
+    const consultant = CONSULTANTS[agentKey] || CONSULTANTS.javier;
+
+    const amountLabel = p.isPrivatePlacement
+      ? (isEn ? "Exclusive Invitation Only" : "A Invitación Exclusiva")
+      : (p.amountDisplay || `$${Number(p.basePrice || 0).toLocaleString()} USD`);
+
+    const modalityLabel = p.modality || "Direct Deal";
+    const roiLabel = p.roi || "N/A";
+    const statusProg = p.statusProgress || (isEn ? "Active in Portfolio" : "Activo en Cartera");
+
+    const highlightsHtml = (langData.highlights || []).map(h => `
+      <li>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold-main)" stroke-width="2.5" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>${h}</span>
+      </li>
+    `).join('');
+
+    const metricsHtml = (langData.metrics || []).map(m => {
+      let colorStyle = 'var(--gold-main)';
+      if (m.color === 'blue') colorStyle = 'var(--blue-main)';
+      if (m.color === 'emerald') colorStyle = 'var(--emerald-main)';
+      if (m.color === 'rose') colorStyle = 'var(--rose-main)';
+      return `
+        <div class="op-metric-box">
+          <div class="op-metric-val" style="color: ${colorStyle};">${m.val}</div>
+          <div class="op-metric-lbl">${m.label}</div>
+        </div>
+      `;
+    }).join('');
+
+    const refCode = `ECPY-${(p.id || 'PROJ').toUpperCase().replace(/[^A-Z0-9]/g, '-')}`;
+
+    const wspSubject = isEn
+      ? `Hello ${consultant.name}, I am contacting you regarding project: ${langData.title} (Ref: ${refCode}). Please provide further details.`
+      : `Hola ${consultant.name}, me contacto por el proyecto: ${langData.title} (Ref: ${refCode}). Quisiera solicitar mayor información y condiciones.`;
+
+    const mailSubject = isEn
+      ? `Inquiry: ${langData.title} (${refCode})`
+      : `Consulta de Inversión: ${langData.title} (${refCode})`;
+
+    const mailBody = isEn
+      ? `Dear ${consultant.name},
+
+I am contacting you regarding the investment opportunity "${langData.title}" (Ref: ${refCode}).
+
+Please let me know the procedure to access the full Dataroom under NDA.
+
+Best regards.`
+      : `Estimado ${consultant.name},
+
+Me contacto con motivo del proyecto de inversión "${langData.title}" (Ref: ${refCode}).
+
+Solicito el procedimiento para acceder al Dataroom oficial bajo acuerdo de confidencialidad.
+
+Atentamente.`;
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(consultant.email)}&cc=${encodeURIComponent('inventario.energycpy@gmail.com,energycpy@gmail.com')}&su=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+    container.innerHTML = `
+      <!-- Header -->
+      <div class="op-header">
+        <div>
+          <div class="op-brand-title">ENERGY CPY</div>
+          <div class="op-brand-sub">Private Investment Advisory &bull; Deal Sourcing</div>
+        </div>
+        <div class="op-meta-box">
+          <div class="op-ref-code">${refCode}</div>
+          <div class="op-confidential-badge">${isEn ? 'Strictly Confidential &bull; Protected Deal' : 'Estricta Confidencialidad &bull; Trato Protegido'}</div>
+        </div>
+      </div>
+
+      <!-- Title & Location -->
+      <div class="op-title-section">
+        <span class="op-tag-pill" style="background: rgba(245, 158, 11, 0.15); color: var(--gold-main); border: 1px solid rgba(245, 158, 11, 0.3);">
+          ${langData.categoryTag || p.sector}
+        </span>
+        <h2 class="op-project-title">${langData.title || p.title}</h2>
+        <div class="op-location">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline; margin-right:4px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ${langData.location || 'Argentina'}
+        </div>
+      </div>
+
+      <!-- 4-item Deal Terms Bar -->
+      <div class="op-deal-bar">
+        <div class="op-deal-col">
+          <span class="op-deal-lbl">${isEn ? 'Investment Ticket' : 'Ticket Inversión'}</span>
+          <span class="op-deal-val" style="color: ${p.isPrivatePlacement ? 'var(--blue-main)' : 'var(--gold-main)'};">${amountLabel}</span>
+        </div>
+        <div class="op-deal-col">
+          <span class="op-deal-lbl">${isEn ? 'Deal Modality' : 'Modalidad'}</span>
+          <span class="op-deal-val" style="color: var(--blue-main);">${modalityLabel}</span>
+        </div>
+        <div class="op-deal-col">
+          <span class="op-deal-lbl">${isEn ? 'Target Horizon / ROI' : 'Horizonte / ROI'}</span>
+          <span class="op-deal-val" style="color: var(--emerald-main);">${roiLabel}</span>
+        </div>
+        <div class="op-deal-col">
+          <span class="op-deal-lbl">${isEn ? 'Execution Status' : 'Estado de Gestión'}</span>
+          <span class="op-deal-val" style="color: var(--text-main); font-size: 0.85rem;">${statusProg}</span>
+        </div>
+      </div>
+
+      <!-- Body: Summary & Thesis -->
+      <div class="op-body-grid">
+        <div class="op-card-block">
+          <div class="op-block-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            ${isEn ? 'Executive Overview' : 'Resumen Ejecutivo'}
+          </div>
+          <p class="op-desc-text">${langData.description || p.description}</p>
+          ${langData.thesis ? `
+            <div class="op-thesis-box">
+              <strong>${isEn ? 'Strategic Thesis:' : 'Tesis Estratégica:'}</strong> ${langData.thesis}
+            </div>
+          ` : ''}
+        </div>
+
+        <div class="op-card-block">
+          <div class="op-block-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            ${isEn ? 'Core Highlights & Key Drivers' : 'Puntos Clave y Factores Críticos'}
+          </div>
+          <ul class="op-highlights-list">
+            ${highlightsHtml}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Metrics Grid -->
+      <div class="op-metrics-grid">
+        ${metricsHtml}
+      </div>
+
+      <!-- Consultant & Contact -->
+      <div class="op-footer-box">
+        <div class="op-consultant-info">
+          <div class="op-consultant-avatar">${consultant.avatar}</div>
+          <div>
+            <div class="op-consultant-name">${consultant.name}</div>
+            <div class="op-consultant-role">${consultant.role}</div>
+            <div style="font-size: 10px; color: var(--text-muted);">${consultant.specialty}</div>
+          </div>
+        </div>
+        <div class="op-consultant-links no-print">
+          <a href="https://wa.me/${consultant.wsp}?text=${encodeURIComponent(wspSubject)}" target="_blank" class="btn btn-sm" style="background:#25D366; color:#080d1a; font-weight:700; border-radius:6px; padding:6px 12px; display:inline-flex; align-items:center; gap:6px; text-decoration:none;">
+            WhatsApp
+          </a>
+          <a href="${gmailUrl}" target="_blank" class="btn btn-sm" style="background:var(--blue-main); color:#080d1a; font-weight:700; border-radius:6px; padding:6px 12px; display:inline-flex; align-items:center; gap:6px; text-decoration:none;">
+            Gmail
+          </a>
+          <a href="${p.driveFolderUrl || 'https://drive.google.com'}" target="_blank" class="btn btn-sm btn-drive" style="background:var(--bg-card); color:var(--text-main); border:1px solid var(--border-color); border-radius:6px; padding:6px 12px; display:inline-flex; align-items:center; gap:6px; text-decoration:none;">
+            Data Room
+          </a>
+        </div>
+      </div>
+
+      <div class="op-disclaimer" style="text-align: center; font-size: 10px; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 8px;">
+        ${isEn 
+          ? 'ENERGY CPY Argentina &bull; Private Placement & Sourcing Desk &bull; Strictly Confidential under NCNDA. All figures subject to final confirmation in formal Dataroom.' 
+          : 'ENERGY CPY Argentina &bull; Mandato de Intermediación y Sourcing Privado &bull; Estricta Confidencialidad bajo NCNDA. Datos sujetos a confirmación formal en Dataroom.'}
+      </div>
+    `;
+
+    modal.style.display = 'flex';
+  }
+
+  closeOnePager() {
+    const modal = document.getElementById('onePagerModal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  printOnePager() {
+    window.print();
+  }
+
+  toggleOnePagerLang(lang) {
+    if (this.currentOnePagerProjectId) {
+      this.openOnePager(this.currentOnePagerProjectId, lang);
+    }
+  }
 }
+

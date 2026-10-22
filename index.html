@@ -193,6 +193,47 @@
   </div>
 
   <!-- Toast Notificaciones y Rollback Rápido -->
+  <!-- Modal Interactivo: Resumen Ejecutivo Sintético One-Pager A4 -->
+  <div class="modal-backdrop one-pager-modal-overlay" id="onePagerModal" style="display: none;">
+    <div class="one-pager-modal-container">
+      <div class="one-pager-actions-bar no-print">
+        <div class="one-pager-actions-left">
+          <span class="badge-onepager-live">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Resumen Ejecutivo Sintético (1 Página A4)
+          </span>
+          <div class="one-pager-lang-switch">
+            <button type="button" class="btn-lang-toggle active" id="btnOnePagerLangEs">ES</button>
+            <span style="color: var(--text-muted); font-size: 11px;">|</span>
+            <button type="button" class="btn-lang-toggle" id="btnOnePagerLangEn">EN</button>
+          </div>
+        </div>
+        <div class="one-pager-actions-right">
+          <button type="button" class="btn btn-print-pdf" id="btnOnePagerPrint">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Imprimir / Guardar en PDF
+          </button>
+          <button type="button" class="modal-close-btn" id="btnOnePagerClose" aria-label="Cerrar Resumen">
+            &times;
+          </button>
+        </div>
+      </div>
+
+      <!-- Single Page Printable A4 Sheet -->
+      <div class="one-pager-sheet-scroll">
+        <div class="one-pager-sheet" id="onePagerSheet">
+          <!-- Watermark Overlay -->
+          <div class="one-pager-watermark">
+            ENERGY CPY &mdash; PRIVATE INVESTMENT ADVISORY
+          </div>
+          <div id="onePagerContent">
+            <!-- Dynamic project content injected via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="toastContainer" class="toast-container"></div>
 
   <!-- SheetJS Library (Lectura y Escritura de Excel XLSX / CSV) -->
