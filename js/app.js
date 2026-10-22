@@ -10,6 +10,7 @@ import { DealsModule } from './modules/deals.js';
 import { BrokersModule } from './modules/brokers.js';
 import { ComplianceModule } from './modules/compliance.js';
 import { SettingsModule } from './modules/settings.js';
+import { InquiriesModule } from './modules/inquiries.js';
 
 class AppRouter {
   constructor() {
@@ -20,6 +21,7 @@ class AppRouter {
       deals: new DealsModule(),
       interlocutors: new BrokersModule(),
       compliance: new ComplianceModule(),
+      inquiries: new InquiriesModule(),
       settings: new SettingsModule()
     };
   }
@@ -60,6 +62,7 @@ class AppRouter {
       deals: { title: 'Pipeline de Negociaciones por Fondos', sub: 'Sub-gestiones simultáneas, control de gatekeeper y minutas' },
       interlocutors: { title: 'Directorio de Dueños & Brokers', sub: 'Supervisión de mandatos, acuerdos de brokeraje y períodos de cola' },
       compliance: { title: 'Estrategia Documental en 3 Capas', sub: 'Matriz de protección legal, modelos de contratos y no circunvención' },
+      inquiries: { title: 'Consultas Showroom & Tickets Únicos ECPY', sub: 'Gestión de prospectos calificados, solicitudes de dossier y coordinación de reuniones' },
       settings: { title: 'Configuración del Sistema & Backups', sub: 'Estados de proyecto personalizados, días de alerta y copias JSON' }
     };
 

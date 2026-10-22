@@ -3288,6 +3288,131 @@ class Store {
     return false;
   }
 
+
+  // ==========================================================================
+  // Consultas y Tickets del Showroom (energycpy_inquiries_db)
+  // ==========================================================================
+  getInquiries() {
+    try {
+      if (typeof localStorage !== 'undefined') {
+        const raw = localStorage.getItem('energycpy_inquiries_db');
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            return parsed;
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('Error reading energycpy_inquiries_db:', e);
+    }
+
+    // Datos semilla iniciales si no hay consultas previas
+    const sampleInquiries = [
+      {
+        id: "ECPY-M3K9X",
+        timestamp: new Date(Date.now() - 3600000 * 2).toISOString(),
+        dateFormatted: new Date(Date.now() - 3600000 * 2).toLocaleString('es-AR'),
+        clientName: "Esteban Morales",
+        clientCompany: "Andes Renewables Fund",
+        clientEmail: "emorales@andesrf.com",
+        clientPhone: "+54 9 11 4982-1200",
+        projectTopic: "Parque Solar Sol de los Cuatro Vientos 300 MW (USD 300M)",
+        clientMessage: "Solicitamos el modelo financiero detallado y el estado de la asignación de prioridad de despacho CAMMESA. Interés en participar como co-inversor de equity.",
+        assignedConsultantName: "Javier Ignacio Diaz",
+        assignedConsultantEmail: "areasostenible.consultorespyme@gmail.com",
+        assignedConsultantPhone: "+54 9 351 2064791",
+        senderAccount: "inventario.energycpy@gmail.com",
+        status: "pendiente"
+      },
+      {
+        id: "ECPY-M2L8A",
+        timestamp: new Date(Date.now() - 3600000 * 18).toISOString(),
+        dateFormatted: new Date(Date.now() - 3600000 * 18).toLocaleString('es-AR'),
+        clientName: "Federico Baum",
+        clientCompany: "Patagonia Seafood Partners",
+        clientEmail: "fbaum@patagoniaseafood.com",
+        clientPhone: "+54 9 297 411-8890",
+        projectTopic: "Proyecto 6.6 Pesca Industrial Gran Escala Patagonia (USD 310M Venta)",
+        clientMessage: "Interés en la adquisición del paquete completo (buques congeladores y plantas procesadoras en Puerto Deseado y Madryn). Requerimos coordinar reunión virtual técnica.",
+        assignedConsultantName: "Daniel Gonzalez",
+        assignedConsultantEmail: "gonzalezmarcelo2105ypf@gmail.com",
+        assignedConsultantPhone: "+54 9 2974 23-3028",
+        senderAccount: "inventario.energycpy@gmail.com",
+        status: "contestado"
+      },
+      {
+        id: "ECPY-M1J7Q",
+        timestamp: new Date(Date.now() - 3600000 * 48).toISOString(),
+        dateFormatted: new Date(Date.now() - 3600000 * 48).toLocaleString('es-AR'),
+        clientName: "Guillermo Soria",
+        clientCompany: "Pampa Oil Holdings",
+        clientEmail: "gsoria@pampaoil.com.ar",
+        clientPhone: "+54 9 299 532-0011",
+        projectTopic: "Oferta de Refineria y explotacion de pozos - La Pampa Argentina (USD 180M)",
+        clientMessage: "Solicitamos el data room y términos del acuerdo con Pampetrol para el bloque Medanito y refinería de crudo.",
+        assignedConsultantName: "Daniel Gonzalez",
+        assignedConsultantEmail: "gonzalezmarcelo2105ypf@gmail.com",
+        assignedConsultantPhone: "+54 9 2974 23-3028",
+        senderAccount: "inventario.energycpy@gmail.com",
+        status: "pendiente"
+      }
+    ];
+
+    this.saveInquiries(sampleInquiries);
+    return sampleInquiries;
+  }
+
+  saveInquiries(inquiries) {
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('energycpy_inquiries_db', JSON.stringify(inquiries));
+      }
+    } catch (e) {
+      console.error('Error saving inquiries to localStorage:', e);
+    }
+  }
+
+  updateInquiryStatus(ticketId, newStatus) {
+    const list = this.getInquiries();
+    const idx = list.findIndex(item => item.id === ticketId);
+    if (idx !== -1) {
+      list[idx].status = newStatus;
+      list[idx].updatedAt = new Date().toISOString();
+      this.saveInquiries(list);
+      window.dispatchEvent(new CustomEvent('inquiries-updated'));
+      window.dispatchEvent(new CustomEvent('data-updated'));
+      return true;
+    }
+    return false;
+  }
+
+  deleteInquiry(ticketId, permanent = false) {
+    const list = this.getInquiries();
+    if (permanent) {
+      const filtered = list.filter(item => item.id !== ticketId);
+      this.saveInquiries(filtered);
+    } else {
+      const idx = list.findIndex(item => item.id === ticketId);
+      if (idx !== -1) {
+        list[idx].status = 'borrado';
+        list[idx].updatedAt = new Date().toISOString();
+        this.saveInquiries(list);
+      }
+    }
+    window.dispatchEvent(new CustomEvent('inquiries-updated'));
+    window.dispatchEvent(new CustomEvent('data-updated'));
+    return true;
+  }
+
+  addInquiry(record) {
+    const list = this.getInquiries();
+    list.unshift(record);
+    this.saveInquiries(list);
+    window.dispatchEvent(new CustomEvent('inquiries-updated'));
+    window.dispatchEvent(new CustomEvent('data-updated'));
+  }
+
   resetToDefaults() {
     this.createSnapshot('Respaldo previo a restablecer valores semilla');
     if (typeof localStorage !== 'undefined') {
