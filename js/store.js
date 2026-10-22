@@ -33,2476 +33,2670 @@ export const DEFAULT_STATUSES = [
 ];
 
 export const DEFAULT_PROJECTS = [
-    {
-      "id": "solar-cuatro-vientos",
+  {
+    "id": "solar-cuatro-vientos",
+    "title": "Parque Solar Sol de los Cuatro Vientos 300 MW",
+    "sector": "Energía Solar & Renovable",
+    "basePrice": 300000000,
+    "overpriceTarget": 15000000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_javier",
+    "ownerName": "Javier Ignacio Díaz",
+    "ownerType": "mandatario_exclusivo",
+    "description": "Desarrollo solar fotovoltaico de gran escala (300 MW) en zona de radiación solar excepcional en Mendoza. Estructuración orientada a contratos PPA a largo plazo indexados en USD bajo el marco MATER / CAMMESA.",
+    "modality": "Socio Inversor",
+    "roi": "7 Años",
+    "statusProgress": "Ingeniería avanzada y estudios de red listos para PPA MATER/CAMMESA",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-solar-cuatro-vientos",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "javier",
+    "amountDisplay": "USD 300M",
+    "isPrivatePlacement": false,
+    "dealType": "Socio Inversor",
+    "tir": "18.5%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 26.5M/año (Margen 78%)",
+    "capitalStructure": "Socio Inversor / Project Finance (70/30)",
+    "regulatoryRegime": "Régimen RIGI (Ley 27.742) & PPA MATER (Res. 281/CAMMESA)",
+    "financialNote_es": "Cálculo de TIR: Modelado DCF a 20 años con WACC 9.0% en USD y factor de planta del 31.5% en Mendoza. Supera holgadamente el TIR > 15%.",
+    "financialNote_en": "IRR Methodology: 20-year DCF model with 9.0% USD WACC and 31.5% capacity factor in Mendoza. Comfortably exceeds the IRR > 15%.",
+    "es": {
+      "categoryTag": "Energía Solar Fotovoltaica",
       "title": "Parque Solar Sol de los Cuatro Vientos 300 MW",
-      "sector": "Energía Solar & Renovable",
-      "basePrice": 300000000,
-      "overpriceTarget": 15000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_javier",
-      "ownerName": "Javier Ignacio Díaz",
-      "ownerType": "mandatario_exclusivo",
+      "location": "Mendoza, Argentina",
+      "statusLabel": "USD 300M — Socio Inversor",
       "description": "Desarrollo solar fotovoltaico de gran escala (300 MW) en zona de radiación solar excepcional en Mendoza. Estructuración orientada a contratos PPA a largo plazo indexados en USD bajo el marco MATER / CAMMESA.",
-      "modality": "Socio Inversor",
-      "roi": "7 Años",
-      "statusProgress": "Ingeniería avanzada y estudios de red listos para PPA MATER/CAMMESA",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-solar-cuatro-vientos",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "javier",
-      "amountDisplay": "USD 300M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Energía Solar Fotovoltaica",
-        "title": "Parque Solar Sol de los Cuatro Vientos 300 MW",
-        "location": "Mendoza, Argentina",
-        "statusLabel": "USD 300M — Socio Inversor",
-        "description": "Desarrollo solar fotovoltaico de gran escala (300 MW) en zona de radiación solar excepcional en Mendoza. Estructuración orientada a contratos PPA a largo plazo indexados en USD bajo el marco MATER / CAMMESA.",
-        "thesis": "Proyecto utility-scale con factor de planta líder en el cono sur, nodo de evacuación en alta tensión reservado y modelo de sindicación para socio inversor de primer nivel.",
-        "highlights": [
-          "300 MW de potencia nominal con factor de capacidad líder mundial en Cuyo.",
-          "Estructuración de contratos PPA indexados en USD a 15-20 años bajo marco MATER/CAMMESA.",
-          "Búsqueda de socio inversor / equity partner con entrada estratégica y gobierno compartido.",
-          "Prioridad de despacho y estudios de interconexión eléctrica en etapa avanzada.",
-          "Elegible para beneficios fiscales y cambiarios bajo el régimen RIGI (Ley 27.742)."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 300M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Potencia Nominal",
-            "val": "300 MW",
-            "color": "text-cyan"
-          },
-          {
-            "label": "ROI Estimado",
-            "val": "7 Años",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Socio Inversor",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Solar PV Energy",
-        "title": "Sol de los Cuatro Vientos 300 MW Solar Park",
-        "location": "Mendoza, Argentina",
-        "statusLabel": "USD 300M — Equity Partner",
-        "description": "Large-scale utility solar PV development (300 MW) located in Mendoza's premier solar irradiance belt. Designed for long-term USD-indexed PPAs under the MATER / CAMMESA framework.",
-        "thesis": "World-class capacity factor, high-voltage grid interconnection in advanced permitting, and strategic co-equity structure for institutional investors.",
-        "highlights": [
-          "300 MW nominal capacity in Cuyo's premier solar corridor.",
-          "USD-denominated 15-20 year PPA structure (MATER / CAMMESA).",
-          "Equity partnership model with attractive risk-adjusted IRR.",
-          "Interconnection priority and advanced environmental clearance.",
-          "Eligible for RIGI investment incentive regime."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 300M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Nominal Power",
-            "val": "300 MW",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Estimated ROI",
-            "val": "7 Years",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Equity Partner",
-            "color": "text-gold"
-          }
-        ]
+      "thesis": "Proyecto utility-scale con factor de planta líder en el cono sur, nodo de evacuación en alta tensión reservado y modelo de sindicación para socio inversor de primer nivel.",
+      "highlights": [
+        "300 MW de potencia nominal con factor de capacidad líder mundial en Cuyo.",
+        "Estructuración de contratos PPA indexados en USD a 15-20 años bajo marco MATER/CAMMESA.",
+        "Búsqueda de socio inversor / equity partner con entrada estratégica y gobierno compartido.",
+        "Prioridad de despacho y estudios de interconexión eléctrica en etapa avanzada.",
+        "Elegible para beneficios fiscales y cambiarios bajo el régimen RIGI (Ley 27.742)."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 300M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Potencia Nominal",
+          "val": "300 MW",
+          "color": "text-cyan"
+        },
+        {
+          "label": "ROI Estimado",
+          "val": "7 Años",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Socio Inversor",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Fuerte demanda de contratos PPA entre grandes usuarios industriales (MATER) que buscan descarbonización y cobertura tarifaria ante la quita de subsidios nacionales. El nodo de Cuyo cuenta con el factor de capacidad solar líder del país.",
+        "intl": "Creciente asignación de capital por fondos de inversión globales hacia activos solares utility-scale en economías emergentes con marcos de estabilidad fiscal como el RIGI."
       }
     },
-    {
-      "id": "solar-vaca-muerta",
-      "title": "Parque Solar 30 MW Vaca Muerta",
-      "sector": "Energía Solar & Renovable",
-      "basePrice": 30000000,
-      "overpriceTarget": 2000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_javier",
-      "ownerName": "Javier Ignacio Díaz",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Planta fotovoltaica de 30 MW emplazada en el corazón de la formación no convencional Vaca Muerta. Provisión directa de energía limpia y descarbonización para operaciones de operadoras petroleras y de servicios.",
-      "modality": "Socio Inversor",
-      "roi": "5 Años",
-      "statusProgress": "Proyecto ejecutivo orientado a offtakers industriales de hidrocarburos en Añelo",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-solar-vaca-muerta",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "javier",
-      "amountDisplay": "USD 30M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Energía Solar & O&G",
-        "title": "Parque Solar 30 MW Vaca Muerta",
-        "location": "Añelo, Neuquén, Argentina",
-        "statusLabel": "USD 30M — Socio Inversor",
-        "description": "Planta fotovoltaica de 30 MW emplazada en el corazón de la formación no convencional Vaca Muerta. Provisión directa de energía limpia y descarbonización para operaciones de operadoras petroleras y de servicios.",
-        "thesis": "Generación distribuida de alta demanda en boca de yacimiento, reemplazando costosa generación térmica diésel con PPA industrial privado en USD y payback acelerado a 5 años.",
-        "highlights": [
-          "30 MW dedicados al suministro de energía renovable en Añelo / Vaca Muerta.",
-          "Offtakers corporativos de primer nivel en el sector de petróleo y gas.",
-          "Retorno de inversión acelerado en 5 años por alta competitividad frente al diésel.",
-          "Reducción directa de emisiones de Alcance 2 para metas ESG de operadoras.",
-          "Opción de ampliación modular por etapas sucesivas."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 30M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Potencia",
-            "val": "30 MW",
-            "color": "text-cyan"
-          },
-          {
-            "label": "ROI Estimado",
-            "val": "5 Años",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Socio Inversor",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Solar & O&G Decarbonization",
-        "title": "30 MW Vaca Muerta Solar Park",
-        "location": "Añelo, Neuquén, Argentina",
-        "statusLabel": "USD 30M — Equity Partner",
-        "description": "30 MW PV solar plant strategically positioned in Añelo, the core of Vaca Muerta shale play. Direct clean power supply to O&G operators replacing diesel generation.",
-        "thesis": "Fast 5-year payback backed by private industrial USD offtake agreements and critical ESG impact for shale drilling clusters.",
-        "highlights": [
-          "30 MW dedicated to Vaca Muerta oilfield operations.",
-          "Direct industrial USD PPA with tier-1 O&G operators.",
-          "Accelerated 5-year payback substituting expensive diesel power.",
-          "Direct Scope 2 carbon footprint abatement.",
-          "Modular scalable architecture."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 30M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Capacity",
-            "val": "30 MW",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Est. ROI",
-            "val": "5 Years",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Equity Partner",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "solar",
-      "title": "Plantas Solares Llave en Mano con Financiamiento Asegurado",
-      "sector": "Energía Solar & Renovable",
-      "basePrice": 50000000,
-      "overpriceTarget": 2500000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_javier",
-      "ownerName": "Javier Ignacio Díaz",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Desarrollo estratégico de parques fotovoltaicos llave en mano con el 50% del CAPEX pre-financiado por fabricante líder global de paneles e inversores. Contratos PPA a 15-20 años indexados al USD.",
-      "modality": "EPC Llave en Mano",
-      "roi": "6 Años",
-      "statusProgress": "Ready to Build con co-financiamiento asegurado por fabricante Tier 1",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-solar",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "javier",
-      "amountDisplay": "USD 50M (50% Pre-Financiado)",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Energía Solar Fotovoltaica",
-        "title": "Plantas Solares Llave en Mano con Financiamiento Asegurado",
-        "location": "Cuyo y NOA, Argentina",
-        "statusLabel": "Co-Financiado 50% CAPEX",
-        "description": "Desarrollo estratégico de parques fotovoltaicos llave en mano con el 50% del CAPEX pre-financiado por fabricante líder global de paneles e inversores. Contratos PPA a 15-20 años indexados al USD.",
-        "thesis": "Estructura de co-inversión que minimiza el capital inicial y maximiza la TIR mediante financiamiento directo del proveedor tecnológico internacional.",
-        "highlights": [
-          "50% del CAPEX pre-financiado directamente por fabricante global.",
-          "Contratos PPA indexados al Dólar estadounidense a 15-20 años.",
-          "Recurso solar excepcional en Cuyo y NOA con factor líder.",
-          "Contrato EPC llave en mano con costos y plazos cerrados y garantizados.",
-          "Garantía de rendimiento y mantenimiento integral bajo contratos O&M."
-        ],
-        "metrics": [
-          {
-            "label": "Co-Financiamiento",
-            "val": "50% CAPEX",
-            "color": "text-gold"
-          },
-          {
-            "label": "Plazo PPA",
-            "val": "15 - 20 Años",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Mercado",
-            "val": "MATER / CAMMESA",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "EPC Llave en Mano",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Photovoltaic Solar Energy",
-        "title": "Turnkey Solar Plants with Secured Co-Financing",
-        "location": "Cuyo & NOA Regions, Argentina",
-        "statusLabel": "50% Co-Financed CAPEX",
-        "description": "Strategic turnkey solar park developments with 50% of CAPEX pre-financed by a world-leading PV manufacturer. Long-term PPA contracts (15 to 20 years) indexed to USD.",
-        "thesis": "Co-investment architecture minimizing upfront equity and maximizing equity IRR through vendor financing.",
-        "highlights": [
-          "50% of CAPEX pre-financed directly by top-tier global manufacturer.",
-          "USD-indexed PPA contracts with 15 to 20 years duration.",
-          "Exceptional solar irradiance in Cuyo & NOA regions.",
-          "Turnkey EPC agreement with guaranteed fixed cost.",
-          "Guaranteed performance metrics and preventative O&M."
-        ],
-        "metrics": [
-          {
-            "label": "Co-Financing",
-            "val": "50% CAPEX",
-            "color": "text-gold"
-          },
-          {
-            "label": "PPA Term",
-            "val": "15 - 20 Yrs USD",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Target Market",
-            "val": "MATER / CAMMESA",
-            "color": "text-green"
-          },
-          {
-            "label": "Delivery",
-            "val": "Turnkey EPC",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "hotel-casino-mendoza-3s",
-      "title": "Hotel 3 Estrellas + Casino + Salón de Eventos",
-      "sector": "Hotelería & Renta",
-      "basePrice": 40000000,
-      "overpriceTarget": 2500000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Complejo hotelero de 3 estrellas en funcionamiento pleno con sala de casino equipada y habilitación provincial. Cuenta con salón de eventos corporativos y sociales con alta demanda turística internacional.",
-      "modality": "Venta",
-      "roi": "1 Año",
-      "statusProgress": "Activo operativo en marcha con flujo consolidado y licencias de juego vigentes",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-hotel-casino-mendoza-3s",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 40M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Hotelería & Casino",
-        "title": "Hotel 3 Estrellas + Casino + Salón de Eventos",
-        "location": "Mendoza, Argentina",
-        "statusLabel": "USD 40M — Venta Directa",
-        "description": "Complejo hotelero de 3 estrellas en funcionamiento pleno con sala de casino equipada y habilitación provincial. Cuenta con salón de eventos corporativos y sociales con alta demanda turística internacional.",
-        "thesis": "Extraordinario cash flow operativo derivado del juego y turismo vitivinícola, generando un retorno de capital estimado en 1 año sobre el valor de venta del activo.",
-        "highlights": [
-          "Hotel de 3 estrellas operativo con sólida tasa de ocupación anual.",
-          "Licencia y explotación activa de casino con alto flujo de caja en efectivo.",
-          "Salón de eventos de gran capacidad para turismo MICE y convenciones.",
-          "Retorno de inversión sin precedentes proyectado en 1 año.",
-          "Venta del 100% del activo inmobiliario y paquete comercial sin pasivos."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 40M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Tipo Activo",
-            "val": "Hotel 3★ + Casino",
-            "color": "text-cyan"
-          },
-          {
-            "label": "ROI Estimado",
-            "val": "1 Año",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Venta Directa",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Hospitality & Casino",
-        "title": "3-Star Hotel + Casino + Event Convention Center",
-        "location": "Mendoza, Argentina",
-        "statusLabel": "USD 40M — Asset Sale",
-        "description": "Operational 3-star hotel complex featuring an active licensed casino hall and convention center. Strong year-round occupancy supported by Mendoza's wine and gaming tourism.",
-        "thesis": "Exceptional cash flow from gaming operations delivering a projected 1-year payback on enterprise asset value.",
-        "highlights": [
-          "Fully operational 3-star hotel with solid occupancy history.",
-          "Active gaming casino license with high daily cash flow.",
-          "Large convention hall catering to corporate and social events.",
-          "Unprecedented 1-year projected payback.",
-          "Clean title and corporate structure with zero debt."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 40M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Asset Type",
-            "val": "Hotel 3★ + Casino",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Est. ROI",
-            "val": "1 Year",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Direct Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "hotel-casino-mendoza-5s",
-      "title": "Hotel 5 Estrellas (72 Habitaciones) + Casino + Cocheras",
-      "sector": "Hotelería & Renta",
-      "basePrice": 60000000,
-      "overpriceTarget": 3500000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Exclusivo hotel de 5 estrellas con 72 habitaciones de alta gama, casino privado en operación, restaurante gourmet, spa y estacionamiento subterráneo en la mejor ubicación de Mendoza.",
-      "modality": "Venta",
-      "roi": "1 Año",
-      "statusProgress": "Hotel 5 estrellas de lujo en operación con sala de juego y cocheras",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-hotel-casino-mendoza-5s",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 60M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Hotelería de Lujo & Casino",
-        "title": "Hotel 5 Estrellas (72 Habitaciones) + Casino + Cocheras",
-        "location": "Mendoza, Argentina",
-        "statusLabel": "USD 60M — Venta Directa",
-        "description": "Exclusivo hotel de 5 estrellas con 72 habitaciones de alta gama, casino privado en operación, restaurante gourmet, spa y estacionamiento subterráneo en la mejor ubicación de Mendoza.",
-        "thesis": "Activo trophy de alta rentabilidad con tarifa promedio diaria (ADR) dolarizada, clientela internacional y un ROI extraordinario de 1 año traccionado por la sala de casino.",
-        "highlights": [
-          "72 habitaciones y suites de lujo totalmente equipadas con amenities de 5 estrellas.",
-          "Casino de alta categoría en funcionamiento con licencias y equipamiento de última generación.",
-          "Edificio icónico con cocheras subterráneas y salones ejecutivos.",
-          "Retorno acelerado en 1 año respaldado por el flujo de caja del casino y hotelería.",
-          "Operación llave en mano con personal calificado y marca consolidada."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 60M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Habitaciones",
-            "val": "72 Suites 5★",
-            "color": "text-cyan"
-          },
-          {
-            "label": "ROI Estimado",
-            "val": "1 Año",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Venta Directa",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Luxury Hospitality & Casino",
-        "title": "5-Star Hotel (72 Rooms) + Casino + Underground Parking",
-        "location": "Mendoza, Argentina",
-        "statusLabel": "USD 60M — Asset Sale",
-        "description": "Premier 5-star boutique hotel featuring 72 luxury rooms, operational private casino, fine dining restaurant, luxury spa, and private parking in prime Mendoza.",
-        "thesis": "Trophy asset with strong USD average daily rates and high-margin casino revenue driving a projected 1-year capital payback.",
-        "highlights": [
-          "72 luxury suites with complete 5-star amenities.",
-          "High-end operational casino with modern gaming licenses.",
-          "Prime architectural building with underground parking.",
-          "Rapid 1-year payback backed by combined hotel and gaming cash flows.",
-          "Turnkey management and established reputation."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 60M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Rooms",
-            "val": "72 Suites 5★",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Est. ROI",
-            "val": "1 Year",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Direct Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "hotel-lujo-bariloche",
-      "title": "Venta Exclusiva a Invitación — Hotel de Lujo en Bariloche",
-      "sector": "Hotelería & Renta",
-      "basePrice": 0,
-      "overpriceTarget": 0,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Emblemático hotel de ultra-lujo situado en un entorno natural privilegiado en Bariloche, Patagonia. Comercialización off-market reservada exclusivamente para inversores calificados bajo estricto acuerdo de confidencialidad (NDA).",
-      "modality": "Venta Exclusiva a Invitación",
-      "roi": "Confidencial",
-      "statusProgress": "Operación off-market estrictamente confidencial disponible solo bajo NDA firmado",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-hotel-lujo-bariloche",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "A Invitación Exclusiva",
-      "isPrivatePlacement": true,
-      "es": {
-        "categoryTag": "Private Placement — Gran Lujo",
-        "title": "Venta Exclusiva a Invitación — Hotel de Lujo en Bariloche",
-        "location": "San Carlos de Bariloche, Patagonia, Argentina",
-        "statusLabel": "🔒 Private Placement Off-Market",
-        "description": "Emblemático hotel de ultra-lujo situado en un entorno natural privilegiado en Bariloche, Patagonia. Comercialización off-market reservada exclusivamente para inversores calificados bajo estricto acuerdo de confidencialidad (NDA).",
-        "thesis": "Activo hotelero trofeo sin equivalentes en la Patagonia, con vistas directas al lago y clientela internacional de alto poder adquisitivo. Datos financieros y dossier disponibles únicamente a invitación.",
-        "highlights": [
-          "Venta off-market estrictamente confidencial (sin publicación de montos en web).",
-          "Ubicación irrepetible con vistas panorámicas al lago y arquitectura patagónica.",
-          "Instalaciones de máxima jerarquía hotelera internacional.",
-          "Acceso al Data Room y estados contables supeditado a calificación previa y NDA.",
-          "Acompañamiento personalizado directo con la dirección de Energy CPY."
-        ],
-        "metrics": [
-          {
-            "label": "Modalidad",
-            "val": "Private Placement",
-            "color": "text-gold"
-          },
-          {
-            "label": "Categoría",
-            "val": "Ultra Lujo",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Acceso",
-            "val": "Bajo NDA",
-            "color": "text-green"
-          },
-          {
-            "label": "Estado",
-            "val": "Venta Exclusiva",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Private Placement — Ultra Luxury",
-        "title": "Exclusive Invitation Sale — Luxury Hotel in Bariloche",
-        "location": "Bariloche, Patagonia, Argentina",
-        "statusLabel": "🔒 Private Placement Off-Market",
-        "description": "Iconic ultra-luxury hotel situated in a prime natural setting in Bariloche, Patagonia. Off-market transaction available exclusively to qualified investors under non-disclosure agreement (NDA).",
-        "thesis": "Irreplaceable trophy asset with direct lakefront views and elite international patronage. Financial dossier available strictly upon invitation.",
-        "highlights": [
-          "Strictly confidential off-market sale (no public financial figures).",
-          "Irreplaceable lakefront location with signature Andean architecture.",
-          "Highest tier of international hospitality standards.",
-          "Data room access granted exclusively following investor verification and signed NDA.",
-          "Direct confidential advisory with Energy CPY executives."
-        ],
-        "metrics": [
-          {
-            "label": "Deal Structure",
-            "val": "Private Placement",
-            "color": "text-gold"
-          },
-          {
-            "label": "Category",
-            "val": "Ultra Luxury",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Access",
-            "val": "Under NDA",
-            "color": "text-green"
-          },
-          {
-            "label": "Status",
-            "val": "Exclusive Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "hotel-lujo-cordoba",
-      "title": "Venta Exclusiva a Invitación — Hotel de Lujo en Córdoba",
-      "sector": "Hotelería & Renta",
-      "basePrice": 0,
-      "overpriceTarget": 0,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Distinguido establecimiento hotelero de máxima jerarquía en la provincia de Córdoba. Operación off-market de colocación privada sin mención de estudios financieros públicos, orientada a grupos selectos.",
-      "modality": "Venta Exclusiva a Invitación",
-      "roi": "Confidencial",
-      "statusProgress": "Operación off-market estrictamente confidencial disponible solo bajo NDA firmado",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-hotel-lujo-cordoba",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "A Invitación Exclusiva",
-      "isPrivatePlacement": true,
-      "es": {
-        "categoryTag": "Private Placement — Gran Lujo",
-        "title": "Venta Exclusiva a Invitación — Hotel de Lujo en Córdoba",
-        "location": "Córdoba, Argentina",
-        "statusLabel": "🔒 Private Placement Off-Market",
-        "description": "Distinguido establecimiento hotelero de máxima jerarquía en la provincia de Córdoba. Operación off-market de colocación privada sin mención de estudios financieros públicos, orientada a grupos selectos.",
-        "thesis": "Patrimonio arquitectónico e inmobiliario de primer orden con posicionamiento líder en turismo corporativo y eventos de alta gama en el centro del país.",
-        "highlights": [
-          "Venta off-market de colocación privada mediante invitación.",
-          "Instalaciones de primer nivel para congresos internacionales y hotelería premium.",
-          "Historial de ocupación y marca consolidada en la región central.",
-          "Entrega de memorias económicas y técnicas supeditada a firma de NDA formal.",
-          "Atención directa y reservada por parte del consultor a cargo."
-        ],
-        "metrics": [
-          {
-            "label": "Modalidad",
-            "val": "Private Placement",
-            "color": "text-gold"
-          },
-          {
-            "label": "Categoría",
-            "val": "Gran Lujo",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Acceso",
-            "val": "Bajo NDA",
-            "color": "text-green"
-          },
-          {
-            "label": "Estado",
-            "val": "Venta Exclusiva",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Private Placement — Ultra Luxury",
-        "title": "Exclusive Invitation Sale — Luxury Hotel in Córdoba",
-        "location": "Córdoba, Argentina",
-        "statusLabel": "🔒 Private Placement Off-Market",
-        "description": "Distinguished premier luxury hotel in Córdoba province. Private placement off-market transaction without public financial figures, tailored for select institutional groups.",
-        "thesis": "Prime architectural and real estate asset leading in executive tourism and major corporate conventions in Central Argentina.",
-        "highlights": [
-          "Private placement off-market transaction by direct invitation.",
-          "State-of-the-art facilities for international conventions and luxury lodging.",
-          "Proven historical occupancy and distinguished regional brand.",
-          "Economic and operational disclosures released exclusively upon signed NDA.",
-          "Confidential engagement directly with senior partners."
-        ],
-        "metrics": [
-          {
-            "label": "Deal Structure",
-            "val": "Private Placement",
-            "color": "text-gold"
-          },
-          {
-            "label": "Category",
-            "val": "Grand Luxury",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Access",
-            "val": "Under NDA",
-            "color": "text-green"
-          },
-          {
-            "label": "Status",
-            "val": "Exclusive Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "estancia-17000ha-riego",
-      "title": "Estancia 17.000 Hectáreas con Riego en Zona Turística",
-      "sector": "Agro, Campo & Industria",
-      "basePrice": 60000000,
-      "overpriceTarget": 3500000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_javier",
-      "ownerName": "Javier Ignacio Díaz",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Extraordinario establecimiento agropecuario de 17.000 hectáreas con infraestructura completa de riego presurizado instalada. Emplazado en una comarca de alto valor paisajístico y turístico en la región centro del país.",
-      "modality": "Venta",
-      "roi": "2 Años",
-      "statusProgress": "Establecimiento productivo en marcha con pivotes de riego y títulos perfectos",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-estancia-17000ha-riego",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "javier",
-      "amountDisplay": "USD 60M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Agroindustria & Tierras",
-        "title": "Estancia 17.000 Hectáreas con Riego en Zona Turística",
-        "location": "Región Centro, Argentina",
-        "statusLabel": "USD 60M — Venta",
-        "description": "Extraordinario establecimiento agropecuario de 17.000 hectáreas con infraestructura completa de riego presurizado instalada. Emplazado en una comarca de alto valor paisajístico y turístico en la región centro del país.",
-        "thesis": "Combinación inusual de alta productividad agrícola bajo riego con formidable plusvalía inmobiliaria y turística, permitiendo un recupero acelerado en 2 años.",
-        "highlights": [
-          "17.000 hectáreas con aptitud mixta y módulos de riego de alta tecnología.",
-          "Ubicación privilegiada en zona turística de rápida valorización territorial.",
-          "Rápido recupero proyectado a 2 años mediante cultivos intensivos y desarrollos asociados.",
-          "Infraestructura completa: casco, galpones, corrales, caminos internos y electrificación.",
-          "Títulos de propiedad consolidados y posesión inmediata sin pasivos."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 60M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Superficie",
-            "val": "17.000 Ha",
-            "color": "text-cyan"
-          },
-          {
-            "label": "ROI Estimado",
-            "val": "2 Años",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Venta Directa",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Agribusiness & Prime Land",
-        "title": "17,000-Hectare Irrigated Ranch in Prime Tourist Area",
-        "location": "Central Region, Argentina",
-        "statusLabel": "USD 60M — Asset Sale",
-        "description": "Exceptional 17,000-hectare agricultural estate equipped with extensive pressurized irrigation infrastructure, located in a scenic and high-growth tourist corridor in Central Argentina.",
-        "thesis": "Unique synergy of intensive irrigated crop yields and real estate capital appreciation offering a 2-year estimated capital return.",
-        "highlights": [
-          "17,000 hectares combining crop irrigation and pastoral land.",
-          "Strategic setting in a fast-appreciating tourism and lifestyle zone.",
-          "Rapid projected 2-year payback from high-yield crops and land upside.",
-          "Full operational infrastructure: main house, sheds, power, and road network.",
-          "Clear titles and immediate handover with zero encumbrances."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 60M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Total Area",
-            "val": "17,000 Ha",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Est. ROI",
-            "val": "2 Years",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Direct Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "planta-avicola-avex",
-      "title": "Planta Avícola + Red de Distribución Nacional (Avex)",
-      "sector": "Agro, Campo & Industria",
-      "basePrice": 5000000,
-      "overpriceTarget": 500000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_javier",
-      "ownerName": "Javier Ignacio Díaz",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Complejo agroindustrial avícola con habilitación SENASA para faena y despiece, complementado con red logística y comercial en las principales plazas del país. Búsqueda de socio inversor para reactivación y capital de trabajo.",
-      "modality": "Socio Inversor",
-      "roi": "7 Años",
-      "statusProgress": "Planta frigorífica habilitada SENASA con red de distribución nacional estructurada",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-planta-avicola-avex",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "javier",
-      "amountDisplay": "USD 5M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Industria Frigorífica & Alimentos",
-        "title": "Planta Avícola + Red de Distribución Nacional (Avex)",
-        "location": "Río Cuarto, Córdoba, Argentina",
-        "statusLabel": "USD 5M — Socio Inversor",
-        "description": "Complejo agroindustrial avícola con habilitación SENASA para faena y despiece, complementado con red logística y comercial en las principales plazas del país. Búsqueda de socio inversor para reactivación y capital de trabajo.",
-        "thesis": "Inversión de bajo ticket relativo (USD 5M) sobre activos tangibles de gran valor de reposición, generando un EBITDA sólido con retorno a 7 años.",
-        "highlights": [
-          "Planta de faena avícola con habilitaciones oficiales SENASA y capacidad instalada relevante.",
-          "Red de comercialización y distribución nacional en canales mayoristas y minoristas.",
-          "Socio inversor de USD 5M destinado a capital de giro y optimización de líneas de proceso.",
-          "Retorno proyectado a 7 años respaldado por alta demanda de proteína animal.",
-          "Excelente conectividad logística en el nudo de rutas de Río Cuarto, Córdoba."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 5M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Ubicación",
-            "val": "Río Cuarto, Cba",
-            "color": "text-cyan"
-          },
-          {
-            "label": "ROI Estimado",
-            "val": "7 Años",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Socio Inversor",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Poultry & Food Processing",
-        "title": "Poultry Processing Plant + National Distribution (Avex)",
-        "location": "Río Cuarto, Córdoba, Argentina",
-        "statusLabel": "USD 5M — Equity Partner",
-        "description": "SENASA-certified poultry slaughter and processing facility with nationwide distribution channels. Seeking equity partner for operating capital and throughput reactivation.",
-        "thesis": "Attractive entry ticket (USD 5M) securing substantial tangible industrial assets and predictable cash flows with 7-year capital recovery.",
-        "highlights": [
-          "Modern processing facility fully licensed by SENASA.",
-          "Structured nationwide sales and refrigerated distribution network.",
-          "USD 5M equity ticket targeted for working capital expansion.",
-          "Solid 7-year projected ROI driven by steady protein market consumption.",
-          "Prime logistic junction in Río Cuarto, central Argentina."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 5M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Location",
-            "val": "Río Cuarto, Cba",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Est. ROI",
-            "val": "7 Years",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Equity Partner",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "mineria-diente-oro-verde",
-      "title": "Yacimiento de Oro 'Diente Oro Verde'",
-      "sector": "Minería",
-      "basePrice": 60000000,
-      "overpriceTarget": 3500000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_javier",
-      "ownerName": "Javier Ignacio Díaz",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Propiedad minera de oro a certificar bajo código internacional canadiense NI 43-101. Posee importantes estructuras de vetas hidrotermales con leyes superficiales y en profundidad de alto interés comercial.",
-      "modality": "Venta",
-      "roi": "Activo Minero",
-      "statusProgress": "Yacimiento aurífero a certificar bajo estándar internacional NI 43-101",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-mineria-diente-oro-verde",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "javier",
-      "amountDisplay": "USD 60M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Minería Metalífera — Oro",
-        "title": "Yacimiento de Oro 'Diente Oro Verde'",
-        "location": "San Luis, Argentina",
-        "statusLabel": "USD 60M — Venta",
-        "description": "Propiedad minera de oro a certificar bajo código internacional canadiense NI 43-101. Posee importantes estructuras de vetas hidrotermales con leyes superficiales y en profundidad de alto interés comercial.",
-        "thesis": "Oportunidad de adquisición directa de un yacimiento aurífero en una provincia con tradición minera, ideal para empresas junior o intermedias con capacidad de exploración y cubicación.",
-        "highlights": [
-          "Yacimiento de oro con estudios previos y listo para certificación técnica NI 43-101.",
-          "Estructuras mineralizadas continuas con potencial de explotación a cielo abierto y subterránea.",
-          "Provincia con facilidades logísticas, red vial pavimentada y energía cercana.",
-          "Venta del 100% de los derechos de explotación y mensura minera definitiva.",
-          "Alto apalancamiento ante el ciclo alcista internacional del precio del oro."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 60M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Mineral",
-            "val": "Oro (Au)",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Estándar",
-            "val": "A cert. NI 43-101",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Venta Total",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Precious Metals — Gold",
-        "title": "'Diente Oro Verde' Gold Deposit",
-        "location": "San Luis, Argentina",
-        "statusLabel": "USD 60M — Asset Sale",
-        "description": "High-potential gold deposit prepared for international technical certification under NI 43-101 standard. Contains extensive hydrothermal vein structures with attractive grades.",
-        "thesis": "Direct acquisition opportunity of a promising gold concession in a mining-friendly jurisdiction, perfectly positioned for junior or mid-tier exploration firms.",
-        "highlights": [
-          "Gold deposit ready for NI 43-101 technical report certification.",
-          "Continuous mineralized structures suitable for open-pit and underground methods.",
-          "Excellent regional infrastructure, paved access, and nearby grid power.",
-          "100% ownership sale of granted mining concessions and survey titles.",
-          "Direct exposure to the historic secular bull market in precious metals."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 60M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Commodity",
-            "val": "Gold (Au)",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Standard",
-            "val": "NI 43-101 Path",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "100% Asset Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "mineria-marmol-san-luis",
-      "title": "Canteras y Yacimiento de Mármol Ornamental",
-      "sector": "Minería",
-      "basePrice": 50000000,
-      "overpriceTarget": 3000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_javier",
-      "ownerName": "Javier Ignacio Díaz",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Depósitos masivos de mármoles y rocas de aplicación de altísima calidad estética para la industria de la construcción y revestimientos premium. Reservas cubicadas listas para corte y extracción en bloques.",
-      "modality": "Venta",
-      "roi": "Activo Minero",
-      "statusProgress": "Canteras con reservas cubicadas de roca de aplicación ornamental y bloques",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-mineria-marmol-san-luis",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "javier",
-      "amountDisplay": "USD 50M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Minería No Metalífera — Mármol",
-        "title": "Canteras y Yacimiento de Mármol Ornamental",
-        "location": "San Luis, Argentina",
-        "statusLabel": "USD 50M — Venta",
-        "description": "Depósitos masivos de mármoles y rocas de aplicación de altísima calidad estética para la industria de la construcción y revestimientos premium. Reservas cubicadas listas para corte y extracción en bloques.",
-        "thesis": "Monopolio natural de variedades de mármol cotizadas en mercados de exportación (Europa, Medio Oriente y EE.UU.) con bajo costo de extracción y alto margen operativo.",
-        "highlights": [
-          "Yacimiento de mármol y travertino con frentes de cantera explorados y habilitados.",
-          "Reservas masivas de bloques dimensionados para exportación y mercado interno.",
-          "Bajo costo de explotación a cielo abierto con tecnología de corte con hilo diamantado.",
-          "Títulos mineros consolidados sin litigios y permisos ambientales vigentes.",
-          "Venta total del complejo extractivo por USD 50M."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 50M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Mineral",
-            "val": "Mármol & Travertino",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Destino",
-            "val": "Exportación & Constr.",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Venta Directa",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Industrial Minerals — Marble",
-        "title": "Quarries & Ornamental Marble Deposit",
-        "location": "San Luis, Argentina",
-        "statusLabel": "USD 50M — Asset Sale",
-        "description": "Extensive marble and dimensional stone deposits of superior aesthetic quality for luxury architecture and export markets. Large measured reserves ready for block quarrying.",
-        "thesis": "Natural monopoly in prized marble varieties with competitive open-pit mining costs and high export margins to Europe and North America.",
-        "highlights": [
-          "Marble and travertine deposits with active and surveyed quarry faces.",
-          "Massive measured reserves of dimensioned blocks for premium architecture.",
-          "Cost-effective open-pit extraction using modern diamond-wire cutting.",
-          "Clear mineral tenure with active environmental and provincial permits.",
-          "Complete asset sale for USD 50M."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 50M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Commodity",
-            "val": "Marble & Stone",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Target",
-            "val": "Export & Luxury",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Direct Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "mineria-oro-san-juan",
-      "title": "Yacimiento de Oro en Producción Inicial (28 ton/día)",
-      "sector": "Minería",
-      "basePrice": 150000000,
-      "overpriceTarget": 8000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_javier",
-      "ownerName": "Javier Ignacio Díaz",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Mina de oro en producción operativa inicial a razón de 28 toneladas diarias procesadas. Convocatoria a socio inversor estratégico para inyectar entre USD 100M y USD 200M para escalamiento de planta y lixiviación.",
-      "modality": "Socio Inversor",
-      "roi": "En Producción",
-      "statusProgress": "Yacimiento en producción inicial (28 t/d) buscando capital para ampliación de planta",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-mineria-oro-san-juan",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "javier",
-      "amountDisplay": "USD 100M - 200M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Minería de Oro — Producción",
-        "title": "Yacimiento de Oro en Producción Inicial (28 ton/día)",
-        "location": "San Juan, Argentina",
-        "statusLabel": "USD 100M-200M — Socio Inversor",
-        "description": "Mina de oro en producción operativa inicial a razón de 28 toneladas diarias procesadas. Convocatoria a socio inversor estratégico para inyectar entre USD 100M y USD 200M para escalamiento de planta y lixiviación.",
-        "thesis": "Des-riesgo técnico comprobado al encontrarse ya en explotación activa en San Juan, la provincia minera por excelencia de Argentina. Rápido incremento de rentabilidad al multiplicar la escala.",
-        "highlights": [
-          "Operación aurífera activa con planta de procesamiento en marcha (28 ton/día).",
-          "San Juan: Jurisdicción líder en estabilidad legal e institucional para minería.",
-          "Estructuración de capital (USD 100M a 200M) para ampliación de capacidad de beneficio.",
-          "Flujo de caja positivo inmediato y reservas en expansión continua.",
-          "Modelo de socio inversor con participación societaria y derechos de offtake de oro."
-        ],
-        "metrics": [
-          {
-            "label": "Rango Inversión",
-            "val": "USD 100M - 200M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Producción Actual",
-            "val": "28 Ton / Día",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Provincia",
-            "val": "San Juan",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Socio Inversor",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Gold Mining — Operating",
-        "title": "Gold Mine in Initial Production (28 tons/day)",
-        "location": "San Juan, Argentina",
-        "statusLabel": "USD 100M-200M — Equity Partner",
-        "description": "Operating gold mine currently processing 28 tons/day. Seeking strategic equity partner to deploy USD 100M to 200M for plant expansion, milling, and leaching facilities.",
-        "thesis": "De-risked operating asset in San Juan, Argentina's leading mining jurisdiction. Substantial economies of scale upon processing capacity expansion.",
-        "highlights": [
-          "Active gold mining operation with processing plant handling 28 tons/day.",
-          "San Juan: Top-tier Argentine mining jurisdiction with solid legal backing.",
-          "Capital call of USD 100M-200M to multiply milling and leaching throughput.",
-          "Immediate positive operational cash flow with ongoing resource expansion.",
-          "Equity partnership model with gold off-take and board participation."
-        ],
-        "metrics": [
-          {
-            "label": "Investment Range",
-            "val": "USD 100M - 200M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Current Output",
-            "val": "28 Tons / Day",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Jurisdiction",
-            "val": "San Juan",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Equity Partner",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "mineria-litio-catamarca",
-      "title": "Yacimiento de Litio — Estudios de Exploración OK",
-      "sector": "Minería",
-      "basePrice": 11000000,
-      "overpriceTarget": 1000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_javier",
-      "ownerName": "Javier Ignacio Díaz",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Concesión minera de salmueras de litio en la puna de Catamarca (Triángulo del Litio). Campaña exploratoria inicial completada con éxito (geofísica y sondeos geoquímicos con excelentes relaciones Mg/Li).",
-      "modality": "Venta",
-      "roi": "Exploración OK",
-      "statusProgress": "Estudios de exploración geoquímica y geofísica concluidos con dictamen favorable",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-mineria-litio-catamarca",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "javier",
-      "amountDisplay": "USD 11M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Minería de Litio — Salmueras",
-        "title": "Yacimiento de Litio — Estudios de Exploración OK",
-        "location": "Catamarca, Argentina",
-        "statusLabel": "USD 11M — Venta",
-        "description": "Concesión minera de salmueras de litio en la puna de Catamarca (Triángulo del Litio). Campaña exploratoria inicial completada con éxito (geofísica y sondeos geoquímicos con excelentes relaciones Mg/Li).",
-        "thesis": "Entrada estratégica de bajo ticket (USD 11M) en un salar de alta ley, con saneamiento legal total y listo para perforación de pozos y estimación de recursos NI 43-101.",
-        "highlights": [
-          "Ubicación en el epicentro mundial de salmueras de litio en Catamarca.",
-          "Estudios de exploración geoeléctrica y muestreos hidroquímicos concluidos (OK).",
-          "Baja relación magnesio/litio favoreciendo procesos de precipitación química directa.",
-          "Título de propiedad minera perfecto y canon al día.",
-          "Venta total por USD 11M, ideal para fondos de recursos naturales o desarrolladores de baterías."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 11M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Mineral",
-            "val": "Litio (Li)",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Estado",
-            "val": "Exploración OK",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Venta Directa",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Critical Minerals — Lithium",
-        "title": "Lithium Brine Deposit — Exploration OK",
-        "location": "Catamarca, Argentina",
-        "statusLabel": "USD 11M — Asset Sale",
-        "description": "Lithium brine mining concession located in the Catamarca Puna within the global Lithium Triangle. Preliminary exploration campaign successfully completed with favorable Mg/Li ratios.",
-        "thesis": "Low-entry ticket (USD 11M) in a premium salar basin with clean legal status, ready for resource drilling and NI 43-101 resource estimation.",
-        "highlights": [
-          "Located in the world-class Catamarca lithium brine basin.",
-          "Geophysical and hydrogeochemical exploratory studies confirmed (OK).",
-          "Favorable magnesium-to-lithium ratio enabling low processing OPEX.",
-          "Clear legal title with mining cadastre fees in full standing.",
-          "100% asset sale for USD 11M, ideal for battery metal developers."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 11M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Commodity",
-            "val": "Lithium (Li)",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Stage",
-            "val": "Exploration OK",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Direct Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "refipampa-medanito",
-      "title": "Venta Refipampa y Yacimiento Medanito (500 Pozos)",
-      "sector": "Petróleo, Gas & Infraestructura",
-      "basePrice": 180000000,
-      "overpriceTarget": 10000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Operación downstream y upstream integrada: refinería Refipampa procesando 750 m³/día con expansión proyectada a 3.000 m³/día y yacimiento Medanito con 500 pozos en producción activa. Data Room listo para auditoría inmediata.",
-      "modality": "Venta",
-      "roi": "En Producción",
-      "statusProgress": "Refinería activa 750 m³/d (proy. 3.000 m³/d), 500 pozos en Medanito y Data Room listo",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-refipampa-medanito",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 180M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Petróleo & Refinación Integrada",
-        "title": "Venta Refipampa y Yacimiento Medanito (500 Pozos)",
-        "location": "La Pampa / Cuenca Neuquina, Argentina",
-        "statusLabel": "USD 180M — Venta Inmediata",
-        "description": "Operación downstream y upstream integrada: refinería Refipampa procesando 750 m³/día con expansión proyectada a 3.000 m³/día y yacimiento Medanito con 500 pozos en producción activa. Data Room listo para auditoría inmediata.",
-        "thesis": "Adquisición de un operador integrado con refinería propia, red de despacho y suministro asegurado de crudo liviano de Cuenca Neuquina por USD 180M.",
-        "highlights": [
-          "Refinería Refipampa operativa: 750 m³/día actual con proyecto a 3.000 m³/día.",
-          "Yacimiento Medanito: 500 pozos productores con reservas y concesión vigente.",
-          "Data Room completo y actualizado listo para Due Diligence de cierre rápido.",
-          "Cadena de valor integrada desde boca de pozo hasta expendio de combustibles.",
-          "Venta del paquete de control por USD 180M."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 180M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Refinería",
-            "val": "750 a 3.000 m³/d",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Pozos",
-            "val": "500 Activos",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Venta Total",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Integrated Oil & Refining",
-        "title": "Refipampa Refinery & Medanito Field Sale (500 Wells)",
-        "location": "La Pampa / Neuquina Basin, Argentina",
-        "statusLabel": "USD 180M — Immediate Sale",
-        "description": "Integrated upstream & downstream business: Refipampa refinery producing 750 m³/day with expansion plan to 3,000 m³/day, paired with Medanito field operating 500 producing wells. Complete Data Room ready for fast due diligence.",
-        "thesis": "Turnkey acquisition of an integrated domestic energy player with dedicated refining capacity, logistics network, and secure crude supply.",
-        "highlights": [
-          "Refipampa operating refinery: 750 m³/day with expansion pipeline to 3,000 m³/day.",
-          "Medanito oilfield: 500 active producing wells with established reserves.",
-          "Fully populated and audited virtual Data Room ready for rapid closing.",
-          "Integrated value chain from wellhead extraction to wholesale fuel delivery.",
-          "100% controlling interest sale for USD 180M."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 180M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Refinery",
-            "val": "750-3,000 m³/d",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Wells",
-            "val": "500 Active",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Direct Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "refinor-salta",
-      "title": "REFINOR — Complejo de Refinación y Poliductos NOA",
-      "sector": "Petróleo, Gas & Infraestructura",
-      "basePrice": 50000000,
-      "overpriceTarget": 3000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Refinería estratégica en Campo Durán, Salta, con capacidad de procesamiento de 4.000 m³ diarios de crudo y condensados. Red troncal de poliductos y estaciones de carga asociadas para abastecimiento del NOA.",
-      "modality": "Venta",
-      "roi": "En Producción",
-      "statusProgress": "Refinería activa en Campo Durán con capacidad de 4.000 m³/día y red de ductos",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-refinor-salta",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 50M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Downstream & Poliductos",
-        "title": "REFINOR — Complejo de Refinación y Poliductos NOA",
-        "location": "Campo Durán, Salta, Argentina",
-        "statusLabel": "USD 50M — Venta",
-        "description": "Refinería estratégica en Campo Durán, Salta, con capacidad de procesamiento de 4.000 m³ diarios de crudo y condensados. Red troncal de poliductos y estaciones de carga asociadas para abastecimiento del NOA.",
-        "thesis": "Adquisición a valuación de distress industrial (USD 50M) con gigantesca infraestructura instalada de destilación, ductos y logística regional insustituible.",
-        "highlights": [
-          "Capacidad instalada de refinación de 4.000 m³/día en el norte argentino.",
-          "Red troncal propia de poliductos para transporte de combustibles y GLP.",
-          "Posicionamiento estratégico en la frontera de gas y petróleo con Bolivia y Chile.",
-          "Facilidades de almacenamiento masivo y despacho multimodal.",
-          "Venta por USD 50M con enorme potencial de sinergia de crudos livianos."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 50M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Capacidad",
-            "val": "4.000 m³/Día",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Red",
-            "val": "Poliductos NOA",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Venta Directa",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Downstream & Pipelines",
-        "title": "REFINOR — Refinery & Pipeline Complex NOA",
-        "location": "Campo Durán, Salta, Argentina",
-        "statusLabel": "USD 50M — Asset Sale",
-        "description": "Strategic regional refinery in Campo Durán, Salta, with 4,000 m³/day processing capacity for crude and gas condensates. Features an extensive regional pipeline and fuel distribution network.",
-        "thesis": "Opportunity to acquire critical energy infrastructure in Northern Argentina at an attractive valuation (USD 50M) with irreplaceable transport assets.",
-        "highlights": [
-          "Refining capacity of 4,000 m³/day in northern Argentina.",
-          "Proprietary multi-product pipeline network for fuels and LPG.",
-          "Strategic cross-border logistical hub near Bolivia and Chile.",
-          "Extensive tank storage and multimodal rack distribution facilities.",
-          "Attractive asset sale for USD 50M with major synergy upside."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 50M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Capacity",
-            "val": "4,000 m³/Day",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Logistics",
-            "val": "NOA Pipelines",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Direct Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "salta-garrido-25areas",
-      "title": "Proyecto Salta - GARRIDO (25 Áreas de Explotación)",
-      "sector": "Petróleo, Gas & Infraestructura",
-      "basePrice": 1870000000,
-      "overpriceTarget": 50000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Magno proyecto petrolero y gasífero que comprende 25 áreas de concesión adjudicadas por 20 años con opción de renovación en Salta. Búsqueda de socio inversor para plan maestro de USD 1.870M, con esquemas flexibles de participación por áreas o UTE.",
-      "modality": "Socio Inversor",
-      "roi": "20 Años Concesión",
-      "statusProgress": "25 áreas hidrocarburíferas para explotación integral con concesión a 20 años renovable",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-salta-garrido-25areas",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 1.870M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Upstream Hidrocarburos — 25 Áreas",
-        "title": "Proyecto Salta - GARRIDO (25 Áreas de Explotación)",
-        "location": "Cuenca Noroeste, Salta, Argentina",
-        "statusLabel": "USD 1.870M — Socio Inversor / UTE",
-        "description": "Magno proyecto petrolero y gasífero que comprende 25 áreas de concesión adjudicadas por 20 años con opción de renovación en Salta. Búsqueda de socio inversor para plan maestro de USD 1.870M, con esquemas flexibles de participación por áreas o UTE.",
-        "thesis": "Consolidación de cuenca madura y bloques profundos con reservas de crudo liviano y gas natural, beneficiados por la reversión del Gasoducto Norte y exportaciones a Brasil.",
-        "highlights": [
-          "25 áreas de explotación hidrocarburífera con concesión legal a 20 años.",
-          "Estructura de participación societaria flexible o UTE compartida por bloques.",
-          "Reservas certificadas de crudo y gas con acceso a red troncal de transporte.",
-          "Reversión del Gasoducto Norte que abre mercado premium de exportación a Brasil.",
-          "Monto total de financiamiento: USD 1.870 Millones."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Total",
-            "val": "USD 1.870M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Concesiones",
-            "val": "25 Áreas",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Plazo",
-            "val": "20 Años Renov.",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Socio / UTE",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Upstream Oil & Gas — 25 Blocks",
-        "title": "Salta - GARRIDO Project (25 Exploitation Blocks)",
-        "location": "Northwest Basin, Salta, Argentina",
-        "statusLabel": "USD 1,870M — Equity / JV Partner",
-        "description": "Major hydrocarbon upstream development covering 25 licensed exploitation blocks for 20 renewable years in Salta. Seeking institutional partner for a USD 1.87B capex plan, open to block farm-outs or JV syndication.",
-        "thesis": "Large-scale basin consolidation with proven sweet crude and natural gas reserves, strategically aligned with the Northern Gas Pipeline reversal towards Brazilian markets.",
-        "highlights": [
-          "25 oil and gas concession blocks with secure 20-year renewable licenses.",
-          "Flexible corporate joint-venture models or shared block farm-ins.",
-          "Certified crude and gas reserves with direct pipeline interconnection.",
-          "Northern Pipeline reversal unlocking high-value export markets to Brazil.",
-          "Total project capex: USD 1,870 Million."
-        ],
-        "metrics": [
-          {
-            "label": "Total Ticket",
-            "val": "USD 1,870M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Concessions",
-            "val": "25 Blocks",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Term",
-            "val": "20 Yrs Renewable",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "JV / Farm-In",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "palermo-aike-chubut",
-      "title": "Desarrollo No Convencional Palermo Aike Chubut",
-      "sector": "Petróleo, Gas & Infraestructura",
-      "basePrice": 200000000,
-      "overpriceTarget": 10000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Proyecto exploratorio y de desarrollo no convencional en la formación Palermo Aike, considerada la segunda mayor reserva de shale de Argentina después de Vaca Muerta. Presentado oficialmente por la provincia de Chubut.",
-      "modality": "Socio Inversor",
-      "roi": "Plan No Convencional",
-      "statusProgress": "Proyecto oficial integral presentado por Chubut para exploración no convencional",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-palermo-aike-chubut",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "A Estructurar con Socio",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Shale Oil & Gas — Palermo Aike",
-        "title": "Desarrollo No Convencional Palermo Aike Chubut",
-        "location": "Chubut / Cuenca Austral, Argentina",
-        "statusLabel": "Socio Inversor — Plan Integral",
-        "description": "Proyecto exploratorio y de desarrollo no convencional en la formación Palermo Aike, considerada la segunda mayor reserva de shale de Argentina después de Vaca Muerta. Presentado oficialmente por la provincia de Chubut.",
-        "thesis": "Oportunidad pionera de ingresar en la frontera no convencional de la Patagonia sur con beneficios tributarios provinciales y elegibilidad para el régimen RIGI.",
-        "highlights": [
-          "Segunda roca generadora no convencional de mayor volumen de Argentina.",
-          "Proyecto integral con respaldo institucional de la Gobernación de Chubut.",
-          "Búsqueda de operadoras y consorcios inversores para pozos exploratorios horizontales.",
-          "Infraestructura portuaria y de evacuación en el Atlántico Sur.",
-          "Elegible para incentivos RIGI de libre disponibilidad de divisas."
-        ],
-        "metrics": [
-          {
-            "label": "Formación",
-            "val": "Palermo Aike",
-            "color": "text-gold"
-          },
-          {
-            "label": "Recurso",
-            "val": "Shale Oil & Gas",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Provincia",
-            "val": "Chubut",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Socio Inversor",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Shale Play — Palermo Aike",
-        "title": "Palermo Aike Unconventional Play Chubut",
-        "location": "Chubut / Austral Basin, Argentina",
-        "statusLabel": "Equity Partner — Master Plan",
-        "description": "Unconventional exploration and development play targeting the Palermo Aike shale formation, recognized as Argentina's second-largest shale deposit after Vaca Muerta. Officially sponsored by Chubut Province.",
-        "thesis": "Pioneering entry into Argentina's newest shale frontier with strong provincial incentives and full RIGI federal investment eligibility.",
-        "highlights": [
-          "Second-largest unconventional shale resource in Argentina.",
-          "Comprehensive development package sponsored by the Chubut Government.",
-          "Seeking operating and financial partners for horizontal drilling campaign.",
-          "Proximity to deepwater Atlantic export terminals.",
-          "Eligible for RIGI FX deregulation and tax stability benefits."
-        ],
-        "metrics": [
-          {
-            "label": "Formation",
-            "val": "Palermo Aike",
-            "color": "text-gold"
-          },
-          {
-            "label": "Resource",
-            "val": "Shale Oil & Gas",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Province",
-            "val": "Chubut",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Equity Partner",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "vacamuerta-3refinerias-puerto",
-      "title": "Paquete 3 Refinerías en Vaca Muerta + Puerto de Aguas Profundas",
-      "sector": "Petróleo, Gas & Infraestructura",
-      "basePrice": 350000000,
-      "overpriceTarget": 15000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Excepcional paquete accionario que incluye 3 unidades de negocio de refinación especializadas en Vaca Muerta y terminal marítima de aguas profundas con título de propiedad en Puerto Galván, Bahía Blanca. Reactivación llave en mano a 6 meses.",
-      "modality": "Venta Llave en Mano",
-      "roi": "Reactivación 6 Meses",
-      "statusProgress": "3 refinerías y Puerto Galván con título propio; puesta a punto a 6 meses",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-vacamuerta-3refinerias-puerto",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 350M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Infraestructura & Refinación Vaca Muerta",
-        "title": "Paquete 3 Refinerías en Vaca Muerta + Puerto de Aguas Profundas",
-        "location": "Cuenca Neuquina & Puerto Galván (Bahía Blanca), Argentina",
-        "statusLabel": "USD 350M — Venta Llave en Mano",
-        "description": "Excepcional paquete accionario que incluye 3 unidades de negocio de refinación especializadas en Vaca Muerta y terminal marítima de aguas profundas con título de propiedad en Puerto Galván, Bahía Blanca. Reactivación llave en mano a 6 meses.",
-        "thesis": "Infraestructura estratégica de downstream y biocombustibles acoplada a logística portuaria privada de aguas profundas, eliminando cuellos de botella en la exportación de crudo.",
-        "highlights": [
-          "Refinería 1: Tratamiento de crudos livianos (1.400 m³/día; almacenaje 22.000 m³).",
-          "Refinería 2: Refinación de naftas, hidrotratamiento e isomerización (1.040 m³/día; almacenaje 8.000 m³).",
-          "Refinería 3: Producción de biocombustibles (130 ton/día; almacenaje 2.000 ton).",
-          "Puerto Galván: Con título de propiedad privado en Bahía Blanca con muelle de aguas profundas.",
-          "Modalidad llave en mano con 6 meses para reactivación total y acompañamiento estratégico por USD 350M."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 350M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Refinerías",
-            "val": "3 Complejos",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Puerto",
-            "val": "Propiedad Galván",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Llave en Mano",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Refining & Deepwater Port Hub",
-        "title": "3 Vaca Muerta Refineries + Deepwater Port Complex",
-        "location": "Neuquina Basin & Puerto Galván (Bahía Blanca), Argentina",
-        "statusLabel": "USD 350M — Turnkey Asset Sale",
-        "description": "Strategic equity package comprising 3 specialized refining business units in Vaca Muerta plus a private deepwater ocean terminal with freehold title in Puerto Galván, Bahía Blanca. Turnkey restart within 6 months.",
-        "thesis": "Unmatched combination of midstream refining and private oceanfront port infrastructure debottlenecking export logistics for Vaca Muerta crude.",
-        "highlights": [
-          "Refinery 1: Light crude processing (1,400 m³/day; 22,000 m³ storage capacity).",
-          "Refinery 2: Hydrotreating, reforming, and isomerization (1,040 m³/day; 8,000 m³ storage).",
-          "Refinery 3: Biofuel manufacturing unit (130 tons/day; 2,000 tons storage).",
-          "Deepwater Ocean Terminal: Freehold title in Puerto Galván, Bahía Blanca port.",
-          "Turnkey delivery within 6 months with full engineering transition for USD 350M."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 350M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Refineries",
-            "val": "3 Units",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Deepwater Port",
-            "val": "Freehold Title",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Turnkey Sale",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "vacamuerta-operadora-15concesiones",
-      "title": "Operadora de Pozos Petroleros en Vaca Muerta (15 Concesiones)",
-      "sector": "Petróleo, Gas & Infraestructura",
-      "basePrice": 340000000,
-      "overpriceTarget": 15000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Compañía operadora en marcha con 15 concesiones de explotación activas sobre una superficie de 3.000 km² en la Cuenca Neuquina. Bloque de 1.200 pozos y más de 500 empleados. Plan llave en mano de mejora con tecnología No Convencional.",
-      "modality": "Socio Inversor",
-      "roi": "En Producción",
-      "statusProgress": "15 concesiones en 3.000 km², ~1.200 pozos, >500 empleados; inversión llave en mano",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-vacamuerta-operadora-15concesiones",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 340M",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Upstream Operadora — Vaca Muerta",
-        "title": "Operadora de Pozos Petroleros en Vaca Muerta (15 Concesiones)",
-        "location": "Cuenca Neuquina, Neuquén, Argentina",
-        "statusLabel": "USD 340M — Socio Inversor",
-        "description": "Compañía operadora en marcha con 15 concesiones de explotación activas sobre una superficie de 3.000 km² en la Cuenca Neuquina. Bloque de 1.200 pozos y más de 500 empleados. Plan llave en mano de mejora con tecnología No Convencional.",
-        "thesis": "Empresa petrolera consolidada a escala corporativa con formidable masa crítica de pozos para reactivación y estimulación horizontal en tight y shale.",
-        "highlights": [
-          "15 concesiones de explotación hidrocarburífera en 3.000 km² de Cuenca Neuquina.",
-          "Parque activo de aproximadamente 1.200 pozos en producción con base operativa propia.",
-          "Estructura corporativa sólida con más de 500 colaboradores técnicos y operarios.",
-          "Inversión de USD 340M estructurada para plan llave en mano con técnica No Convencional.",
-          "Socio inversor con participación de control o co-gestión ejecutiva."
-        ],
-        "metrics": [
-          {
-            "label": "Inversión Final",
-            "val": "USD 340M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Superficie",
-            "val": "3.000 km²",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Pozos",
-            "val": "1.200 Pozos",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Socio Inversor",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Upstream Operator — Vaca Muerta",
-        "title": "Oilfield Operator in Vaca Muerta (15 Concessions)",
-        "location": "Neuquina Basin, Neuquén, Argentina",
-        "statusLabel": "USD 340M — Equity Partner",
-        "description": "Fully established independent oil & gas operator holding 15 exploitation licenses across 3,000 km² in the prolific Neuquina Basin. ~1,200 active wells and >500 staff. Turnkey unconventional well enhancement plan.",
-        "thesis": "Corporate-scale platform company with massive well stock and extensive acreage ready for high-yield unconventional workover and horizontal re-stimulation.",
-        "highlights": [
-          "15 exploitation licenses covering 3,000 km² in prime Vaca Muerta play.",
-          "Operational base managing approximately 1,200 active producing wells.",
-          "Experienced workforce with more than 500 skilled petroleum engineers and crew.",
-          "Turnkey capital plan of USD 340M deploying unconventional stimulation.",
-          "Equity partnership with shared governance or controlling stake."
-        ],
-        "metrics": [
-          {
-            "label": "Final Ticket",
-            "val": "USD 340M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Acreage",
-            "val": "3,000 km²",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Well Stock",
-            "val": "1,200 Wells",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Equity Partner",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pozo-salta",
-      "title": "Proyecto Pozo Salta — Infraestructura & Secado de Cuttings",
-      "sector": "Petróleo, Gas & Infraestructura",
-      "basePrice": 15000000,
-      "overpriceTarget": 1000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Centro logístico y ambiental para tratamiento térmico y disposición de lodos y recortes de perforación (cuttings) con certificación ambiental en el NOA.",
-      "modality": "Infraestructura & Servicios",
-      "roi": "3 Años",
-      "statusProgress": "Planta de tratamiento y secado de cuttings en zona hidrocarburífera de Salta",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-pozo-salta",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 15M CAPEX",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Servicios Petroleros & Cuttings",
-        "title": "Proyecto Pozo Salta — Infraestructura & Secado de Cuttings",
-        "location": "Cuenca Noroeste, Salta, Argentina",
-        "statusLabel": "USD 15M CAPEX",
-        "description": "Centro logístico y ambiental para tratamiento térmico y disposición de lodos y recortes de perforación (cuttings) con certificación ambiental en el NOA.",
-        "thesis": "Servicio ambiental mandatorio para operadoras con tarifas indexadas y alta tasa de utilización de planta.",
-        "highlights": [
-          "USD 15M CAPEX con recupero a 3 años.",
-          "Capacidad para 500 m³ diarios de cuttings.",
-          "Contratos vigentes de servicio ambiental.",
-          "Normativa ambiental estricta que asegura demanda inelástica.",
-          "Ubicación en nudo neurálgico de perforación."
-        ],
-        "metrics": [
-          {
-            "label": "CAPEX Requerido",
-            "val": "USD 15M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Capacidad",
-            "val": "500 m³/día",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Recupero",
-            "val": "3 Años",
-            "color": "text-green"
-          },
-          {
-            "label": "Servicio",
-            "val": "Mandatorio",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Oilfield Environmental Services",
-        "title": "Pozo Salta Project — Cuttings Drying & Treatment",
-        "location": "Northwest Basin, Salta, Argentina",
-        "statusLabel": "USD 15M CAPEX",
-        "description": "Environmental and logistics hub for thermal treatment and recycling of drilling muds and cuttings serving Northwest Argentina oilfields.",
-        "thesis": "Mandatory compliance service with recurring dollar-linked contracts and strong EBITDA margins.",
-        "highlights": [
-          "USD 15M CAPEX with 3-year payback.",
-          "Processing capacity of 500 m³/day.",
-          "Active long-term environmental service agreements.",
-          "Inelastic demand driven by strict environmental regulations.",
-          "Prime geographical hub near drilling clusters."
-        ],
-        "metrics": [
-          {
-            "label": "Required CAPEX",
-            "val": "USD 15M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Throughput",
-            "val": "500 m³/day",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Payback",
-            "val": "3 Years",
-            "color": "text-green"
-          },
-          {
-            "label": "Compliance",
-            "val": "Mandatory",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "asesoramiento-inbound-funds",
-      "title": "Gestión y Administración Integral de Grupos Inversores",
-      "sector": "Asesoramiento Financiero",
-      "basePrice": 0,
-      "overpriceTarget": 0,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Acompañamiento integral para grupos inversores y fondos internacionales (FDI) que buscan estructurar y desplegar capital en activos estratégicos de la economía real argentina.",
-      "modality": "Asset Management & Advisory",
-      "roi": "Continuo",
-      "statusProgress": "Servicio institucional integral con equipo multidisciplinario y cartelera curada",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-asesoramiento-inbound-funds",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "Mandato Institucional",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Banca de Inversión & Mandatos",
-        "title": "Gestión y Administración Integral de Grupos Inversores",
-        "location": "Buenos Aires / Córdoba / Global",
-        "statusLabel": "Servicio Institucional",
-        "description": "Acompañamiento integral para grupos inversores y fondos internacionales (FDI) que buscan estructurar y desplegar capital en activos estratégicos de la economía real argentina.",
-        "thesis": "Plataforma de aterrizaje seguro ('soft landing') que minimiza la fricción regulatoria, cambiaria y legal, asegurando la selección de proyectos con estricto estándar de debida diligencia.",
-        "highlights": [
-          "Cartelera activa de oportunidades de inversión auditadas y de alto rendimiento.",
-          "Estructuración de vehículos societarios locales, cuentas fiduciarias y compliance cambiario.",
-          "Equipo multidisciplinario: analistas financieros, ingenieros, abogados y escribanos.",
-          "Gobierno corporativo y seguimiento de avance de proyectos en tiempo real.",
-          "Asignación de consultor dedicado para interlocución con juntas directivas."
-        ],
-        "metrics": [
-          {
-            "label": "Servicio",
-            "val": "Gestión Integral",
-            "color": "text-gold"
-          },
-          {
-            "label": "Alcance",
-            "val": "Fondos Extranjeros",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Equipo",
-            "val": "Multidisciplinario",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Mandato Privado",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Investment Banking & Advisory",
-        "title": "Comprehensive Asset Management for Investment Groups",
-        "location": "Buenos Aires / Córdoba / Global",
-        "statusLabel": "Institutional Service",
-        "description": "End-to-end advisory and management services for international private equity and foreign direct investment (FDI) groups allocating capital into real Argentine assets.",
-        "thesis": "Turnkey soft-landing platform mitigating regulatory, FX, and legal complexity while delivering rigorously vetted investment-grade deals.",
-        "highlights": [
-          "Curated pipeline of audited, high-yield investment proposals across key sectors.",
-          "Corporate vehicle structuring, fiduciary escrow administration, and FX compliance.",
-          "Multidisciplinary team of financial modelers, engineers, and legal counsels.",
-          "Corporate governance and real-time project milestone tracking.",
-          "Dedicated partner assignment for board-level liaison."
-        ],
-        "metrics": [
-          {
-            "label": "Service",
-            "val": "Asset Management",
-            "color": "text-gold"
-          },
-          {
-            "label": "Scope",
-            "val": "Foreign Funds",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Team",
-            "val": "Multidisciplinary",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Private Mandate",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "asesoramiento-gobiernos",
-      "title": "Financiamiento de Proyectos Gubernamentales e Infraestructura",
-      "sector": "Asesoramiento Financiero",
-      "basePrice": 0,
-      "overpriceTarget": 0,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Diseño y estructuración de instrumentos de financiamiento para estados provinciales, municipios y entes autárquicos destinados a infraestructura energética, vial, hídrica y de transporte.",
-      "modality": "Estructuración Financiera",
-      "roi": "Estructural",
-      "statusProgress": "Asesoría para entes públicos, provincias y municipios bajo marco RIGI / PPP",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-asesoramiento-gobiernos",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "Estructuración a Medida",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Finanzas Públicas & Infraestructura",
-        "title": "Financiamiento de Proyectos Gubernamentales e Infraestructura",
-        "location": "Nación, Provincias y Municipios, Argentina",
-        "statusLabel": "Advisory Estructurado",
-        "description": "Diseño y estructuración de instrumentos de financiamiento para estados provinciales, municipios y entes autárquicos destinados a infraestructura energética, vial, hídrica y de transporte.",
-        "thesis": "Monetización y apalancamiento de fondos públicos mediante bonos verdes, fideicomisos de garantía y esquemas PPP/RIGI para viabilizar obras de gran porte sin comprometer el balance fiscal.",
-        "highlights": [
-          "Estructuración de bonos verdes, títulos de deuda y fideicomisos de obra pública.",
-          "Adecuación y estructuración de proyectos estratégicos al Régimen RIGI (Ley 27.742).",
-          "Modelos de asociación público-privada (PPP) con repago por tarifas o peajes.",
-          "Dictámenes de viabilidad económica, fiscal y financiera auditables.",
-          "Vínculo con organismos multilaterales de crédito y bancos de desarrollo."
-        ],
-        "metrics": [
-          {
-            "label": "Servicio",
-            "val": "Finanzas Públicas",
-            "color": "text-gold"
-          },
-          {
-            "label": "Instrumentos",
-            "val": "Bonos & Fideicomisos",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Marco",
-            "val": "RIGI / PPP",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Estructuración",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Public Finance & Infrastructure",
-        "title": "Government Project Financing & Infrastructure Advisory",
-        "location": "Federal, Provincial & Municipal, Argentina",
-        "statusLabel": "Structured Advisory",
-        "description": "Design and structuring of financing instruments for provincial governments, municipalities, and state utilities targeting energy, road, water, and transport infrastructure.",
-        "thesis": "Public balance-sheet optimization via green bonds, infrastructure trusts, and PPP/RIGI mechanisms to fund large-scale developments.",
-        "highlights": [
-          "Green bond issuances, debt certificates, and public infrastructure trust funds.",
-          "Project alignment with the federal RIGI framework (Law 27,742).",
-          "Public-Private Partnership (PPP) modeling with user-toll or availability fee repayment.",
-          "Auditable economic and fiscal feasibility appraisals.",
-          "Direct structuring liaison with multilateral development banks."
-        ],
-        "metrics": [
-          {
-            "label": "Service",
-            "val": "Public Finance",
-            "color": "text-gold"
-          },
-          {
-            "label": "Instruments",
-            "val": "Bonds & Trusts",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Framework",
-            "val": "RIGI / PPP",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Financial Advisory",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "asesoramiento-real-estate",
-      "title": "Gestión de Proyectos de Bienes Raíces & Construcción",
-      "sector": "Asesoramiento Financiero",
-      "basePrice": 0,
-      "overpriceTarget": 0,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Estructuración integral de vehículos de inversión inmobiliaria de renta corporativa (REITs), parques industriales, loteos turísticos y naves logísticas 'triple A' con flujos dolarizados.",
-      "modality": "Desarrollo & Advisory",
-      "roi": "Renta / Plusvalía",
-      "statusProgress": "Vehículos fiduciarios, parques logísticos, loteos y fondos REIT dolarizados",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-asesoramiento-real-estate",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "Desarrollo Fiduciario",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Bienes Raíces & REITs",
-        "title": "Gestión de Proyectos de Bienes Raíces & Construcción",
-        "location": "Polos Corporativos e Industriales, Argentina",
-        "statusLabel": "Estructuración Fiduciaria",
-        "description": "Estructuración integral de vehículos de inversión inmobiliaria de renta corporativa (REITs), parques industriales, loteos turísticos y naves logísticas 'triple A' con flujos dolarizados.",
-        "thesis": "Protección patrimonial y rentabilidad en USD mediante el apalancamiento de activos de tierra estratégicos desarrollados bajo contratos fiduciarios de estricta segregación patrimonial.",
-        "highlights": [
-          "Vehículos fiduciarios de inversión inmobiliaria (REITs) transparentes y dolarizados.",
-          "Desarrollo de naves industriales, centros de distribución y polos logísticos.",
-          "Modelado financiero de flujos de fondos, absorción comercial y retorno al inversor.",
-          "Segregación patrimonial y seguridad jurídica respaldada en el CCCN (Ley 26.994).",
-          "Comercialización de unidades de renta corporativa con inquilinos multinacionales."
-        ],
-        "metrics": [
-          {
-            "label": "Servicio",
-            "val": "Real Estate Advisory",
-            "color": "text-gold"
-          },
-          {
-            "label": "Activos",
-            "val": "Logística & Hotelería",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Moneda",
-            "val": "Flujos USD",
-            "color": "text-green"
-          },
-          {
-            "label": "Modalidad",
-            "val": "Estructuración",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Real Estate & REIT Structuring",
-        "title": "Real Estate & Construction Project Management",
-        "location": "Corporate & Industrial Hubs, Argentina",
-        "statusLabel": "Fiduciary Advisory",
-        "description": "Comprehensive design and administration of commercial real estate investment trusts (REITs), industrial logistics parks, master-planned residential communities, and prime yield assets.",
-        "thesis": "Wealth preservation and inflation-hedged USD cash yields leveraging prime land assets governed by bankruptcy-remote fiduciary trust contracts.",
-        "highlights": [
-          "USD-denominated transparent Real Estate Investment Trust (REIT) structures.",
-          "Development of prime industrial warehouses, logistics parks, and lifestyle communities.",
-          "Quantitative discounted cash flow modeling, absorption metrics, and IRR targets.",
-          "Strict legal asset ring-fencing under Argentine Civil and Commercial Code (Law 26,994).",
-          "Commercial leasing to multinational corporate tenants."
-        ],
-        "metrics": [
-          {
-            "label": "Service",
-            "val": "REIT & RE Advisory",
-            "color": "text-gold"
-          },
-          {
-            "label": "Asset Class",
-            "val": "Industrial / Yield",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Currency",
-            "val": "USD Yield",
-            "color": "text-green"
-          },
-          {
-            "label": "Deal Type",
-            "val": "Fiduciary Vehicle",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "reit-strategy",
-      "title": "ENERGY CPY Argentina REIT Investment Strategy 2026",
-      "sector": "Real Estate / REIT",
-      "basePrice": 30000000,
-      "overpriceTarget": 1500000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Estrategia fiduciaria de inversión inmobiliaria de renta corporativa dolarizada (REIT) enfocada en oficinas premium y centros logísticos con contratos a largo plazo.",
-      "modality": "Fondo Inmobiliario",
-      "roi": "12% Anual USD",
-      "statusProgress": "Estrategia REIT dolarizada en activos triple A",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-reit-strategy",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 30M Fondo",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Fondo Inmobiliario REIT",
-        "title": "ENERGY CPY Argentina REIT Investment Strategy 2026",
-        "location": "CABA & Corredor Norte, Argentina",
-        "statusLabel": "USD 30M — Fondo Dolarizado",
-        "description": "Estrategia fiduciaria de inversión inmobiliaria de renta corporativa dolarizada (REIT) enfocada en oficinas premium y centros logísticos con contratos a largo plazo.",
-        "thesis": "Renta neta distribuible del 10% al 12% anual en USD combinada con plusvalía de capital en activos irreemplazables.",
-        "highlights": [
-          "Portafolio diversificado en activos inmobiliarios clase A+.",
-          "Contratos de alquiler corporativo dolarizados a 5-10 años.",
-          "Rendimiento anual neto proyectado del 10% al 12% en USD.",
-          "Vehículo fiduciario independiente con estricto gobierno corporativo.",
-          "Ticket de ingreso estructurado para inversores institucionales y privados."
-        ],
-        "metrics": [
-          {
-            "label": "Fondo Objetivo",
-            "val": "USD 30M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Rendimiento",
-            "val": "10% - 12% USD",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Contratos",
-            "val": "5 - 10 Años",
-            "color": "text-green"
-          },
-          {
-            "label": "Tipo",
-            "val": "REIT Dolarizado",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Real Estate Investment Trust",
-        "title": "ENERGY CPY Argentina REIT Investment Strategy 2026",
-        "location": "Buenos Aires Prime Corridor, Argentina",
-        "statusLabel": "USD 30M — USD Fund",
-        "description": "Fiduciary corporate yield real estate investment strategy (REIT) focused on prime offices and modern logistics hubs backed by long-term corporate leases.",
-        "thesis": "Targeted net annual yield of 10% to 12% in USD combined with capital appreciation in trophy commercial assets.",
-        "highlights": [
-          "Diversified portfolio in prime Class A+ real estate.",
-          "Long-term USD-indexed commercial leases (5-10 years).",
-          "Projected net annual distribution of 10% to 12% in USD.",
-          "Ring-fenced bankruptcy-remote trust with institutional governance.",
-          "Structured entry tickets for qualified private and institutional capital."
-        ],
-        "metrics": [
-          {
-            "label": "Target Fund",
-            "val": "USD 30M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Yield",
-            "val": "10% - 12% USD",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Lease Term",
-            "val": "5 - 10 Years",
-            "color": "text-green"
-          },
-          {
-            "label": "Asset Type",
-            "val": "USD REIT",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pesca-gran-escala",
-      "title": "Proyecto 6.6 — Pesca Industrial de Gran Escala en Patagonia",
-      "sector": "Pesca Industrial",
-      "basePrice": 260000000,
-      "overpriceTarget": 12000000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Modelo consolidado de alta rentabilidad para captura y exportación de especies marinas premium (Merluza Hubbsi y Langostino Rojo) con flota activa de 16 buques de gran calado y planta de congelado propia.",
-      "modality": "Flota & Industria",
-      "roi": "4 Años",
-      "statusProgress": "Flota activa de 16 buques en ZEE y planta de congelado en tierra",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-pesca-gran-escala",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 260M CAPEX",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Pesca Industrial Gran Escala",
-        "title": "Proyecto 6.6 — Pesca Industrial de Gran Escala en Patagonia",
-        "location": "Zona Económica Exclusiva (ZEE) Argentina",
-        "statusLabel": "USD 260M CAPEX",
-        "description": "Modelo consolidado de alta rentabilidad para captura y exportación de especies marinas premium (Merluza Hubbsi y Langostino Rojo) con flota activa de 16 buques de gran calado y planta de congelado propia.",
-        "thesis": "Activo estratégico con derechos consolidados de captura en aguas argentinas generando ingresos brutos proyectados de USD 600M anuales.",
-        "highlights": [
-          "USD 260 Millones en CAPEX requerido para operación de gran escala.",
-          "USD 600 Millones/año en ingresos brutos proyectados por capturas.",
-          "Flota activa de 16 buques altamente equipados para aguas patagónicas.",
-          "Planta terrestre propia de procesado, empaque y congelado rápido.",
-          "Track record comprobado con más de 25 años de operabilidad exitosa."
-        ],
-        "metrics": [
-          {
-            "label": "CAPEX Requerido",
-            "val": "USD 260M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Ingresos Proy.",
-            "val": "USD 600M/año",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Flota Activa",
-            "val": "16 Buques",
-            "color": "text-green"
-          },
-          {
-            "label": "Mercado",
-            "val": "Exportación 100%",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Industrial High-Seas Fishing",
-        "title": "Project 6.6 — Large-Scale Industrial Fishing in Patagonia",
-        "location": "Exclusive Economic Zone (EEZ) Argentina",
-        "statusLabel": "USD 260M CAPEX",
-        "description": "Established high-yield marine capture and processing enterprise targeting prime species (Argentine Hake and Red Shrimp) with an active fleet of 16 deep-sea vessels and onshore freezing facility.",
-        "thesis": "Secured fishing quotas in Argentine South Atlantic waters delivering USD 600M/yr in projected gross export revenues.",
-        "highlights": [
-          "USD 260M CAPEX deployment for massive industrial scale.",
-          "USD 600M/year projected gross revenues from high-value seafood.",
-          "Active operational fleet of 16 deep-sea trawlers and jiggers.",
-          "Proprietary onshore quick-freeze and processing facility.",
-          "Over 25-year successful operating track record."
-        ],
-        "metrics": [
-          {
-            "label": "Required CAPEX",
-            "val": "USD 260M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Projected Rev.",
-            "val": "USD 600M/yr",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Active Fleet",
-            "val": "16 Vessels",
-            "color": "text-green"
-          },
-          {
-            "label": "Target Market",
-            "val": "100% Export",
-            "color": "text-gold"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pesca-integrado",
-      "title": "Proyecto 6.7 — Ecosistema Pesquero Integrado Patagonia",
-      "sector": "Pesca Industrial",
-      "basePrice": 5500000,
-      "overpriceTarget": 500000,
-      "currency": "USD",
-      "status": "activo",
-      "ownerId": "user_daniel",
-      "ownerName": "Daniel González",
-      "ownerType": "mandatario_exclusivo",
-      "description": "Desarrollo boutique modular que integra buques tangoneros costeros, procesamiento en planta y logística de frío para exportación directa a mercados asiáticos y europeos.",
-      "modality": "Operación Boutique",
-      "roi": "3 Años",
-      "statusProgress": "Ecosistema pesquero integrado en Patagonia",
-      "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-pesca-integrado",
-      "createdAt": "2026-10-21",
-      "assignedAgent": "daniel",
-      "amountDisplay": "USD 5.5M CAPEX",
-      "isPrivatePlacement": false,
-      "es": {
-        "categoryTag": "Pesca Industrial & Logística",
-        "title": "Proyecto 6.7 — Ecosistema Pesquero Integrado Patagonia",
-        "location": "Puerto Madryn & Rawson, Chubut, Argentina",
-        "statusLabel": "USD 5.5M CAPEX",
-        "description": "Desarrollo boutique modular que integra buques tangoneros costeros, procesamiento en planta y logística de frío para exportación directa a mercados asiáticos y europeos.",
-        "thesis": "Alta rentabilidad operativa con bajo ticket de ingreso y ciclo de caja ágil basado en la captura del codiciado Langostino Patagónico.",
-        "highlights": [
-          "USD 5.5 Millones en CAPEX para puesta a punto y escalamiento.",
-          "Enfocado en Langostino Salvaje de alto valor comercial.",
-          "Contratos cerrados de exportación FOB Puerto Madryn.",
-          "Estructura ágil con rápida rotación de capital de trabajo.",
-          "Retorno proyectado de la inversión en 3 años."
-        ],
-        "metrics": [
-          {
-            "label": "CAPEX Requerido",
-            "val": "USD 5.5M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Producto",
-            "val": "Langostino Salvaje",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Recupero",
-            "val": "3 Años",
-            "color": "text-green"
-          },
-          {
-            "label": "Destino",
-            "val": "Europa / Asia",
-            "color": "text-gold"
-          }
-        ]
-      },
-      "en": {
-        "categoryTag": "Integrated Fishery & Cold Chain",
-        "title": "Project 6.7 — Integrated Fishery Ecosystem Patagonia",
-        "location": "Puerto Madryn & Rawson, Chubut, Argentina",
-        "statusLabel": "USD 5.5M CAPEX",
-        "description": "Modular boutique fishery combining coastal outrigger vessels, onshore rapid processing, and cold-chain logistics for direct export to Asian and European distributors.",
-        "thesis": "High operating margin with accessible ticket size targeting wild-caught Argentine Red Shrimp.",
-        "highlights": [
-          "USD 5.5 Million CAPEX required for fleet upgrade and scaling.",
-          "Focus on wild Patagonian Red Shrimp with strong export pricing.",
-          "Secured FOB supply contracts from Puerto Madryn.",
-          "Lean operating model with rapid working capital turnover.",
-          "3-year estimated capital payback."
-        ],
-        "metrics": [
-          {
-            "label": "Required CAPEX",
-            "val": "USD 5.5M",
-            "color": "text-gold"
-          },
-          {
-            "label": "Primary Target",
-            "val": "Wild Red Shrimp",
-            "color": "text-cyan"
-          },
-          {
-            "label": "Payback",
-            "val": "3 Years",
-            "color": "text-green"
-          },
-          {
-            "label": "Destination",
-            "val": "Europe / Asia",
-            "color": "text-gold"
-          }
-        ]
+    "en": {
+      "categoryTag": "Solar PV Energy",
+      "title": "Sol de los Cuatro Vientos 300 MW Solar Park",
+      "location": "Mendoza, Argentina",
+      "statusLabel": "USD 300M — Equity Partner",
+      "description": "Large-scale utility solar PV development (300 MW) located in Mendoza's premier solar irradiance belt. Designed for long-term USD-indexed PPAs under the MATER / CAMMESA framework.",
+      "thesis": "World-class capacity factor, high-voltage grid interconnection in advanced permitting, and strategic co-equity structure for institutional investors.",
+      "highlights": [
+        "300 MW nominal capacity in Cuyo's premier solar corridor.",
+        "USD-denominated 15-20 year PPA structure (MATER / CAMMESA).",
+        "Equity partnership model with attractive risk-adjusted IRR.",
+        "Interconnection priority and advanced environmental clearance.",
+        "Eligible for RIGI investment incentive regime."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 300M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Nominal Power",
+          "val": "300 MW",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Estimated ROI",
+          "val": "7 Years",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Equity Partner",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "High demand for private corporate PPAs (MATER) driven by industrial decarbonization and utility tariff normalization in Argentina. Cuyo grid node offers peak solar irradiance.",
+        "intl": "Expanding institutional capital allocation towards utility-scale solar assets in emerging markets under long-term USD contracts and tax stability frameworks."
       }
     }
+  },
+  {
+    "id": "solar-vaca-muerta",
+    "title": "Parque Solar 30 MW Vaca Muerta",
+    "sector": "Energía Solar & Renovable",
+    "basePrice": 30000000,
+    "overpriceTarget": 1500000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_javier",
+    "ownerName": "Javier Ignacio Díaz",
+    "ownerType": "mandatario_exclusivo",
+    "description": "Planta fotovoltaica de 30 MW emplazada en el corazón de la formación no convencional Vaca Muerta. Provisión directa de energía limpia y descarbonización para operaciones de operadoras petroleras y de servicios.",
+    "modality": "Socio Inversor",
+    "roi": "5 Años",
+    "statusProgress": "Proyecto ejecutivo orientado a offtakers industriales de hidrocarburos en Añelo",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-solar-vaca-muerta",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "javier",
+    "amountDisplay": "USD 30M",
+    "isPrivatePlacement": false,
+    "dealType": "Socio Inversor",
+    "tir": "22.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 3.8M/año (Margen 74%)",
+    "capitalStructure": "Socio Inversor / Equity Directo",
+    "regulatoryRegime": "PPA Privado B2B con Operadoras Petroleras en Boca de Pozo",
+    "financialNote_es": "Cálculo de TIR: Modelado a 15 años sustituyendo generación térmica diésel en cuenca con tarifa dolarizada. Supera ampliamente la TIR > 15%.",
+    "financialNote_en": "IRR Methodology: 15-year DCF displacing diesel generation with USD dollarized off-take price. Strongly exceeds the IRR > 15%.",
+    "es": {
+      "categoryTag": "Energía Solar & O&G",
+      "title": "Parque Solar 30 MW Vaca Muerta",
+      "location": "Añelo, Neuquén, Argentina",
+      "statusLabel": "USD 30M — Socio Inversor",
+      "description": "Planta fotovoltaica de 30 MW emplazada en el corazón de la formación no convencional Vaca Muerta. Provisión directa de energía limpia y descarbonización para operaciones de operadoras petroleras y de servicios.",
+      "thesis": "Generación distribuida de alta demanda en boca de yacimiento, reemplazando costosa generación térmica diésel con PPA industrial privado en USD y payback acelerado a 5 años.",
+      "highlights": [
+        "30 MW dedicados al suministro de energía renovable en Añelo / Vaca Muerta.",
+        "Offtakers corporativos de primer nivel en el sector de petróleo y gas.",
+        "Retorno de inversión acelerado en 5 años por alta competitividad frente al diésel.",
+        "Reducción directa de emisiones de Alcance 2 para metas ESG de operadoras.",
+        "Opción de ampliación modular por etapas sucesivas."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 30M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Potencia",
+          "val": "30 MW",
+          "color": "text-cyan"
+        },
+        {
+          "label": "ROI Estimado",
+          "val": "5 Años",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Socio Inversor",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Las operadoras en Vaca Muerta precisan descarbonizar operaciones upstream y reemplazar costosa generación diésel en boca de pozo por energía solar fotovoltaica con amortización acelerada.",
+        "intl": "Los compromisos internacionales Net-Zero de las petroleras globales impulsan la electrificación limpia de campos no convencionales para reducir la huella de carbono del crudo Medanito."
+      }
+    },
+    "en": {
+      "categoryTag": "Solar & O&G Decarbonization",
+      "title": "30 MW Vaca Muerta Solar Park",
+      "location": "Añelo, Neuquén, Argentina",
+      "statusLabel": "USD 30M — Equity Partner",
+      "description": "30 MW PV solar plant strategically positioned in Añelo, the core of Vaca Muerta shale play. Direct clean power supply to O&G operators replacing diesel generation.",
+      "thesis": "Fast 5-year payback backed by private industrial USD offtake agreements and critical ESG impact for shale drilling clusters.",
+      "highlights": [
+        "30 MW dedicated to Vaca Muerta oilfield operations.",
+        "Direct industrial USD PPA with tier-1 O&G operators.",
+        "Accelerated 5-year payback substituting expensive diesel power.",
+        "Direct Scope 2 carbon footprint abatement.",
+        "Modular scalable architecture."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 30M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Capacity",
+          "val": "30 MW",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Est. ROI",
+          "val": "5 Years",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Equity Partner",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Upstream operators in Vaca Muerta urgently replacing expensive diesel generation with low-cost on-site solar power to reduce lifting costs.",
+        "intl": "Global oil majors prioritizing clean field electrification to meet international Scope 1 emissions targets and lower crude carbon intensity."
+      }
+    }
+  },
+  {
+    "id": "solar",
+    "title": "Plantas Solares Llave en Mano con Financiamiento Asegurado",
+    "sector": "Energía Solar & Renovable",
+    "basePrice": 50000000,
+    "overpriceTarget": 2500000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_javier",
+    "ownerName": "Javier Ignacio Díaz",
+    "ownerType": "mandatario_exclusivo",
+    "description": "Desarrollo estratégico de parques fotovoltaicos llave en mano con el 50% del CAPEX pre-financiado por fabricante líder global de paneles e inversores. Contratos PPA a 15-20 años indexados al USD.",
+    "modality": "EPC Llave en Mano",
+    "roi": "6 Años",
+    "statusProgress": "Ready to Build con co-financiamiento asegurado por fabricante Tier 1",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-solar",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "javier",
+    "amountDisplay": "USD 50M (50% Pre-Financiado)",
+    "isPrivatePlacement": false,
+    "dealType": "Venta / Socio Inversor",
+    "tir": "24.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 6.2M/año (Margen 70%)",
+    "capitalStructure": "50% Pre-Financiado por Fabricante Tier-1 / 50% Equity",
+    "regulatoryRegime": "Contratos Llave en Mano EPC + Marco MATER/CAMMESA",
+    "financialNote_es": "Cálculo de TIR: Estructura de co-inversión apalancada con crédito de proveedor que maximiza el retorno sobre capital propio. TIR > 15% holgadamente superada.",
+    "financialNote_en": "IRR Methodology: Leveraged co-investment model with vendor credit maximizing equity IRR. Well above the IRR > 15%.",
+    "es": {
+      "categoryTag": "Energía Solar Fotovoltaica",
+      "title": "Plantas Solares Llave en Mano con Financiamiento Asegurado",
+      "location": "Cuyo y NOA, Argentina",
+      "statusLabel": "Co-Financiado 50% CAPEX",
+      "description": "Desarrollo estratégico de parques fotovoltaicos llave en mano con el 50% del CAPEX pre-financiado por fabricante líder global de paneles e inversores. Contratos PPA a 15-20 años indexados al USD.",
+      "thesis": "Estructura de co-inversión que minimiza el capital inicial y maximiza la TIR mediante financiamiento directo del proveedor tecnológico internacional.",
+      "highlights": [
+        "50% del CAPEX pre-financiado directamente por fabricante global.",
+        "Contratos PPA indexados al Dólar estadounidense a 15-20 años.",
+        "Recurso solar excepcional en Cuyo y NOA con factor líder.",
+        "Contrato EPC llave en mano con costos y plazos cerrados y garantizados.",
+        "Garantía de rendimiento y mantenimiento integral bajo contratos O&M."
+      ],
+      "metrics": [
+        {
+          "label": "Co-Financiamiento",
+          "val": "50% CAPEX",
+          "color": "text-gold"
+        },
+        {
+          "label": "Plazo PPA",
+          "val": "15 - 20 Años",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Mercado",
+          "val": "MATER / CAMMESA",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "EPC Llave en Mano",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Modelo de co-inversión EPC llave en mano con pre-financiamiento del 50% de fábrica, superando la principal barrera crediticia local y acelerando la puesta en marcha.",
+        "intl": "Alianzas directas con fabricantes globales Tier-1 de módulos e inversores garantizan precios de equipamiento altamente competitivos y garantías extendidas a 25 años."
+      }
+    },
+    "en": {
+      "categoryTag": "Photovoltaic Solar Energy",
+      "title": "Turnkey Solar Plants with Secured Co-Financing",
+      "location": "Cuyo & NOA Regions, Argentina",
+      "statusLabel": "50% Co-Financed CAPEX",
+      "description": "Strategic turnkey solar park developments with 50% of CAPEX pre-financed by a world-leading PV manufacturer. Long-term PPA contracts (15 to 20 years) indexed to USD.",
+      "thesis": "Co-investment architecture minimizing upfront equity and maximizing equity IRR through vendor financing.",
+      "highlights": [
+        "50% of CAPEX pre-financed directly by top-tier global manufacturer.",
+        "USD-indexed PPA contracts with 15 to 20 years duration.",
+        "Exceptional solar irradiance in Cuyo & NOA regions.",
+        "Turnkey EPC agreement with guaranteed fixed cost.",
+        "Guaranteed performance metrics and preventative O&M."
+      ],
+      "metrics": [
+        {
+          "label": "Co-Financing",
+          "val": "50% CAPEX",
+          "color": "text-gold"
+        },
+        {
+          "label": "PPA Term",
+          "val": "15 - 20 Yrs USD",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Target Market",
+          "val": "MATER / CAMMESA",
+          "color": "text-green"
+        },
+        {
+          "label": "Delivery",
+          "val": "Turnkey EPC",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Turnkey EPC co-investment model with 50% vendor pre-financing overcoming capital barriers and accelerating COD in Argentina.",
+        "intl": "Direct strategic supply agreements with global Tier-1 PV manufacturers securing volume-discounted hardware and 25-year performance warranties."
+      }
+    }
+  },
+  {
+    "id": "hotel-casino-mendoza-3s",
+    "title": "Hotel 3 Estrellas + Casino + Salón de Eventos",
+    "sector": "Hotelería & Renta",
+    "basePrice": 40000000,
+    "overpriceTarget": 2000000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Complejo hotelero de 3 estrellas en funcionamiento pleno con sala de casino equipada y habilitación provincial. Cuenta con salón de eventos corporativos y sociales con alta demanda turística internacional.",
+    "modality": "Venta",
+    "roi": "1 Año",
+    "statusProgress": "Activo operativo en marcha con flujo consolidado y licencias de juego vigentes",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-hotel-casino-mendoza-3s",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "USD 40M",
+    "isPrivatePlacement": false,
+    "dealType": "Venta",
+    "tir": "65.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 14.2M/año (Margen 42%)",
+    "capitalStructure": "100% Venta de Activo y Licencia de Juego",
+    "regulatoryRegime": "Concesión Provincial de Juego Oficial y Habilitación Turística",
+    "financialNote_es": "Cálculo de TIR: Flujo de caja diario intensivo generado por slots, mesas de juego y hotelería enológica. Recupero en 1 año con TIR muy superior al TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Daily intensive cash generation from gaming floor and wine tourism hotel. 1-year payback exceeding the IRR > 15%.",
+    "es": {
+      "categoryTag": "Hotelería & Casino",
+      "title": "Hotel 3 Estrellas + Casino + Salón de Eventos",
+      "location": "Mendoza, Argentina",
+      "statusLabel": "USD 40M — Venta Directa",
+      "description": "Complejo hotelero de 3 estrellas en funcionamiento pleno con sala de casino equipada y habilitación provincial. Cuenta con salón de eventos corporativos y sociales con alta demanda turística internacional.",
+      "thesis": "Extraordinario cash flow operativo derivado del juego y turismo vitivinícola, generando un retorno de capital estimado en 1 año sobre el valor de venta del activo.",
+      "highlights": [
+        "Hotel de 3 estrellas operativo con sólida tasa de ocupación anual.",
+        "Licencia y explotación activa de casino con alto flujo de caja en efectivo.",
+        "Salón de eventos de gran capacidad para turismo MICE y convenciones.",
+        "Retorno de inversión sin precedentes proyectado en 1 año.",
+        "Venta del 100% del activo inmobiliario y paquete comercial sin pasivos."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 40M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Tipo Activo",
+          "val": "Hotel 3★ + Casino",
+          "color": "text-cyan"
+        },
+        {
+          "label": "ROI Estimado",
+          "val": "1 Año",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Venta Directa",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Mendoza lidera la recepción de turismo enológico y corporativo. La licencia oficial de casino otorga un flujo de caja diario en efectivo, sumamente resistente a fluctuaciones macroeconómicas.",
+        "intl": "Crecimiento sostenido del turismo internacional de Brasil, EE.UU. y Europa atraído por la enogastronomía andina de alta gama, con tarifas ADR dolarizadas."
+      }
+    },
+    "en": {
+      "categoryTag": "Hospitality & Casino",
+      "title": "3-Star Hotel + Casino + Event Convention Center",
+      "location": "Mendoza, Argentina",
+      "statusLabel": "USD 40M — Asset Sale",
+      "description": "Operational 3-star hotel complex featuring an active licensed casino hall and convention center. Strong year-round occupancy supported by Mendoza's wine and gaming tourism.",
+      "thesis": "Exceptional cash flow from gaming operations delivering a projected 1-year payback on enterprise asset value.",
+      "highlights": [
+        "Fully operational 3-star hotel with solid occupancy history.",
+        "Active gaming casino license with high daily cash flow.",
+        "Large convention hall catering to corporate and social events.",
+        "Unprecedented 1-year projected payback.",
+        "Clean title and corporate structure with zero debt."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 40M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Asset Type",
+          "val": "Hotel 3★ + Casino",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Est. ROI",
+          "val": "1 Year",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Direct Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Mendoza heads regional wine and executive tourism. The official casino gaming license provides daily resilient, high-margin cash flow.",
+        "intl": "Sustained international traveler influx from the Americas and Europe seeking premium wine experiences with dollarized room rates."
+      }
+    }
+  },
+  {
+    "id": "hotel-casino-mendoza-5s",
+    "title": "Hotel 5 Estrellas (72 Habitaciones) + Casino + Cocheras",
+    "sector": "Hotelería & Renta",
+    "basePrice": 60000000,
+    "overpriceTarget": 3000000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Exclusivo hotel de 5 estrellas con 72 habitaciones de alta gama, casino privado en operación, restaurante gourmet, spa y estacionamiento subterráneo en la mejor ubicación de Mendoza.",
+    "modality": "Venta",
+    "roi": "1 Año",
+    "statusProgress": "Hotel 5 estrellas de lujo en operación con sala de juego y cocheras",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-hotel-casino-mendoza-5s",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "USD 60M",
+    "isPrivatePlacement": false,
+    "dealType": "Venta",
+    "tir": "58.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 19.8M/año (Margen 45%)",
+    "capitalStructure": "100% Venta Trophy Asset Inmobiliario + Licencia",
+    "regulatoryRegime": "Licencia Exclusiva de Casino 5 Estrellas & Habilitación Internacional",
+    "financialNote_es": "Cálculo de TIR: Tarifa ADR dolarizada con clientes corporativos e internacionales de alta gama. Retorno en 1 año superando ampliamente la TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Dollarized ADR room rates and high-end international gaming clientele. 1-year payback exceeding the IRR > 15%.",
+    "es": {
+      "categoryTag": "Hotelería de Lujo & Casino",
+      "title": "Hotel 5 Estrellas (72 Habitaciones) + Casino + Cocheras",
+      "location": "Mendoza, Argentina",
+      "statusLabel": "USD 60M — Venta Directa",
+      "description": "Exclusivo hotel de 5 estrellas con 72 habitaciones de alta gama, casino privado en operación, restaurante gourmet, spa y estacionamiento subterráneo en la mejor ubicación de Mendoza.",
+      "thesis": "Activo trophy de alta rentabilidad con tarifa promedio diaria (ADR) dolarizada, clientela internacional y un ROI extraordinario de 1 año traccionado por la sala de casino.",
+      "highlights": [
+        "72 habitaciones y suites de lujo totalmente equipadas con amenities de 5 estrellas.",
+        "Casino de alta categoría en funcionamiento con licencias y equipamiento de última generación.",
+        "Edificio icónico con cocheras subterráneas y salones ejecutivos.",
+        "Retorno acelerado en 1 año respaldado por el flujo de caja del casino y hotelería.",
+        "Operación llave en mano con personal calificado y marca consolidada."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 60M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Habitaciones",
+          "val": "72 Suites 5★",
+          "color": "text-cyan"
+        },
+        {
+          "label": "ROI Estimado",
+          "val": "1 Año",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Venta Directa",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Activo trophy de 72 suites de ultra-lujo y complejo de juego con ocupación ejecutiva de alta gama en el polo vitivinícola más prestigioso de Sudamérica.",
+        "intl": "Escasez absoluta de activos hoteleros 5 estrellas con licencia de casino habilitada en plazas turísticas consolidadas del Cono Sur."
+      }
+    },
+    "en": {
+      "categoryTag": "Luxury Hospitality & Casino",
+      "title": "5-Star Hotel (72 Rooms) + Casino + Underground Parking",
+      "location": "Mendoza, Argentina",
+      "statusLabel": "USD 60M — Asset Sale",
+      "description": "Premier 5-star boutique hotel featuring 72 luxury rooms, operational private casino, fine dining restaurant, luxury spa, and private parking in prime Mendoza.",
+      "thesis": "Trophy asset with strong USD average daily rates and high-margin casino revenue driving a projected 1-year capital payback.",
+      "highlights": [
+        "72 luxury suites with complete 5-star amenities.",
+        "High-end operational casino with modern gaming licenses.",
+        "Prime architectural building with underground parking.",
+        "Rapid 1-year payback backed by combined hotel and gaming cash flows.",
+        "Turnkey management and established reputation."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 60M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Rooms",
+          "val": "72 Suites 5★",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Est. ROI",
+          "val": "1 Year",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Direct Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Trophy hospitality asset featuring 72 luxury suites and premium casino gaming in South America premier wine capital.",
+        "intl": "Extreme scarcity of licensed 5-star hotel-casinos in top South American leisure and convention destination markets."
+      }
+    }
+  },
+  {
+    "id": "hotel-lujo-bariloche",
+    "title": "Venta Exclusiva a Invitación — Hotel de Lujo en Bariloche",
+    "sector": "Hotelería & Renta",
+    "basePrice": 0,
+    "overpriceTarget": 0,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Emblemático hotel de ultra-lujo situado en un entorno natural privilegiado en Bariloche, Patagonia. Comercialización off-market reservada exclusivamente para inversores calificados bajo estricto acuerdo de confidencialidad (NDA).",
+    "modality": "Venta Exclusiva a Invitación",
+    "roi": "Confidencial",
+    "statusProgress": "Operación off-market estrictamente confidencial disponible solo bajo NDA firmado",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-hotel-lujo-bariloche",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "A Invitación Exclusiva",
+    "isPrivatePlacement": true,
+    "dealType": "Venta",
+    "tir": "26.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 12.5M/año (Margen 38%)",
+    "capitalStructure": "Venta Exclusiva a Invitación / Private Placement",
+    "regulatoryRegime": "Dominio Privado Registrado con Habilitación Hotelera 5 Estrellas",
+    "financialNote_es": "Cálculo de TIR: Ocupación en 4 estaciones en Bariloche con ADR promedio de USD 420/noche. TIR proyectada del 26.0% vs. TIR > 15%.",
+    "financialNote_en": "IRR Methodology: 4-season prime occupancy with average USD 420 ADR. Projected 26.0% IRR vs. IRR > 15%.",
+    "es": {
+      "categoryTag": "Private Placement — Gran Lujo",
+      "title": "Venta Exclusiva a Invitación — Hotel de Lujo en Bariloche",
+      "location": "San Carlos de Bariloche, Patagonia, Argentina",
+      "statusLabel": "🔒 Private Placement Off-Market",
+      "description": "Emblemático hotel de ultra-lujo situado en un entorno natural privilegiado en Bariloche, Patagonia. Comercialización off-market reservada exclusivamente para inversores calificados bajo estricto acuerdo de confidencialidad (NDA).",
+      "thesis": "Activo hotelero trofeo sin equivalentes en la Patagonia, con vistas directas al lago y clientela internacional de alto poder adquisitivo. Datos financieros y dossier disponibles únicamente a invitación.",
+      "highlights": [
+        "Venta off-market estrictamente confidencial (sin publicación de montos en web).",
+        "Ubicación irrepetible con vistas panorámicas al lago y arquitectura patagónica.",
+        "Instalaciones de máxima jerarquía hotelera internacional.",
+        "Acceso al Data Room y estados contables supeditado a calificación previa y NDA.",
+        "Acompañamiento personalizado directo con la dirección de Energy CPY."
+      ],
+      "metrics": [
+        {
+          "label": "Modalidad",
+          "val": "Private Placement",
+          "color": "text-gold"
+        },
+        {
+          "label": "Categoría",
+          "val": "Ultra Lujo",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Acceso",
+          "val": "Bajo NDA",
+          "color": "text-green"
+        },
+        {
+          "label": "Estado",
+          "val": "Venta Exclusiva",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Bariloche registra ocupación plena en las 4 temporadas del año, combinando esquí de clase mundial en invierno con ecoturismo y eventos náuticos en verano.",
+        "intl": "Multiplicación de vuelos internacionales directos hacia la Patagonia y demanda global inelástica de viajeros High-Net-Worth por naturaleza virgen."
+      }
+    },
+    "en": {
+      "categoryTag": "Private Placement — Ultra Luxury",
+      "title": "Exclusive Invitation Sale — Luxury Hotel in Bariloche",
+      "location": "Bariloche, Patagonia, Argentina",
+      "statusLabel": "🔒 Private Placement Off-Market",
+      "description": "Iconic ultra-luxury hotel situated in a prime natural setting in Bariloche, Patagonia. Off-market transaction available exclusively to qualified investors under non-disclosure agreement (NDA).",
+      "thesis": "Irreplaceable trophy asset with direct lakefront views and elite international patronage. Financial dossier available strictly upon invitation.",
+      "highlights": [
+        "Strictly confidential off-market sale (no public financial figures).",
+        "Irreplaceable lakefront location with signature Andean architecture.",
+        "Highest tier of international hospitality standards.",
+        "Data room access granted exclusively following investor verification and signed NDA.",
+        "Direct confidential advisory with Energy CPY executives."
+      ],
+      "metrics": [
+        {
+          "label": "Deal Structure",
+          "val": "Private Placement",
+          "color": "text-gold"
+        },
+        {
+          "label": "Category",
+          "val": "Ultra Luxury",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Access",
+          "val": "Under NDA",
+          "color": "text-green"
+        },
+        {
+          "label": "Status",
+          "val": "Exclusive Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Bariloche records year-round prime occupancy, driven by winter ski seasons and luxury lake-district summer tourism.",
+        "intl": "Expansion of direct international flights to Patagonia boosting ultra-high-net-worth foreign guest arrivals."
+      }
+    }
+  },
+  {
+    "id": "hotel-lujo-cordoba",
+    "title": "Venta Exclusiva a Invitación — Hotel de Lujo en Córdoba",
+    "sector": "Hotelería & Renta",
+    "basePrice": 0,
+    "overpriceTarget": 0,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Distinguido establecimiento hotelero de máxima jerarquía en la provincia de Córdoba. Operación off-market de colocación privada sin mención de estudios financieros públicos, orientada a grupos selectos.",
+    "modality": "Venta Exclusiva a Invitación",
+    "roi": "Confidencial",
+    "statusProgress": "Operación off-market estrictamente confidencial disponible solo bajo NDA firmado",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-hotel-lujo-cordoba",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "A Invitación Exclusiva",
+    "isPrivatePlacement": true,
+    "dealType": "Venta",
+    "tir": "25.5%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 6.8M/año (Margen 36%)",
+    "capitalStructure": "Venta Exclusiva a Invitación / Private Placement",
+    "regulatoryRegime": "Título Notarial Perfecto & Certificación Turística Provincial",
+    "financialNote_es": "Cálculo de TIR: Centro de convenciones y golf resort con ingresos por eventos corporativos y escapadas de fin de semana. TIR del 25.5% frente al TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Convention center and golf resort with recurring corporate events cash flow. 25.5% IRR vs. IRR > 15%.",
+    "es": {
+      "categoryTag": "Private Placement — Gran Lujo",
+      "title": "Venta Exclusiva a Invitación — Hotel de Lujo en Córdoba",
+      "location": "Córdoba, Argentina",
+      "statusLabel": "🔒 Private Placement Off-Market",
+      "description": "Distinguido establecimiento hotelero de máxima jerarquía en la provincia de Córdoba. Operación off-market de colocación privada sin mención de estudios financieros públicos, orientada a grupos selectos.",
+      "thesis": "Patrimonio arquitectónico e inmobiliario de primer orden con posicionamiento líder en turismo corporativo y eventos de alta gama en el centro del país.",
+      "highlights": [
+        "Venta off-market de colocación privada mediante invitación.",
+        "Instalaciones de primer nivel para congresos internacionales y hotelería premium.",
+        "Historial de ocupación y marca consolidada en la región central.",
+        "Entrega de memorias económicas y técnicas supeditada a firma de NDA formal.",
+        "Atención directa y reservada por parte del consultor a cargo."
+      ],
+      "metrics": [
+        {
+          "label": "Modalidad",
+          "val": "Private Placement",
+          "color": "text-gold"
+        },
+        {
+          "label": "Categoría",
+          "val": "Gran Lujo",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Acceso",
+          "val": "Bajo NDA",
+          "color": "text-green"
+        },
+        {
+          "label": "Estado",
+          "val": "Venta Exclusiva",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Epicentro nacional para turismo de convenciones corporativas, torneos de golf y relax en las Sierras de Córdoba, con acceso vial y aéreo federal privilegiado.",
+        "intl": "Interés de grupos patrimoniales extranjeros por adquirir hoteles boutique con valor histórico y potencial de desarrollo fiduciario a largo plazo."
+      }
+    },
+    "en": {
+      "categoryTag": "Private Placement — Ultra Luxury",
+      "title": "Exclusive Invitation Sale — Luxury Hotel in Córdoba",
+      "location": "Córdoba, Argentina",
+      "statusLabel": "🔒 Private Placement Off-Market",
+      "description": "Distinguished premier luxury hotel in Córdoba province. Private placement off-market transaction without public financial figures, tailored for select institutional groups.",
+      "thesis": "Prime architectural and real estate asset leading in executive tourism and major corporate conventions in Central Argentina.",
+      "highlights": [
+        "Private placement off-market transaction by direct invitation.",
+        "State-of-the-art facilities for international conventions and luxury lodging.",
+        "Proven historical occupancy and distinguished regional brand.",
+        "Economic and operational disclosures released exclusively upon signed NDA.",
+        "Confidential engagement directly with senior partners."
+      ],
+      "metrics": [
+        {
+          "label": "Deal Structure",
+          "val": "Private Placement",
+          "color": "text-gold"
+        },
+        {
+          "label": "Category",
+          "val": "Grand Luxury",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Access",
+          "val": "Under NDA",
+          "color": "text-green"
+        },
+        {
+          "label": "Status",
+          "val": "Exclusive Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Central hub for corporate conventions, championship golf, and mountain leisure with federal highway and airport connections.",
+        "intl": "Rising interest from cross-border family offices acquiring heritage boutique hospitality assets with capital appreciation potential."
+      }
+    }
+  },
+  {
+    "id": "estancia-17000ha-riego",
+    "title": "Estancia 17.000 Hectáreas con Riego en Zona Turística",
+    "sector": "Agro, Campo & Industria",
+    "basePrice": 60000000,
+    "overpriceTarget": 3000000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_javier",
+    "ownerName": "Javier Ignacio Díaz",
+    "ownerType": "mandatario_exclusivo",
+    "description": "Extraordinario establecimiento agropecuario de 17.000 hectáreas con infraestructura completa de riego presurizado instalada. Emplazado en una comarca de alto valor paisajístico y turístico en la región centro del país.",
+    "modality": "Venta",
+    "roi": "2 Años",
+    "statusProgress": "Establecimiento productivo en marcha con pivotes de riego y títulos perfectos",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-estancia-17000ha-riego",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "javier",
+    "amountDisplay": "USD 60M",
+    "isPrivatePlacement": false,
+    "dealType": "Venta",
+    "tir": "38.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 11.2M/año (Margen 52%)",
+    "capitalStructure": "100% Venta de Dominio Inmobiliario con Agua Definitiva",
+    "regulatoryRegime": "Derechos Concesionados de Riego Definitivo y Título Escritural",
+    "financialNote_es": "Cálculo de TIR: Renta agrícola-ganadera de alta precisión bajo pivotes centrales y plusvalía de suelo productivo. TIR del 38.0% superando el umbral TIR > 15%.",
+    "financialNote_en": "IRR Methodology: High-precision pivot irrigation agriculture, livestock and land appreciation. 38.0% IRR well above the IRR > 15%.",
+    "es": {
+      "categoryTag": "Agroindustria & Tierras",
+      "title": "Estancia 17.000 Hectáreas con Riego en Zona Turística",
+      "location": "Región Centro, Argentina",
+      "statusLabel": "USD 60M — Venta",
+      "description": "Extraordinario establecimiento agropecuario de 17.000 hectáreas con infraestructura completa de riego presurizado instalada. Emplazado en una comarca de alto valor paisajístico y turístico en la región centro del país.",
+      "thesis": "Combinación inusual de alta productividad agrícola bajo riego con formidable plusvalía inmobiliaria y turística, permitiendo un recupero acelerado en 2 años.",
+      "highlights": [
+        "17.000 hectáreas con aptitud mixta y módulos de riego de alta tecnología.",
+        "Ubicación privilegiada en zona turística de rápida valorización territorial.",
+        "Rápido recupero proyectado a 2 años mediante cultivos intensivos y desarrollos asociados.",
+        "Infraestructura completa: casco, galpones, corrales, caminos internos y electrificación.",
+        "Títulos de propiedad consolidados y posesión inmediata sin pasivos."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 60M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Superficie",
+          "val": "17.000 Ha",
+          "color": "text-cyan"
+        },
+        {
+          "label": "ROI Estimado",
+          "val": "2 Años",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Venta Directa",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "17.000 hectáreas con concesiones definitivas de riego tecnificado para nogales, olivos, vid y ganadería intensiva en corredor turístico estratégico.",
+        "intl": "La seguridad alimentaria global y la apreciación de la tierra fértil con agua asegurada consolidan este activo como refugio patrimonial anti-inflacionario."
+      }
+    },
+    "en": {
+      "categoryTag": "Agribusiness & Prime Land",
+      "title": "17,000-Hectare Irrigated Ranch in Prime Tourist Area",
+      "location": "Central Region, Argentina",
+      "statusLabel": "USD 60M — Asset Sale",
+      "description": "Exceptional 17,000-hectare agricultural estate equipped with extensive pressurized irrigation infrastructure, located in a scenic and high-growth tourist corridor in Central Argentina.",
+      "thesis": "Unique synergy of intensive irrigated crop yields and real estate capital appreciation offering a 2-year estimated capital return.",
+      "highlights": [
+        "17,000 hectares combining crop irrigation and pastoral land.",
+        "Strategic setting in a fast-appreciating tourism and lifestyle zone.",
+        "Rapid projected 2-year payback from high-yield crops and land upside.",
+        "Full operational infrastructure: main house, sheds, power, and road network.",
+        "Clear titles and immediate handover with zero encumbrances."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 60M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Total Area",
+          "val": "17,000 Ha",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Est. ROI",
+          "val": "2 Years",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Direct Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "17,000 hectares with permanent water rights and pivot irrigation systems suitable for intensive agriculture and livestock in prime valley.",
+        "intl": "Global food security priorities cementing water-secured agricultural land as a premier long-term inflation hedge."
+      }
+    }
+  },
+  {
+    "id": "mineria-diente-oro-verde",
+    "title": "Yacimiento de Oro 'Diente Oro Verde'",
+    "sector": "Minería",
+    "basePrice": 60000000,
+    "overpriceTarget": 3000000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_javier",
+    "ownerName": "Javier Ignacio Díaz",
+    "ownerType": "mandatario_exclusivo",
+    "description": "Propiedad minera de oro a certificar bajo código internacional canadiense NI 43-101. Posee importantes estructuras de vetas hidrotermales con leyes superficiales y en profundidad de alto interés comercial.",
+    "modality": "Venta",
+    "roi": "Activo Minero",
+    "statusProgress": "Yacimiento aurífero a certificar bajo estándar internacional NI 43-101",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-mineria-diente-oro-verde",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "javier",
+    "amountDisplay": "USD 60M",
+    "isPrivatePlacement": false,
+    "dealType": "Venta",
+    "tir": "34.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 16.5M/año (Margen 62%)",
+    "capitalStructure": "100% Venta de Concesión Minera Registrada",
+    "regulatoryRegime": "Código de Minería de la Nación & Régimen RIGI (Ley 27.742)",
+    "financialNote_es": "Cálculo de TIR: Costo de extracción All-In Sustaining Cost (AISC) de USD 1.050/oz frente a cotización internacional récord del oro. TIR del 34.0% vs. TIR > 15%.",
+    "financialNote_en": "IRR Methodology: All-In Sustaining Cost (AISC) below USD 1,050/oz against peak gold prices. 34.0% IRR vs. IRR > 15%.",
+    "es": {
+      "categoryTag": "Minería Metalífera — Oro",
+      "title": "Yacimiento de Oro 'Diente Oro Verde'",
+      "location": "San Luis, Argentina",
+      "statusLabel": "USD 60M — Venta",
+      "description": "Propiedad minera de oro a certificar bajo código internacional canadiense NI 43-101. Posee importantes estructuras de vetas hidrotermales con leyes superficiales y en profundidad de alto interés comercial.",
+      "thesis": "Oportunidad de adquisición directa de un yacimiento aurífero en una provincia con tradición minera, ideal para empresas junior o intermedias con capacidad de exploración y cubicación.",
+      "highlights": [
+        "Yacimiento de oro con estudios previos y listo para certificación técnica NI 43-101.",
+        "Estructuras mineralizadas continuas con potencial de explotación a cielo abierto y subterránea.",
+        "Provincia con facilidades logísticas, red vial pavimentada y energía cercana.",
+        "Venta del 100% de los derechos de explotación y mensura minera definitiva.",
+        "Alto apalancamiento ante el ciclo alcista internacional del precio del oro."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 60M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Mineral",
+          "val": "Oro (Au)",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Estándar",
+          "val": "A cert. NI 43-101",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Venta Total",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Distrito minero histórico con régimen RIGI aplicable que otorga 30 años de estabilidad fiscal, exención arancelaria y libre disponibilidad de divisas.",
+        "intl": "Cotización del oro en máximos históricos impulsada por compras masivas de bancos centrales soberanos y cobertura ante volatilidad geopolítica."
+      }
+    },
+    "en": {
+      "categoryTag": "Precious Metals — Gold",
+      "title": "'Diente Oro Verde' Gold Deposit",
+      "location": "San Luis, Argentina",
+      "statusLabel": "USD 60M — Asset Sale",
+      "description": "High-potential gold deposit prepared for international technical certification under NI 43-101 standard. Contains extensive hydrothermal vein structures with attractive grades.",
+      "thesis": "Direct acquisition opportunity of a promising gold concession in a mining-friendly jurisdiction, perfectly positioned for junior or mid-tier exploration firms.",
+      "highlights": [
+        "Gold deposit ready for NI 43-101 technical report certification.",
+        "Continuous mineralized structures suitable for open-pit and underground methods.",
+        "Excellent regional infrastructure, paved access, and nearby grid power.",
+        "100% ownership sale of granted mining concessions and survey titles.",
+        "Direct exposure to the historic secular bull market in precious metals."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 60M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Commodity",
+          "val": "Gold (Au)",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Standard",
+          "val": "NI 43-101 Path",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "100% Asset Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Historical mining district benefiting from Argentine RIGI framework offering 30-year tax stability and customs duty exemptions.",
+        "intl": "Gold bullion prices hovering near historic records driven by central bank reserve accumulation and global currency hedging."
+      }
+    }
+  },
+  {
+    "id": "mineria-marmol-san-luis",
+    "title": "Canteras y Yacimiento de Mármol Ornamental",
+    "sector": "Minería",
+    "basePrice": 50000000,
+    "overpriceTarget": 2500000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_javier",
+    "ownerName": "Javier Ignacio Díaz",
+    "ownerType": "mandatario_exclusivo",
+    "description": "Depósitos masivos de mármoles y rocas de aplicación de altísima calidad estética para la industria de la construcción y revestimientos premium. Reservas cubicadas listas para corte y extracción en bloques.",
+    "modality": "Venta",
+    "roi": "Activo Minero",
+    "statusProgress": "Canteras con reservas cubicadas de roca de aplicación ornamental y bloques",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-mineria-marmol-san-luis",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "javier",
+    "amountDisplay": "USD 50M",
+    "isPrivatePlacement": false,
+    "dealType": "Venta",
+    "tir": "30.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 8.4M/año (Margen 48%)",
+    "capitalStructure": "100% Venta de Canteras Activas con Planta",
+    "regulatoryRegime": "Derechos Mineros Concedidos e Impacto Ambiental Aprobado",
+    "financialNote_es": "Cálculo de TIR: Extracción a cielo abierto de mármol y travertino con demanda cautiva en construcción de lujo. TIR del 30.0% superando el umbral de >9%.",
+    "financialNote_en": "IRR Methodology: Open-pit extraction with captive luxury architectural demand. 30.0% IRR exceeding the IRR > 15%.",
+    "es": {
+      "categoryTag": "Minería No Metalífera — Mármol",
+      "title": "Canteras y Yacimiento de Mármol Ornamental",
+      "location": "San Luis, Argentina",
+      "statusLabel": "USD 50M — Venta",
+      "description": "Depósitos masivos de mármoles y rocas de aplicación de altísima calidad estética para la industria de la construcción y revestimientos premium. Reservas cubicadas listas para corte y extracción en bloques.",
+      "thesis": "Monopolio natural de variedades de mármol cotizadas en mercados de exportación (Europa, Medio Oriente y EE.UU.) con bajo costo de extracción y alto margen operativo.",
+      "highlights": [
+        "Yacimiento de mármol y travertino con frentes de cantera explorados y habilitados.",
+        "Reservas masivas de bloques dimensionados para exportación y mercado interno.",
+        "Bajo costo de explotación a cielo abierto con tecnología de corte con hilo diamantado.",
+        "Títulos mineros consolidados sin litigios y permisos ambientales vigentes.",
+        "Venta total del complejo extractivo por USD 50M."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 50M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Mineral",
+          "val": "Mármol & Travertino",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Destino",
+          "val": "Exportación & Constr.",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Venta Directa",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Canteras operativas de mármol y travertino con reservas comprobadas para abastecer proyectos de arquitectura corporativa y residencial de alta gama en Argentina.",
+        "intl": "Demanda internacional sostenida de bloques y placas de piedra natural ornamental para desarrollos hoteleros y residenciales de lujo en EE.UU. y Europa."
+      }
+    },
+    "en": {
+      "categoryTag": "Industrial Minerals — Marble",
+      "title": "Quarries & Ornamental Marble Deposit",
+      "location": "San Luis, Argentina",
+      "statusLabel": "USD 50M — Asset Sale",
+      "description": "Extensive marble and dimensional stone deposits of superior aesthetic quality for luxury architecture and export markets. Large measured reserves ready for block quarrying.",
+      "thesis": "Natural monopoly in prized marble varieties with competitive open-pit mining costs and high export margins to Europe and North America.",
+      "highlights": [
+        "Marble and travertine deposits with active and surveyed quarry faces.",
+        "Massive measured reserves of dimensioned blocks for premium architecture.",
+        "Cost-effective open-pit extraction using modern diamond-wire cutting.",
+        "Clear mineral tenure with active environmental and provincial permits.",
+        "Complete asset sale for USD 50M."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 50M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Commodity",
+          "val": "Marble & Stone",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Target",
+          "val": "Export & Luxury",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Direct Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Active marble and travertine quarries holding verified reserves supplying premium domestic commercial construction.",
+        "intl": "Solid international export demand for dimensional natural stone across luxury architectural developments worldwide."
+      }
+    }
+  },
+  {
+    "id": "mineria-oro-san-juan",
+    "title": "Yacimiento de Oro en Producción Inicial (28 ton/día)",
+    "sector": "Minería",
+    "basePrice": 150000000,
+    "overpriceTarget": 7500000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_javier",
+    "ownerName": "Javier Ignacio Díaz",
+    "ownerType": "mandatario_exclusivo",
+    "description": "Mina de oro en producción operativa inicial a razón de 28 toneladas diarias procesadas. Convocatoria a socio inversor estratégico para inyectar entre USD 100M y USD 200M para escalamiento de planta y lixiviación.",
+    "modality": "Socio Inversor",
+    "roi": "En Producción",
+    "statusProgress": "Yacimiento en producción inicial (28 t/d) buscando capital para ampliación de planta",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-mineria-oro-san-juan",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "javier",
+    "amountDisplay": "USD 100M - 200M",
+    "isPrivatePlacement": false,
+    "dealType": "Socio Inversor",
+    "tir": "42.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 38.0M/año (Margen 65%)",
+    "capitalStructure": "Socio Inversor / Capital de Expansión de Molienda",
+    "regulatoryRegime": "Ley de Inversiones Mineras 24.196 & Estabilidad Fiscal San Juan",
+    "financialNote_es": "Cálculo de TIR: Yacimiento operativo (28 ton/día) con ley media de 4.8 g/t Au, escalable a 100 ton/día. TIR proyectada del 42.0% superando la TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Operating mine (28 tpd) averaging 4.8 g/t Au, expandable to 100 tpd. 42.0% IRR well above the IRR > 15%.",
+    "es": {
+      "categoryTag": "Minería de Oro — Producción",
+      "title": "Yacimiento de Oro en Producción Inicial (28 ton/día)",
+      "location": "San Juan, Argentina",
+      "statusLabel": "USD 100M-200M — Socio Inversor",
+      "description": "Mina de oro en producción operativa inicial a razón de 28 toneladas diarias procesadas. Convocatoria a socio inversor estratégico para inyectar entre USD 100M y USD 200M para escalamiento de planta y lixiviación.",
+      "thesis": "Des-riesgo técnico comprobado al encontrarse ya en explotación activa en San Juan, la provincia minera por excelencia de Argentina. Rápido incremento de rentabilidad al multiplicar la escala.",
+      "highlights": [
+        "Operación aurífera activa con planta de procesamiento en marcha (28 ton/día).",
+        "San Juan: Jurisdicción líder en estabilidad legal e institucional para minería.",
+        "Estructuración de capital (USD 100M a 200M) para ampliación de capacidad de beneficio.",
+        "Flujo de caja positivo inmediato y reservas en expansión continua.",
+        "Modelo de socio inversor con participación societaria y derechos de offtake de oro."
+      ],
+      "metrics": [
+        {
+          "label": "Rango Inversión",
+          "val": "USD 100M - 200M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Producción Actual",
+          "val": "28 Ton / Día",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Provincia",
+          "val": "San Juan",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Socio Inversor",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Yacimiento en etapa de producción inicial (28 ton/día) con permisos ambientales al día en San Juan, la provincia con mayor seguridad jurídica minera de Argentina.",
+        "intl": "Márgenes operativos extraordinarios por la cotización del oro, atrayendo socios internacionales para escalar la capacidad de molienda y beneficio."
+      }
+    },
+    "en": {
+      "categoryTag": "Gold Mining — Operating",
+      "title": "Gold Mine in Initial Production (28 tons/day)",
+      "location": "San Juan, Argentina",
+      "statusLabel": "USD 100M-200M — Equity Partner",
+      "description": "Operating gold mine currently processing 28 tons/day. Seeking strategic equity partner to deploy USD 100M to 200M for plant expansion, milling, and leaching facilities.",
+      "thesis": "De-risked operating asset in San Juan, Argentina's leading mining jurisdiction. Substantial economies of scale upon processing capacity expansion.",
+      "highlights": [
+        "Active gold mining operation with processing plant handling 28 tons/day.",
+        "San Juan: Top-tier Argentine mining jurisdiction with solid legal backing.",
+        "Capital call of USD 100M-200M to multiply milling and leaching throughput.",
+        "Immediate positive operational cash flow with ongoing resource expansion.",
+        "Equity partnership model with gold off-take and board participation."
+      ],
+      "metrics": [
+        {
+          "label": "Investment Range",
+          "val": "USD 100M - 200M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Current Output",
+          "val": "28 Tons / Day",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Jurisdiction",
+          "val": "San Juan",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Equity Partner",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Operating mine processing 28 tons/day with approved environmental baseline in San Juan, Argentina top-rated mining jurisdiction.",
+        "intl": "Extraordinary gold extraction margins driving institutional joint-venture interest to scale crushing and flotation capacity."
+      }
+    }
+  },
+  {
+    "id": "mineria-litio-catamarca",
+    "title": "Yacimiento de Litio — Estudios de Exploración OK",
+    "sector": "Minería",
+    "basePrice": 11000000,
+    "overpriceTarget": 550000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_javier",
+    "ownerName": "Javier Ignacio Díaz",
+    "ownerType": "mandatario_exclusivo",
+    "description": "Concesión minera de salmueras de litio en la puna de Catamarca (Triángulo del Litio). Campaña exploratoria inicial completada con éxito (geofísica y sondeos geoquímicos con excelentes relaciones Mg/Li).",
+    "modality": "Venta",
+    "roi": "Exploración OK",
+    "statusProgress": "Estudios de exploración geoquímica y geofísica concluidos con dictamen favorable",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-mineria-litio-catamarca",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "javier",
+    "amountDisplay": "USD 11M",
+    "isPrivatePlacement": false,
+    "dealType": "Venta",
+    "tir": "29.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 5.2M/año (Exploración / Upside USD 120M)",
+    "capitalStructure": "100% Venta de Propiedad Minera en Salar",
+    "regulatoryRegime": "Código Minero & Acuerdos Comunitarios Catamarca OK",
+    "financialNote_es": "Cálculo de TIR: Modelo de exploración avanzada con recursos inferidos de carbonato de litio grado batería. TIR proyectada del 29.0% vs. TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Advanced brine exploration model with battery-grade lithium carbonate reserves. 29.0% IRR vs. IRR > 15%.",
+    "es": {
+      "categoryTag": "Minería de Litio — Salmueras",
+      "title": "Yacimiento de Litio — Estudios de Exploración OK",
+      "location": "Catamarca, Argentina",
+      "statusLabel": "USD 11M — Venta",
+      "description": "Concesión minera de salmueras de litio en la puna de Catamarca (Triángulo del Litio). Campaña exploratoria inicial completada con éxito (geofísica y sondeos geoquímicos con excelentes relaciones Mg/Li).",
+      "thesis": "Entrada estratégica de bajo ticket (USD 11M) en un salar de alta ley, con saneamiento legal total y listo para perforación de pozos y estimación de recursos NI 43-101.",
+      "highlights": [
+        "Ubicación en el epicentro mundial de salmueras de litio en Catamarca.",
+        "Estudios de exploración geoeléctrica y muestreos hidroquímicos concluidos (OK).",
+        "Baja relación magnesio/litio favoreciendo procesos de precipitación química directa.",
+        "Título de propiedad minera perfecto y canon al día.",
+        "Venta total por USD 11M, ideal para fondos de recursos naturales o desarrolladores de baterías."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 11M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Mineral",
+          "val": "Litio (Li)",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Estado",
+          "val": "Exploración OK",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Venta Directa",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Propiedad minera en el corazón del Triángulo del Litio catamarqueño con estudios hidrogeológicos favorables y reservas de salmuera de alta concentración.",
+        "intl": "La revolución global de vehículos eléctricos y almacenamiento en baterías a escala de red requiere suministro estratégico garantizado de litio grado batería."
+      }
+    },
+    "en": {
+      "categoryTag": "Critical Minerals — Lithium",
+      "title": "Lithium Brine Deposit — Exploration OK",
+      "location": "Catamarca, Argentina",
+      "statusLabel": "USD 11M — Asset Sale",
+      "description": "Lithium brine mining concession located in the Catamarca Puna within the global Lithium Triangle. Preliminary exploration campaign successfully completed with favorable Mg/Li ratios.",
+      "thesis": "Low-entry ticket (USD 11M) in a premium salar basin with clean legal status, ready for resource drilling and NI 43-101 resource estimation.",
+      "highlights": [
+        "Located in the world-class Catamarca lithium brine basin.",
+        "Geophysical and hydrogeochemical exploratory studies confirmed (OK).",
+        "Favorable magnesium-to-lithium ratio enabling low processing OPEX.",
+        "Clear legal title with mining cadastre fees in full standing.",
+        "100% asset sale for USD 11M, ideal for battery metal developers."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 11M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Commodity",
+          "val": "Lithium (Li)",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Stage",
+          "val": "Exploration OK",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Direct Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Prime acreage in the Catamarca Lithium Triangle with proven brine chemistry, low impurity ratios, and exploration permits.",
+        "intl": "Global EV and grid battery expansion driving long-term strategic supply security for high-purity lithium carbonate."
+      }
+    }
+  },
+  {
+    "id": "refipampa-medanito",
+    "title": "Oferta de Refineria y explotacion de pozos - La Pampa Argentina",
+    "sector": "Petróleo, Gas & Infraestructura",
+    "basePrice": 180000000,
+    "overpriceTarget": 9000000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Operación downstream y upstream integrada: refinería Refipampa procesando 750 m³/día con expansión proyectada a 3.000 m³/día y yacimiento Medanito con 500 pozos en producción activa. Data Room listo para auditoría inmediata.",
+    "modality": "Venta",
+    "roi": "En Producción",
+    "statusProgress": "Refinería activa 750 m³/d (proy. 3.000 m³/d), 500 pozos en Medanito y Data Room listo",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-refipampa-medanito",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "USD 180M",
+    "isPrivatePlacement": false,
+    "dealType": "Venta",
+    "tir": "33.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 42.0M/año (Margen 28%)",
+    "capitalStructure": "100% Venta de Paquete Integral (Refinería + 500 Pozos)",
+    "regulatoryRegime": "Mercado Desregulado de Combustibles & Concesiones Hidrocarburíferas",
+    "financialNote_es": "Cálculo de TIR: Integración vertical upstream-downstream que captura el crack spread completo sin intermediarios. TIR del 33.0% vs. TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Fully integrated upstream-downstream capturing complete crack spread margin. 33.0% IRR vs. IRR > 15%.",
+    "es": {
+      "categoryTag": "Petróleo & Refinación Integrada",
+      "title": "Oferta de Refineria y explotacion de pozos - La Pampa Argentina",
+      "location": "La Pampa / Cuenca Neuquina, Argentina",
+      "statusLabel": "USD 180M — Venta Inmediata",
+      "description": "Operación downstream y upstream integrada: refinería Refipampa procesando 750 m³/día con expansión proyectada a 3.000 m³/día y yacimiento Medanito con 500 pozos en producción activa. Data Room listo para auditoría inmediata.",
+      "thesis": "Adquisición de un operador integrado con refinería propia, red de despacho y suministro asegurado de crudo liviano de Cuenca Neuquina por USD 180M.",
+      "highlights": [
+        "Refinería Refipampa operativa: 750 m³/día actual con proyecto a 3.000 m³/día.",
+        "Yacimiento Medanito: 500 pozos productores con reservas y concesión vigente.",
+        "Data Room completo y actualizado listo para Due Diligence de cierre rápido.",
+        "Cadena de valor integrada desde boca de pozo hasta expendio de combustibles.",
+        "Venta del paquete de control por USD 180M."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 180M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Refinería",
+          "val": "750 a 3.000 m³/d",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Pozos",
+          "val": "500 Activos",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Venta Total",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Refinería modular conectada a 500 pozos en producción activa en Cuenca Neuquina, con red de estaciones y distribución mayorista directa en el centro del país.",
+        "intl": "La desregulación del mercado energético en Argentina permite fijar precios a paridad de importación en dólares, maximizando márgenes de refinación."
+      }
+    },
+    "en": {
+      "categoryTag": "Integrated Oil & Refining",
+      "title": "Refinery & Well Exploitation Offer — La Pampa Argentina",
+      "location": "La Pampa / Neuquina Basin, Argentina",
+      "statusLabel": "USD 180M — Immediate Sale",
+      "description": "Integrated upstream & downstream business: Refipampa refinery producing 750 m³/day with expansion plan to 3,000 m³/day, paired with Medanito field operating 500 producing wells. Complete Data Room ready for fast due diligence.",
+      "thesis": "Turnkey acquisition of an integrated domestic energy player with dedicated refining capacity, logistics network, and secure crude supply.",
+      "highlights": [
+        "Refipampa operating refinery: 750 m³/day with expansion pipeline to 3,000 m³/day.",
+        "Medanito oilfield: 500 active producing wells with established reserves.",
+        "Fully populated and audited virtual Data Room ready for rapid closing.",
+        "Integrated value chain from wellhead extraction to wholesale fuel delivery.",
+        "100% controlling interest sale for USD 180M."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 180M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Refinery",
+          "val": "750-3,000 m³/d",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Wells",
+          "val": "500 Active",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Direct Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Fully operating modular refinery interconnected with 500 active producing wells in Neuquen Basin with private fuel retail network.",
+        "intl": "Downstream deregulation in Argentina enabling full dollarized import-parity pricing and robust crack-spread margins."
+      }
+    }
+  },
+  {
+    "id": "refinor-salta",
+    "title": "Complejo de Refinación y Poliductos NOA - Salta Argentina",
+    "sector": "Petróleo, Gas & Infraestructura",
+    "basePrice": 50000000,
+    "overpriceTarget": 2500000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Refinería estratégica en Campo Durán, Salta, con capacidad de procesamiento de 4.000 m³ diarios de crudo y condensados. Red troncal de poliductos y estaciones de carga asociadas para abastecimiento del NOA.",
+    "modality": "Venta",
+    "roi": "En Producción",
+    "statusProgress": "Refinería activa en Campo Durán con capacidad de 4.000 m³/día y red de ductos",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-refinor-salta",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "USD 50M",
+    "isPrivatePlacement": false,
+    "dealType": "Venta",
+    "tir": "36.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 18.5M/año (Margen 32%)",
+    "capitalStructure": "100% Venta de Complejo de Refinación y Poliductos",
+    "regulatoryRegime": "Posición Monopólica Regulada de Transporte en el NOA",
+    "financialNote_es": "Cálculo de TIR: Beneficiado por la reversión del Gasoducto Norte para fraccionar gas licuado hacia Brasil. TIR del 36.0% superando holgadamente el TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Leveraged by Northern Pipeline reversal for NGL fractionation towards Brazil. 36.0% IRR vs. IRR > 15%.",
+    "es": {
+      "categoryTag": "Downstream & Poliductos",
+      "title": "Complejo de Refinación y Poliductos NOA - Salta Argentina",
+      "location": "Campo Durán, Salta, Argentina",
+      "statusLabel": "USD 50M — Venta",
+      "description": "Refinería estratégica en Campo Durán, Salta, con capacidad de procesamiento de 4.000 m³ diarios de crudo y condensados. Red troncal de poliductos y estaciones de carga asociadas para abastecimiento del NOA.",
+      "thesis": "Adquisición a valuación de distress industrial (USD 50M) con gigantesca infraestructura instalada de destilación, ductos y logística regional insustituible.",
+      "highlights": [
+        "Capacidad instalada de refinación de 4.000 m³/día en el norte argentino.",
+        "Red troncal propia de poliductos para transporte de combustibles y GLP.",
+        "Posicionamiento estratégico en la frontera de gas y petróleo con Bolivia y Chile.",
+        "Facilidades de almacenamiento masivo y despacho multimodal.",
+        "Venta por USD 50M con enorme potencial de sinergia de crudos livianos."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 50M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Capacidad",
+          "val": "4.000 m³/Día",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Red",
+          "val": "Poliductos NOA",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Venta Directa",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Complejo de refinación, poliductos y fraccionamiento de GLP con posición dominante de abastecimiento en 7 provincias del Noroeste Argentino.",
+        "intl": "La reversión del Gasoducto Norte transforma a REFINOR en el nudo logístico indispensable para procesar y transportar gas y condensados hacia Brasil y Bolivia."
+      }
+    },
+    "en": {
+      "categoryTag": "Downstream & Pipelines",
+      "title": "NOA Refinery & Pipeline Complex — Salta Argentina",
+      "location": "Campo Durán, Salta, Argentina",
+      "statusLabel": "USD 50M — Asset Sale",
+      "description": "Strategic regional refinery in Campo Durán, Salta, with 4,000 m³/day processing capacity for crude and gas condensates. Features an extensive regional pipeline and fuel distribution network.",
+      "thesis": "Opportunity to acquire critical energy infrastructure in Northern Argentina at an attractive valuation (USD 50M) with irreplaceable transport assets.",
+      "highlights": [
+        "Refining capacity of 4,000 m³/day in northern Argentina.",
+        "Proprietary multi-product pipeline network for fuels and LPG.",
+        "Strategic cross-border logistical hub near Bolivia and Chile.",
+        "Extensive tank storage and multimodal rack distribution facilities.",
+        "Attractive asset sale for USD 50M with major synergy upside."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 50M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Capacity",
+          "val": "4,000 m³/Day",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Logistics",
+          "val": "NOA Pipelines",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Direct Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "The sole refining, LPG fractionation, and pipeline complex in Northwest Argentina, commanding wholesale supply across 7 provinces.",
+        "intl": "Northern Gas Pipeline reversal establishes REFINOR as the primary logistics bridge for hydrocarbon transit to Brazil."
+      }
+    }
+  },
+  {
+    "id": "palermo-aike-chubut",
+    "title": "Desarrollo No Convencional Palermo Aike Chubut",
+    "sector": "Petróleo, Gas & Infraestructura",
+    "basePrice": 200000000,
+    "overpriceTarget": 10000000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Proyecto exploratorio y de desarrollo no convencional en la formación Palermo Aike, considerada la segunda mayor reserva de shale de Argentina después de Vaca Muerta. Presentado oficialmente por la provincia de Chubut.",
+    "modality": "Socio Inversor",
+    "roi": "Plan No Convencional",
+    "statusProgress": "Proyecto oficial integral presentado por Chubut para exploración no convencional",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-palermo-aike-chubut",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "A Estructurar con Socio",
+    "isPrivatePlacement": false,
+    "dealType": "Socio Inversor",
+    "tir": "27.5%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 22.0M/año (Margen 55%)",
+    "capitalStructure": "Socio Inversor / Farm-in UTE",
+    "regulatoryRegime": "Concesión Provincial de Exploración No Convencional & RIGI",
+    "financialNote_es": "Cálculo de TIR: Segunda reserva de shale de Argentina con costos de acceso por acre 80% menores a Neuquén. TIR del 27.5% vs. TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Argentina second-largest shale play with entry costs 80% below Vaca Muerta. 27.5% IRR vs. IRR > 15%.",
+    "es": {
+      "categoryTag": "Shale Oil & Gas — Palermo Aike",
+      "title": "Desarrollo No Convencional Palermo Aike Chubut",
+      "location": "Chubut / Cuenca Austral, Argentina",
+      "statusLabel": "Socio Inversor — Plan Integral",
+      "description": "Proyecto exploratorio y de desarrollo no convencional en la formación Palermo Aike, considerada la segunda mayor reserva de shale de Argentina después de Vaca Muerta. Presentado oficialmente por la provincia de Chubut.",
+      "thesis": "Oportunidad pionera de ingresar en la frontera no convencional de la Patagonia sur con beneficios tributarios provinciales y elegibilidad para el régimen RIGI.",
+      "highlights": [
+        "Segunda roca generadora no convencional de mayor volumen de Argentina.",
+        "Proyecto integral con respaldo institucional de la Gobernación de Chubut.",
+        "Búsqueda de operadoras y consorcios inversores para pozos exploratorios horizontales.",
+        "Infraestructura portuaria y de evacuación en el Atlántico Sur.",
+        "Elegible para incentivos RIGI de libre disponibilidad de divisas."
+      ],
+      "metrics": [
+        {
+          "label": "Formación",
+          "val": "Palermo Aike",
+          "color": "text-gold"
+        },
+        {
+          "label": "Recurso",
+          "val": "Shale Oil & Gas",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Provincia",
+          "val": "Chubut",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Socio Inversor",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "La formación shale más prometedora fuera de Vaca Muerta, con espesores netos y madurez térmica ideales para petróleo liviano y gas en la Cuenca Austral.",
+        "intl": "Operadoras internacionales buscan posicionarse tempranamente en la próxima frontera no convencional de Sudamérica a una fracción del costo por acre de Texas."
+      }
+    },
+    "en": {
+      "categoryTag": "Shale Play — Palermo Aike",
+      "title": "Palermo Aike Unconventional Play Chubut",
+      "location": "Chubut / Austral Basin, Argentina",
+      "statusLabel": "Equity Partner — Master Plan",
+      "description": "Unconventional exploration and development play targeting the Palermo Aike shale formation, recognized as Argentina's second-largest shale deposit after Vaca Muerta. Officially sponsored by Chubut Province.",
+      "thesis": "Pioneering entry into Argentina's newest shale frontier with strong provincial incentives and full RIGI federal investment eligibility.",
+      "highlights": [
+        "Second-largest unconventional shale resource in Argentina.",
+        "Comprehensive development package sponsored by the Chubut Government.",
+        "Seeking operating and financial partners for horizontal drilling campaign.",
+        "Proximity to deepwater Atlantic export terminals.",
+        "Eligible for RIGI FX deregulation and tax stability benefits."
+      ],
+      "metrics": [
+        {
+          "label": "Formation",
+          "val": "Palermo Aike",
+          "color": "text-gold"
+        },
+        {
+          "label": "Resource",
+          "val": "Shale Oil & Gas",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Province",
+          "val": "Chubut",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Equity Partner",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Argentina premier emerging shale play outside Neuquen, featuring excellent thermal maturity for light oil in the Austral Basin.",
+        "intl": "International E&P firms targeting early-entry acreage in South America next shale frontier at attractive valuation multiples."
+      }
+    }
+  },
+  {
+    "id": "vacamuerta-3refinerias-puerto",
+    "title": "Paquete 3 Refinerías en Vaca Muerta + Puerto de Aguas Profundas",
+    "sector": "Petróleo, Gas & Infraestructura",
+    "basePrice": 350000000,
+    "overpriceTarget": 17500000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Excepcional paquete accionario que incluye 3 unidades de negocio de refinación especializadas en Vaca Muerta y terminal marítima de aguas profundas con título de propiedad en Puerto Galván, Bahía Blanca. Reactivación llave en mano a 6 meses.",
+    "modality": "Venta Llave en Mano",
+    "roi": "Reactivación 6 Meses",
+    "statusProgress": "3 refinerías y Puerto Galván con título propio; puesta a punto a 6 meses",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-vacamuerta-3refinerias-puerto",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "USD 350M",
+    "isPrivatePlacement": false,
+    "dealType": "Venta",
+    "tir": "45.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 95.0M/año (Margen 34%)",
+    "capitalStructure": "100% Venta Llave en Mano de Activos Portuarios y Refinación",
+    "regulatoryRegime": "Habilitación Portuaria de Aguas Profundas & Régimen RIGI",
+    "financialNote_es": "Cálculo de TIR: Tarifas de desahogo y exportación directa de crudo Medanito sin estrangulamiento de oleoductos. TIR del 45.0% frente al TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Direct offshore loading tariffs avoiding pipeline evacuation bottlenecks. 45.0% IRR well above the IRR > 15%.",
+    "es": {
+      "categoryTag": "Infraestructura & Refinación Vaca Muerta",
+      "title": "Paquete 3 Refinerías en Vaca Muerta + Puerto de Aguas Profundas",
+      "location": "Cuenca Neuquina & Puerto Galván (Bahía Blanca), Argentina",
+      "statusLabel": "USD 350M — Venta Llave en Mano",
+      "description": "Excepcional paquete accionario que incluye 3 unidades de negocio de refinación especializadas en Vaca Muerta y terminal marítima de aguas profundas con título de propiedad en Puerto Galván, Bahía Blanca. Reactivación llave en mano a 6 meses.",
+      "thesis": "Infraestructura estratégica de downstream y biocombustibles acoplada a logística portuaria privada de aguas profundas, eliminando cuellos de botella en la exportación de crudo.",
+      "highlights": [
+        "Refinería 1: Tratamiento de crudos livianos (1.400 m³/día; almacenaje 22.000 m³).",
+        "Refinería 2: Refinación de naftas, hidrotratamiento e isomerización (1.040 m³/día; almacenaje 8.000 m³).",
+        "Refinería 3: Producción de biocombustibles (130 ton/día; almacenaje 2.000 ton).",
+        "Puerto Galván: Con título de propiedad privado en Bahía Blanca con muelle de aguas profundas.",
+        "Modalidad llave en mano con 6 meses para reactivación total y acompañamiento estratégico por USD 350M."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 350M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Refinerías",
+          "val": "3 Complejos",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Puerto",
+          "val": "Propiedad Galván",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Llave en Mano",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Paquete de 3 refinerías modulares y terminal portuaria de aguas profundas diseñada para evacuar crudo no convencional sin depender de oleoductos congestionados.",
+        "intl": "La producción de Vaca Muerta superará 1 millón de barriles diarios en 2030, demandando infraestructura privada de despacho marítimo a mercados del Atlántico."
+      }
+    },
+    "en": {
+      "categoryTag": "Refining & Deepwater Port Hub",
+      "title": "3 Vaca Muerta Refineries + Deepwater Port Complex",
+      "location": "Neuquina Basin & Puerto Galván (Bahía Blanca), Argentina",
+      "statusLabel": "USD 350M — Turnkey Asset Sale",
+      "description": "Strategic equity package comprising 3 specialized refining business units in Vaca Muerta plus a private deepwater ocean terminal with freehold title in Puerto Galván, Bahía Blanca. Turnkey restart within 6 months.",
+      "thesis": "Unmatched combination of midstream refining and private oceanfront port infrastructure debottlenecking export logistics for Vaca Muerta crude.",
+      "highlights": [
+        "Refinery 1: Light crude processing (1,400 m³/day; 22,000 m³ storage capacity).",
+        "Refinery 2: Hydrotreating, reforming, and isomerization (1,040 m³/day; 8,000 m³ storage).",
+        "Refinery 3: Biofuel manufacturing unit (130 tons/day; 2,000 tons storage).",
+        "Deepwater Ocean Terminal: Freehold title in Puerto Galván, Bahía Blanca port.",
+        "Turnkey delivery within 6 months with full engineering transition for USD 350M."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 350M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Refineries",
+          "val": "3 Units",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Deepwater Port",
+          "val": "Freehold Title",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Turnkey Sale",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Strategic package of 3 modular refineries and deep-water terminal bypassing domestic pipeline bottlenecks for Vaca Muerta crude.",
+        "intl": "Vaca Muerta surging towards 1M bpd by 2030, creating critical need for private offshore tanker loading to global export routes."
+      }
+    }
+  },
+  {
+    "id": "vacamuerta-operadora-15concesiones",
+    "title": "Operadora de Pozos Petroleros en Vaca Muerta (15 Concesiones)",
+    "sector": "Petróleo, Gas & Infraestructura",
+    "basePrice": 340000000,
+    "overpriceTarget": 17000000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Compañía operadora en marcha con 15 concesiones de explotación activas sobre una superficie de 3.000 km² en la Cuenca Neuquina. Bloque de 1.200 pozos y más de 500 empleados. Plan llave en mano de mejora con tecnología No Convencional.",
+    "modality": "Socio Inversor",
+    "roi": "En Producción",
+    "statusProgress": "15 concesiones en 3.000 km², ~1.200 pozos, >500 empleados; inversión llave en mano",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-vacamuerta-operadora-15concesiones",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "USD 340M",
+    "isPrivatePlacement": false,
+    "dealType": "Socio Inversor",
+    "tir": "35.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 68.0M/año (Margen 58%)",
+    "capitalStructure": "Socio Inversor / Capital de Desarrollo Upstream",
+    "regulatoryRegime": "15 Concesiones de Explotación Hidrocarburífera Vigentes",
+    "financialNote_es": "Cálculo de TIR: Producción de crudo no convencional con break-even inferior a 35 USD/bbl y reservas P1 certificadas. TIR del 35.0% vs. TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Producing shale assets with sub-USD 35/bbl breakeven and certified 1P reserves. 35.0% IRR vs. IRR > 15%.",
+    "es": {
+      "categoryTag": "Upstream Operadora — Vaca Muerta",
+      "title": "Operadora de Pozos Petroleros en Vaca Muerta (15 Concesiones)",
+      "location": "Cuenca Neuquina, Neuquén, Argentina",
+      "statusLabel": "USD 340M — Socio Inversor",
+      "description": "Compañía operadora en marcha con 15 concesiones de explotación activas sobre una superficie de 3.000 km² en la Cuenca Neuquina. Bloque de 1.200 pozos y más de 500 empleados. Plan llave en mano de mejora con tecnología No Convencional.",
+      "thesis": "Empresa petrolera consolidada a escala corporativa con formidable masa crítica de pozos para reactivación y estimulación horizontal en tight y shale.",
+      "highlights": [
+        "15 concesiones de explotación hidrocarburífera en 3.000 km² de Cuenca Neuquina.",
+        "Parque activo de aproximadamente 1.200 pozos en producción con base operativa propia.",
+        "Estructura corporativa sólida con más de 500 colaboradores técnicos y operarios.",
+        "Inversión de USD 340M estructurada para plan llave en mano con técnica No Convencional.",
+        "Socio inversor con participación de control o co-gestión ejecutiva."
+      ],
+      "metrics": [
+        {
+          "label": "Inversión Final",
+          "val": "USD 340M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Superficie",
+          "val": "3.000 km²",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Pozos",
+          "val": "1.200 Pozos",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Socio Inversor",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Compañía operadora con 15 áreas de concesión adjudicadas, producción inmediata de petróleo y gas, y red de ductos de captación en Cuenca Neuquina.",
+        "intl": "Entrada directa de capital al shale oil más competitivo del hemisferio sur, con costos de desarrollo y punto de equilibrio (break-even) inferiores a USD 35/bbl."
+      }
+    },
+    "en": {
+      "categoryTag": "Upstream Operator — Vaca Muerta",
+      "title": "Oilfield Operator in Vaca Muerta (15 Concessions)",
+      "location": "Neuquina Basin, Neuquén, Argentina",
+      "statusLabel": "USD 340M — Equity Partner",
+      "description": "Fully established independent oil & gas operator holding 15 exploitation licenses across 3,000 km² in the prolific Neuquina Basin. ~1,200 active wells and >500 staff. Turnkey unconventional well enhancement plan.",
+      "thesis": "Corporate-scale platform company with massive well stock and extensive acreage ready for high-yield unconventional workover and horizontal re-stimulation.",
+      "highlights": [
+        "15 exploitation licenses covering 3,000 km² in prime Vaca Muerta play.",
+        "Operational base managing approximately 1,200 active producing wells.",
+        "Experienced workforce with more than 500 skilled petroleum engineers and crew.",
+        "Turnkey capital plan of USD 340M deploying unconventional stimulation.",
+        "Equity partnership with shared governance or controlling stake."
+      ],
+      "metrics": [
+        {
+          "label": "Final Ticket",
+          "val": "USD 340M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Acreage",
+          "val": "3,000 km²",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Well Stock",
+          "val": "1,200 Wells",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Equity Partner",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Independent producer holding 15 active concession blocks with running crude production and field gathering facilities.",
+        "intl": "Direct equity access to top-tier shale oil assets delivering sub-USD 35/bbl breakeven economics."
+      }
+    }
+  },
+  {
+    "id": "pozo-salta",
+    "title": "Proyecto Pozo Salta — Infraestructura & Secado de Cuttings",
+    "sector": "Petróleo, Gas & Infraestructura",
+    "basePrice": 1860000000,
+    "overpriceTarget": 93000000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Complejo integral hidrocarburífero y ambiental en Salta que combina: 1) Planta industrial de tratamiento térmico y secado de cuttings (500 m³/día) con demanda regulatoria mandatoria, y 2) Concesión oficial por 20 años sobre 25 áreas de explotación en Cuenca Noroeste con reservas certificadas de crudo y gas.",
+    "modality": "Socio Inversor / Concesión & UTE",
+    "roi": "3 Años (Planta) / 20 Años (Concesión)",
+    "statusProgress": "Planta de secado de cuttings (500 m³/d) unificada a 25 áreas de concesión hidrocarburífera por 20 años en Salta",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-pozo-salta",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "USD 1.860M (Flexible con Socios Inversores)",
+    "isPrivatePlacement": false,
+    "dealType": "Socio Inversor",
+    "tir": "31.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 8.2M/año Planta + USD 240M/año Bloques UTE",
+    "capitalStructure": "Socio Inversor / Flexibilidad de Acuerdo en 25 Bloques & Complejo Cuttings",
+    "regulatoryRegime": "Normativa Ambiental Mandatoria NOA & 25 Concesiones Vigentes",
+    "financialNote_es": "Cálculo de TIR: Inversión estructurada de USD 1.860M con flexibilidad para socios inversores: planta de secado de cuttings mandatoria más 25 áreas conectadas a Brasil. TIR proyectada del 31.0% (TIR > 15%).",
+    "financialNote_en": "IRR Methodology: Structured USD 1,860M investment with flexibility for partner investors: mandatory cuttings drying plant plus 25 blocks connected to Brazil. Projected 31.0% IRR (IRR > 15%).",
+    "es": {
+      "categoryTag": "Infraestructura & Upstream NOA — 25 Áreas",
+      "title": "Proyecto Pozo Salta — Infraestructura & Secado de Cuttings",
+      "location": "Cuenca Noroeste, Salta, Argentina",
+      "statusLabel": "USD 1.860M — Socio Inversor",
+      "description": "Complejo integral hidrocarburífero y ambiental en Salta que combina: 1) Planta industrial de tratamiento térmico y secado de cuttings (500 m³/día) con demanda regulatoria mandatoria, y 2) Concesión oficial por 20 años sobre 25 áreas de explotación en Cuenca Noroeste con reservas certificadas de crudo y gas.",
+      "thesis": "Doble motor de rentabilidad: ingresos operativos en dólares con clientes cautivos de perforación NOA, complementado por la reversión del Gasoducto Norte para inyección y exportación masiva a Brasil sobre 25 bloques en UTE.",
+      "highlights": [
+        "Planta de secado de cuttings (500 m³/día): único centro habilitado en la cuenca, payback < 3 años.",
+        "25 áreas de explotación concesionadas por 20 años con reservas probadas P1 y P2.",
+        "Conexión logística directa a Campo Durán y red de poliductos/gasoductos al norte y Brasil.",
+        "Monto de inversión de USD 1.860M con alta flexibilidad para acordar esquemas con socios inversores (por bloques o complejo integral).",
+        "Acuerdo bilateral de suministro de crudo y gas con refinerías de la región."
+      ],
+      "metrics": [
+        {
+          "label": "Monto Total Plan",
+          "val": "USD 1.860M",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Concesión Áreas",
+          "val": "25 Bloques (20 Años)",
+          "color": "text-gold"
+        },
+        {
+          "label": "EBITDA Proyectado",
+          "val": "USD 8.2M + USD 240M",
+          "color": "text-green"
+        },
+        {
+          "label": "TIR Estimada",
+          "val": "31.0%",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Servicio ambiental obligatorio de secado térmico de cuttings (500 m³/día) con tarifas dolarizadas, unificado al desarrollo de 25 áreas concesionadas a 20 años con gasoducto troncal.",
+        "intl": "La reversión del Gasoducto Norte y la apertura de exportaciones a Brasil aceleran el desarrollo de cuencas maduras y exigen cumplimiento estricto de normas ambientales ESG."
+      }
+    },
+    "en": {
+      "categoryTag": "Infrastructure & Upstream Basin — 25 Blocks",
+      "title": "Pozo Salta Project — Infrastructure & Cuttings Treatment",
+      "location": "Northwest Basin, Salta, Argentina",
+      "statusLabel": "USD 1,860M — Equity Partner",
+      "description": "Integrated oilfield and environmental complex in Salta combining: 1) Thermal drying facility for drilling cuttings (500 m3/day) with mandatory compliance demand, and 2) 20-year concession covering 25 licensed exploration blocks in Northwest Basin.",
+      "thesis": "Dual-engine revenue model: recurring dollarized environmental service cash flow paired with 25 upstream concession blocks strategically linked to the Northern Gas Pipeline reversal towards Brazil.",
+      "highlights": [
+        "Thermal desorption plant (500 m³/day): sole certified processing facility in the basin (< 3-year payback).",
+        "25 exploitation blocks under 20-year concession with certified 1P and 2P reserves.",
+        "Direct pipeline interconnection to Campo Durán refinery and export lines to Brazil.",
+        "Total USD 1,860M investment volume offering maximum flexibility for customized agreements with partner investors.",
+        "Bilateral off-take agreements with regional downstream refiners."
+      ],
+      "metrics": [
+        {
+          "label": "Total Plan Monto",
+          "val": "USD 1,860M",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Area Concessions",
+          "val": "25 Blocks (20 Yrs)",
+          "color": "text-gold"
+        },
+        {
+          "label": "Projected EBITDA",
+          "val": "USD 8.2M + USD 240M",
+          "color": "text-green"
+        },
+        {
+          "label": "Modeled IRR",
+          "val": "31.0%",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Mandatory thermal cuttings drying hub (500 m3/day) paired with 25 licensed 20-year concession blocks in the Northwest Basin.",
+        "intl": "Northern Pipeline reversal unlocking Brazilian export markets while stringent environmental ESG rules enforce zero-discharge drill cuttings."
+      }
+    }
+  },
+  {
+    "id": "asesoramiento-inbound-funds",
+    "title": "Gestión y Administración Integral de Grupos Inversores",
+    "sector": "Asesoramiento Financiero",
+    "basePrice": 0,
+    "overpriceTarget": 0,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Acompañamiento integral para grupos inversores y fondos internacionales (FDI) que buscan estructurar y desplegar capital en activos estratégicos de la economía real argentina.",
+    "modality": "Asset Management & Advisory",
+    "roi": "Continuo",
+    "statusProgress": "Servicio institucional integral con equipo multidisciplinario y cartelera curada",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-asesoramiento-inbound-funds",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "Mandato Institucional",
+    "isPrivatePlacement": false,
+    "dealType": "Asesoramiento / Mandato",
+    "tir": "Estructuración",
+    "tir_target": "TIR > 15%",
+    "ebitda": "Fee Management 1.5% + Carry 15%",
+    "capitalStructure": "Mandato Institucional de Asset Management",
+    "regulatoryRegime": "Contratos NCNDA, Mandatos Fiduciarios & Compliance Internacional",
+    "financialNote_es": "Cálculo de TIR: Retorno continuo basado en honorarios de gestión y carry sobre valorización de activos. Supera cualquier tasa libre de riesgo objetivo (>9%).",
+    "financialNote_en": "IRR Methodology: Ongoing returns from management fees and carried interest on deal execution. Substantially outperforms IRR > 15%.",
+    "es": {
+      "categoryTag": "Banca de Inversión & Mandatos",
+      "title": "Gestión y Administración Integral de Grupos Inversores",
+      "location": "Buenos Aires / Córdoba / Global",
+      "statusLabel": "Servicio Institucional",
+      "description": "Acompañamiento integral para grupos inversores y fondos internacionales (FDI) que buscan estructurar y desplegar capital en activos estratégicos de la economía real argentina.",
+      "thesis": "Plataforma de aterrizaje seguro ('soft landing') que minimiza la fricción regulatoria, cambiaria y legal, asegurando la selección de proyectos con estricto estándar de debida diligencia.",
+      "highlights": [
+        "Cartelera activa de oportunidades de inversión auditadas y de alto rendimiento.",
+        "Estructuración de vehículos societarios locales, cuentas fiduciarias y compliance cambiario.",
+        "Equipo multidisciplinario: analistas financieros, ingenieros, abogados y escribanos.",
+        "Gobierno corporativo y seguimiento de avance de proyectos en tiempo real.",
+        "Asignación de consultor dedicado para interlocución con juntas directivas."
+      ],
+      "metrics": [
+        {
+          "label": "Servicio",
+          "val": "Gestión Integral",
+          "color": "text-gold"
+        },
+        {
+          "label": "Alcance",
+          "val": "Fondos Extranjeros",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Equipo",
+          "val": "Multidisciplinario",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Mandato Privado",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "El nuevo marco macroeconómico argentino y el régimen RIGI generan un flujo masivo de consultas de fondos extranjeros para estructurar adquisiciones directas.",
+        "intl": "Fondos soberanos y de private equity buscan originadores locales con conocimiento regulatorio, contratos NCNDA y acceso directo a activos privados."
+      }
+    },
+    "en": {
+      "categoryTag": "Investment Banking & Advisory",
+      "title": "Comprehensive Asset Management for Investment Groups",
+      "location": "Buenos Aires / Córdoba / Global",
+      "statusLabel": "Institutional Service",
+      "description": "End-to-end advisory and management services for international private equity and foreign direct investment (FDI) groups allocating capital into real Argentine assets.",
+      "thesis": "Turnkey soft-landing platform mitigating regulatory, FX, and legal complexity while delivering rigorously vetted investment-grade deals.",
+      "highlights": [
+        "Curated pipeline of audited, high-yield investment proposals across key sectors.",
+        "Corporate vehicle structuring, fiduciary escrow administration, and FX compliance.",
+        "Multidisciplinary team of financial modelers, engineers, and legal counsels.",
+        "Corporate governance and real-time project milestone tracking.",
+        "Dedicated partner assignment for board-level liaison."
+      ],
+      "metrics": [
+        {
+          "label": "Service",
+          "val": "Asset Management",
+          "color": "text-gold"
+        },
+        {
+          "label": "Scope",
+          "val": "Foreign Funds",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Team",
+          "val": "Multidisciplinary",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Private Mandate",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Pro-market reforms and RIGI incentives accelerating institutional foreign capital entry into Argentina natural resources.",
+        "intl": "Sovereign wealth and private equity funds seeking trusted local partners to originate, diligence, and structure private transactions."
+      }
+    }
+  },
+  {
+    "id": "asesoramiento-gobiernos",
+    "title": "Financiamiento de Proyectos Gubernamentales e Infraestructura",
+    "sector": "Asesoramiento Financiero",
+    "basePrice": 0,
+    "overpriceTarget": 0,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Diseño y estructuración de instrumentos de financiamiento para estados provinciales, municipios y entes autárquicos destinados a infraestructura energética, vial, hídrica y de transporte.",
+    "modality": "Estructuración Financiera",
+    "roi": "Estructural",
+    "statusProgress": "Asesoría para entes públicos, provincias y municipios bajo marco RIGI / PPP",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-asesoramiento-gobiernos",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "Estructuración a Medida",
+    "isPrivatePlacement": false,
+    "dealType": "Mandato Soberano",
+    "tir": "Honorarios Éxito",
+    "tir_target": "TIR > 9%",
+    "ebitda": "Success Fee 2.0% - 3.5% sobre Capex",
+    "capitalStructure": "Mandato Soberano de Estructuración Financiera",
+    "regulatoryRegime": "Régimen PPP Nacional/Provincial & Agencias Multilaterales",
+    "financialNote_es": "Cálculo de TIR: Estructuración fiduciaria de obra pública sin compromiso de capital propio, con honorarios de éxito en dólares superiores al TIR > 9%.",
+    "financialNote_en": "IRR Methodology: Zero-equity public-private partnership structuring yielding dollar success fees above >9% hurdle rate.",
+    "es": {
+      "categoryTag": "Finanzas Públicas & Infraestructura",
+      "title": "Financiamiento de Proyectos Gubernamentales e Infraestructura",
+      "location": "Nación, Provincias y Municipios, Argentina",
+      "statusLabel": "Advisory Estructurado",
+      "description": "Diseño y estructuración de instrumentos de financiamiento para estados provinciales, municipios y entes autárquicos destinados a infraestructura energética, vial, hídrica y de transporte.",
+      "thesis": "Monetización y apalancamiento de fondos públicos mediante bonos verdes, fideicomisos de garantía y esquemas PPP/RIGI para viabilizar obras de gran porte sin comprometer el balance fiscal.",
+      "highlights": [
+        "Estructuración de bonos verdes, títulos de deuda y fideicomisos de obra pública.",
+        "Adecuación y estructuración de proyectos estratégicos al Régimen RIGI (Ley 27.742).",
+        "Modelos de asociación público-privada (PPP) con repago por tarifas o peajes.",
+        "Dictámenes de viabilidad económica, fiscal y financiera auditables.",
+        "Vínculo con organismos multilaterales de crédito y bancos de desarrollo."
+      ],
+      "metrics": [
+        {
+          "label": "Servicio",
+          "val": "Finanzas Públicas",
+          "color": "text-gold"
+        },
+        {
+          "label": "Instrumentos",
+          "val": "Bonos & Fideicomisos",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Marco",
+          "val": "RIGI / PPP",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Estructuración",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Estados provinciales y municipios demandan estructuración de esquemas de Participación Público-Privada (PPP) para obras viales, energéticas e hídricas.",
+        "intl": "Bancos multilaterales de crédito (BID, CAF, Banco Mundial) priorizan financiamiento de infraestructura resiliente con gobernanza transparente."
+      }
+    },
+    "en": {
+      "categoryTag": "Public Finance & Infrastructure",
+      "title": "Government Project Financing & Infrastructure Advisory",
+      "location": "Federal, Provincial & Municipal, Argentina",
+      "statusLabel": "Structured Advisory",
+      "description": "Design and structuring of financing instruments for provincial governments, municipalities, and state utilities targeting energy, road, water, and transport infrastructure.",
+      "thesis": "Public balance-sheet optimization via green bonds, infrastructure trusts, and PPP/RIGI mechanisms to fund large-scale developments.",
+      "highlights": [
+        "Green bond issuances, debt certificates, and public infrastructure trust funds.",
+        "Project alignment with the federal RIGI framework (Law 27,742).",
+        "Public-Private Partnership (PPP) modeling with user-toll or availability fee repayment.",
+        "Auditable economic and fiscal feasibility appraisals.",
+        "Direct structuring liaison with multilateral development banks."
+      ],
+      "metrics": [
+        {
+          "label": "Service",
+          "val": "Public Finance",
+          "color": "text-gold"
+        },
+        {
+          "label": "Instruments",
+          "val": "Bonds & Trusts",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Framework",
+          "val": "RIGI / PPP",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Financial Advisory",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Provinces and municipalities deploying private PPP financing models for critical public infrastructure works.",
+        "intl": "Multilateral development banks and global institutional lenders prioritizing transparent blended-finance infrastructure facilities."
+      }
+    }
+  },
+  {
+    "id": "asesoramiento-real-estate",
+    "title": "Gestión de Proyectos de Bienes Raíces & Construcción",
+    "sector": "Asesoramiento Financiero",
+    "basePrice": 0,
+    "overpriceTarget": 0,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Estructuración integral de vehículos de inversión inmobiliaria de renta corporativa (REITs), parques industriales, loteos turísticos y naves logísticas 'triple A' con flujos dolarizados.",
+    "modality": "Desarrollo & Advisory",
+    "roi": "Renta / Plusvalía",
+    "statusProgress": "Vehículos fiduciarios, parques logísticos, loteos y fondos REIT dolarizados",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-asesoramiento-real-estate",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "Desarrollo Fiduciario",
+    "isPrivatePlacement": false,
+    "dealType": "Socio Inversor / Desarrollo",
+    "tir": "18.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 7.5M/año (Margen 35%)",
+    "capitalStructure": "Socio Inversor / Fideicomiso al Costo con Plusvalía",
+    "regulatoryRegime": "Ley de Fideicomisos 24.441 & Crédito Hipotecario",
+    "financialNote_es": "Cálculo de TIR: Flujos de preventa al costo más renta por revalorización en polos urbanos en expansión. TIR del 18.0% vs. TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Cost-based development pre-sales plus urban property capital appreciation. 18.0% IRR vs. IRR > 15%.",
+    "es": {
+      "categoryTag": "Bienes Raíces & REITs",
+      "title": "Gestión de Proyectos de Bienes Raíces & Construcción",
+      "location": "Polos Corporativos e Industriales, Argentina",
+      "statusLabel": "Estructuración Fiduciaria",
+      "description": "Estructuración integral de vehículos de inversión inmobiliaria de renta corporativa (REITs), parques industriales, loteos turísticos y naves logísticas 'triple A' con flujos dolarizados.",
+      "thesis": "Protección patrimonial y rentabilidad en USD mediante el apalancamiento de activos de tierra estratégicos desarrollados bajo contratos fiduciarios de estricta segregación patrimonial.",
+      "highlights": [
+        "Vehículos fiduciarios de inversión inmobiliaria (REITs) transparentes y dolarizados.",
+        "Desarrollo de naves industriales, centros de distribución y polos logísticos.",
+        "Modelado financiero de flujos de fondos, absorción comercial y retorno al inversor.",
+        "Segregación patrimonial y seguridad jurídica respaldada en el CCCN (Ley 26.994).",
+        "Comercialización de unidades de renta corporativa con inquilinos multinacionales."
+      ],
+      "metrics": [
+        {
+          "label": "Servicio",
+          "val": "Real Estate Advisory",
+          "color": "text-gold"
+        },
+        {
+          "label": "Activos",
+          "val": "Logística & Hotelería",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Moneda",
+          "val": "Flujos USD",
+          "color": "text-green"
+        },
+        {
+          "label": "Modalidad",
+          "val": "Estructuración",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "El regreso del crédito hipotecario y la regularización de activos impulsan el desarrollo de urbanizaciones, parques logísticos y oficinas corporativas AAA.",
+        "intl": "Costos de construcción en dólares históricamente atractivos en Argentina permiten a desarrolladores internacionales capturar retornos por plusvalía y renta."
+      }
+    },
+    "en": {
+      "categoryTag": "Real Estate & REIT Structuring",
+      "title": "Real Estate & Construction Project Management",
+      "location": "Corporate & Industrial Hubs, Argentina",
+      "statusLabel": "Fiduciary Advisory",
+      "description": "Comprehensive design and administration of commercial real estate investment trusts (REITs), industrial logistics parks, master-planned residential communities, and prime yield assets.",
+      "thesis": "Wealth preservation and inflation-hedged USD cash yields leveraging prime land assets governed by bankruptcy-remote fiduciary trust contracts.",
+      "highlights": [
+        "USD-denominated transparent Real Estate Investment Trust (REIT) structures.",
+        "Development of prime industrial warehouses, logistics parks, and lifestyle communities.",
+        "Quantitative discounted cash flow modeling, absorption metrics, and IRR targets.",
+        "Strict legal asset ring-fencing under Argentine Civil and Commercial Code (Law 26,994).",
+        "Commercial leasing to multinational corporate tenants."
+      ],
+      "metrics": [
+        {
+          "label": "Service",
+          "val": "REIT & RE Advisory",
+          "color": "text-gold"
+        },
+        {
+          "label": "Asset Class",
+          "val": "Industrial / Yield",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Currency",
+          "val": "USD Yield",
+          "color": "text-green"
+        },
+        {
+          "label": "Deal Type",
+          "val": "Fiduciary Vehicle",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Mortgage lending recovery and tax normalization driving residential, logistics, and AAA corporate real estate developments.",
+        "intl": "Highly attractive construction costs in USD allowing international investors to secure premium yields and long-term capital gains."
+      }
+    }
+  },
+  {
+    "id": "reit-strategy",
+    "title": "ENERGY CPY Argentina REIT Investment Strategy 2026",
+    "sector": "Real Estate / REIT",
+    "basePrice": 30000000,
+    "overpriceTarget": 1500000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Estrategia fiduciaria de inversión inmobiliaria de renta corporativa dolarizada (REIT) enfocada en oficinas premium y centros logísticos con contratos a largo plazo.",
+    "modality": "Fondo Inmobiliario",
+    "roi": "12% Anual USD",
+    "statusProgress": "Estrategia REIT dolarizada en activos triple A",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-reit-strategy",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "USD 30M Fondo",
+    "isPrivatePlacement": false,
+    "dealType": "Fondo Inmobiliario / REIT",
+    "tir": "13.5%",
+    "tir_target": "TIR > 9%",
+    "ebitda": "USD 4.2M/año en dividendos (Cap Rate 14.0%)",
+    "capitalStructure": "Fondo Fiduciario Inmobiliario Dolarizado / REIT",
+    "regulatoryRegime": "Estructura Fiduciaria Blindada bajo Ley 24.441 & CNV",
+    "financialNote_es": "Cálculo de TIR: Renta inmobiliaria institucional con distribución trimestral en USD y Cap Rate del 14%. TIR neta del 16.5% vs. TIR > 9%.",
+    "financialNote_en": "IRR Methodology: Institutional real estate quarterly dollar dividend payouts yielding 14% Cap Rate. 16.5% net IRR vs. IRR > 9%.",
+    "es": {
+      "categoryTag": "Fondo Inmobiliario REIT",
+      "title": "ENERGY CPY Argentina REIT Investment Strategy 2026",
+      "location": "CABA & Corredor Norte, Argentina",
+      "statusLabel": "USD 30M — Fondo Dolarizado",
+      "description": "Estrategia fiduciaria de inversión inmobiliaria de renta corporativa dolarizada (REIT) enfocada en oficinas premium y centros logísticos con contratos a largo plazo.",
+      "thesis": "Renta neta distribuible del 10% al 12% anual en USD combinada con plusvalía de capital en activos irreemplazables.",
+      "highlights": [
+        "Portafolio diversificado en activos inmobiliarios clase A+.",
+        "Contratos de alquiler corporativo dolarizados a 5-10 años.",
+        "Rendimiento anual neto proyectado del 10% al 12% en USD.",
+        "Vehículo fiduciario independiente con estricto gobierno corporativo.",
+        "Ticket de ingreso estructurado para inversores institucionales y privados."
+      ],
+      "metrics": [
+        {
+          "label": "Fondo Objetivo",
+          "val": "USD 30M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Rendimiento",
+          "val": "10% - 12% USD",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Contratos",
+          "val": "5 - 10 Años",
+          "color": "text-green"
+        },
+        {
+          "label": "Tipo",
+          "val": "REIT Dolarizado",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Primer vehículo institucional estructurado bajo ley de fideicomisos que consolida inmuebles comerciales y hoteleros con renta dolarizada y liquidación trimestral.",
+        "intl": "Estructura REIT alineada con estándares globales de transparencia que permite diversificar portafolios internacionales con rentas protegidas contra la inflación."
+      }
+    },
+    "en": {
+      "categoryTag": "Real Estate Investment Trust",
+      "title": "ENERGY CPY Argentina REIT Investment Strategy 2026",
+      "location": "Buenos Aires Prime Corridor, Argentina",
+      "statusLabel": "USD 30M — USD Fund",
+      "description": "Fiduciary corporate yield real estate investment strategy (REIT) focused on prime offices and modern logistics hubs backed by long-term corporate leases.",
+      "thesis": "Targeted net annual yield of 10% to 12% in USD combined with capital appreciation in trophy commercial assets.",
+      "highlights": [
+        "Diversified portfolio in prime Class A+ real estate.",
+        "Long-term USD-indexed commercial leases (5-10 years).",
+        "Projected net annual distribution of 10% to 12% in USD.",
+        "Ring-fenced bankruptcy-remote trust with institutional governance.",
+        "Structured entry tickets for qualified private and institutional capital."
+      ],
+      "metrics": [
+        {
+          "label": "Target Fund",
+          "val": "USD 30M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Yield",
+          "val": "10% - 12% USD",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Lease Term",
+          "val": "5 - 10 Years",
+          "color": "text-green"
+        },
+        {
+          "label": "Asset Type",
+          "val": "USD REIT",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Pioneering institutional REIT vehicle consolidating prime hotel and commercial real estate yielding quarterly dollarized distributions.",
+        "intl": "Standardized REIT architecture offering global investors liquid, inflation-protected, high-dividend exposure to prime Argentine real estate."
+      }
+    }
+  },
+  {
+    "id": "pesca-gran-escala",
+    "title": "Proyecto 6.6 — Pesca Industrial de Gran Escala en Patagonia",
+    "sector": "Pesca Industrial",
+    "basePrice": 310000000,
+    "overpriceTarget": 15500000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Modelo consolidado de alta rentabilidad para captura y exportación de especies marinas premium (Merluza Hubbsi y Langostino Rojo) con flota activa de 16 buques de gran calado, cuotas federales CITP y planta de procesamiento en tierra. Venta integral por USD 310M.",
+    "modality": "Flota & Industria",
+    "roi": "4 Años",
+    "statusProgress": "Flota activa de 16 buques en ZEE y planta de congelado en tierra",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-pesca-gran-escala",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "USD 310M — Venta de Activo",
+    "isPrivatePlacement": false,
+    "dealType": "Venta",
+    "tir": "28.0%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 48.0M/año (Margen 35%)",
+    "capitalStructure": "100% Venta de Flota Activa (16 Buques), Cuotas CITP y Planta Procesadora",
+    "regulatoryRegime": "Régimen Federal de Pesca (Ley 24.922) — Cuotas CITP a 15 Años",
+    "financialNote_es": "Cálculo de TIR: Venta integral por USD 310M con flujo de exportación consolidado de langostino y calamar en moneda dura. TIR proyectada del 28.0% (TIR > 15%).",
+    "financialNote_en": "IRR Methodology: 100% asset sale at USD 310M with robust export cash flows in hard currency. Projected 28.0% IRR (IRR > 15%).",
+    "es": {
+      "categoryTag": "Pesca Industrial Gran Escala",
+      "title": "Proyecto 6.6 — Pesca Industrial de Gran Escala en Patagonia",
+      "location": "Zona Económica Exclusiva (ZEE) Argentina",
+      "statusLabel": "USD 310M — Venta",
+      "description": "Modelo consolidado de alta rentabilidad para captura y exportación de especies marinas premium (Merluza Hubbsi y Langostino Rojo) con flota activa de 16 buques de gran calado, cuotas federales CITP y planta de procesamiento en tierra. Venta integral por USD 310M.",
+      "thesis": "Activo estratégico con derechos consolidados de captura en aguas argentinas generando ingresos brutos proyectados de USD 600M anuales.",
+      "highlights": [
+        "Flota propia de 16 buques industriales operativos en Caleta Olivia y Puerto Madryn.",
+        "Cuotas de captura federales (CITP) garantizadas a 15 años por ley nacional.",
+        "Monto de venta total fijado en USD 310M con Data Room e inventario técnico disponible.",
+        "Planta de procesamiento en tierra con capacidad de 120 toneladas diarias de congelado.",
+        "Exportación directa a mercados de alta cotización en moneda dura (UE, EE.UU. y Asia)."
+      ],
+      "metrics": [
+        {
+          "label": "Monto Venta",
+          "val": "USD 310M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Flota Activa",
+          "val": "16 Buques",
+          "color": "text-cyan"
+        },
+        {
+          "label": "EBITDA Anual",
+          "val": "USD 48.0M",
+          "color": "text-green"
+        },
+        {
+          "label": "TIR Estimada",
+          "val": "28.0%",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Flota activa de 16 buques pesqueros con cuota CITP federal asignada en caladeros patagónicos, capturando langostino salvaje, calamar illex y merluza hubbsi.",
+        "intl": "Demanda global insatisfecha de proteína marina salvaje en Asia, Europa y EE.UU., con cotizaciones internacionales récord en crustáceos y cefalópodos."
+      }
+    },
+    "en": {
+      "categoryTag": "Industrial High-Seas Fishing",
+      "title": "Project 6.6 — Large-Scale Industrial Fishing in Patagonia",
+      "location": "Exclusive Economic Zone (EEZ) Argentina",
+      "statusLabel": "USD 310M — Asset Sale",
+      "description": "High-margin industrial fishing and seafood export enterprise: active fleet of 16 deep-sea vessels, 15-year federal CITP quotas, and onshore processing plant. 100% asset sale at USD 310M.",
+      "thesis": "Secured fishing quotas in Argentine South Atlantic waters delivering USD 600M/yr in projected gross export revenues.",
+      "highlights": [
+        "Active proprietary fleet of 16 industrial fishing vessels operating in Patagonian ports.",
+        "15-year federal capture quotas (CITP) legally secured under national fishing regime.",
+        "Total asset sale price established at USD 310M with complete technical Data Room.",
+        "Onshore processing facility with 120 tons/day freezing capacity.",
+        "Direct dollarized exports to premium global markets (EU, USA, and Asia)."
+      ],
+      "metrics": [
+        {
+          "label": "Sale Amount",
+          "val": "USD 310M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Active Fleet",
+          "val": "16 Vessels",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Annual EBITDA",
+          "val": "USD 48.0M",
+          "color": "text-green"
+        },
+        {
+          "label": "Modeled IRR",
+          "val": "28.0%",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Premier 16-vessel industrial fleet holding permanent federal fishing quotas across the prolific Argentine Patagonia exclusive economic zone.",
+        "intl": "Sustained international demand for wild-caught marine protein across Asian and European seafood markets yielding peak export valuations."
+      }
+    }
+  },
+  {
+    "id": "pesca-integrado",
+    "title": "Proyecto 6.7 — Ecosistema Pesquero Integrado Patagonia",
+    "sector": "Pesca Industrial",
+    "basePrice": 5500000,
+    "overpriceTarget": 275000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_daniel",
+    "ownerName": "Daniel González",
+    "ownerType": "titular_directo",
+    "description": "Desarrollo boutique modular que integra buques tangoneros costeros, procesamiento en planta y logística de frío para exportación directa a mercados asiáticos y europeos.",
+    "modality": "Operación Boutique",
+    "roi": "3 Años",
+    "statusProgress": "Ecosistema pesquero integrado en Patagonia",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-pesca-integrado",
+    "createdAt": "2026-10-21",
+    "assignedAgent": "daniel",
+    "amountDisplay": "USD 5.5M CAPEX",
+    "isPrivatePlacement": false,
+    "dealType": "Socio Inversor",
+    "tir": "32.5%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 1.8M/año (Margen 40%)",
+    "capitalStructure": "Socio Inversor / Planta en Muelle & Flota Propia",
+    "regulatoryRegime": "Habilitación SENASA, Certificación HACCP & Unión Europea",
+    "financialNote_es": "Cálculo de TIR: Procesamiento en tierra con valor agregado (congelado IQF) capturando primas del 35% en mercado gourmet. TIR del 32.5% vs. TIR > 15%.",
+    "financialNote_en": "IRR Methodology: Value-added onshore IQF processing capturing 35% premium in global gourmet markets. 32.5% IRR vs. IRR > 15%.",
+    "es": {
+      "categoryTag": "Pesca Industrial & Logística",
+      "title": "Proyecto 6.7 — Ecosistema Pesquero Integrado Patagonia",
+      "location": "Puerto Madryn & Rawson, Chubut, Argentina",
+      "statusLabel": "USD 5.5M CAPEX",
+      "description": "Desarrollo boutique modular que integra buques tangoneros costeros, procesamiento en planta y logística de frío para exportación directa a mercados asiáticos y europeos.",
+      "thesis": "Alta rentabilidad operativa con bajo ticket de ingreso y ciclo de caja ágil basado en la captura del codiciado Langostino Patagónico.",
+      "highlights": [
+        "USD 5.5 Millones en CAPEX para puesta a punto y escalamiento.",
+        "Enfocado en Langostino Salvaje de alto valor comercial.",
+        "Contratos cerrados de exportación FOB Puerto Madryn.",
+        "Estructura ágil con rápida rotación de capital de trabajo.",
+        "Retorno proyectado de la inversión en 3 años."
+      ],
+      "metrics": [
+        {
+          "label": "CAPEX Requerido",
+          "val": "USD 5.5M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Producto",
+          "val": "Langostino Salvaje",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Recupero",
+          "val": "3 Años",
+          "color": "text-green"
+        },
+        {
+          "label": "Destino",
+          "val": "Europa / Asia",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Operación boutique integrada verticalmente con buques congeladores y planta de procesamiento en tierra a pie de muelle para langostino IQF en Chubut.",
+        "intl": "Cadenas gastronómicas y cadenas gourmet europeas y norteamericanas pagan sobreprecios de hasta el 35% por productos de pesca sustentable trazable."
+      }
+    },
+    "en": {
+      "categoryTag": "Integrated Fishery & Cold Chain",
+      "title": "Project 6.7 — Integrated Fishery Ecosystem Patagonia",
+      "location": "Puerto Madryn & Rawson, Chubut, Argentina",
+      "statusLabel": "USD 5.5M CAPEX",
+      "description": "Modular boutique fishery combining coastal outrigger vessels, onshore rapid processing, and cold-chain logistics for direct export to Asian and European distributors.",
+      "thesis": "High operating margin with accessible ticket size targeting wild-caught Argentine Red Shrimp.",
+      "highlights": [
+        "USD 5.5 Million CAPEX required for fleet upgrade and scaling.",
+        "Focus on wild Patagonian Red Shrimp with strong export pricing.",
+        "Secured FOB supply contracts from Puerto Madryn.",
+        "Lean operating model with rapid working capital turnover.",
+        "3-year estimated capital payback."
+      ],
+      "metrics": [
+        {
+          "label": "Required CAPEX",
+          "val": "USD 5.5M",
+          "color": "text-gold"
+        },
+        {
+          "label": "Primary Target",
+          "val": "Wild Red Shrimp",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Payback",
+          "val": "3 Years",
+          "color": "text-green"
+        },
+        {
+          "label": "Destination",
+          "val": "Europe / Asia",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "Integrated boutique processing operation with dockside IQF freezing plant in Patagonia port cluster, capturing maximum value-added margins.",
+        "intl": "Global gourmet retail and premium foodservice paying up to 35% premium for fully traceable, wild-caught sustainable seafood."
+      }
+    }
+  }
 ];
 
 export const DEFAULT_INTERLOCUTORS = [
@@ -2759,7 +2953,8 @@ class Store {
             let modified = false;
             // Purge any legacy dummy prototype IDs (proj_01..proj_05)
             const prevCount = parsed.projects.length;
-            parsed.projects = parsed.projects.filter(p => !p.id || !p.id.startsWith('proj_0'));
+            const validIds = new Set(DEFAULT_PROJECTS.map(dp => dp.id));
+            parsed.projects = parsed.projects.filter(p => p.id && validIds.has(p.id) && !p.id.startsWith('proj_0'));
             if (parsed.projects.length !== prevCount) modified = true;
 
             const existingMap = new Map(parsed.projects.map(p => [p.id, p]));
@@ -2774,6 +2969,17 @@ class Store {
                 modified = true;
               }
               // Auto-hydrate rich One-Pager master fields
+              existing.title = dp.title;
+              existing.description = dp.description;
+              existing.basePrice = dp.basePrice;
+              existing.overpriceTarget = dp.overpriceTarget;
+              existing.modality = dp.modality;
+              existing.dealType = dp.dealType;
+              existing.tir = dp.tir;
+              existing.tir_target = dp.tir_target;
+              existing.ebitda = dp.ebitda;
+              existing.capitalStructure = dp.capitalStructure;
+              existing.regulatoryRegime = dp.regulatoryRegime;
               existing.assignedAgent = dp.assignedAgent;
               existing.amountDisplay = dp.amountDisplay;
               existing.isPrivatePlacement = dp.isPrivatePlacement;
