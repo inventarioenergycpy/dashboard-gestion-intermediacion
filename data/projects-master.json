@@ -1313,15 +1313,15 @@
     "category": "mineria",
     "sector": "Minería",
     "assignedAgent": "javier",
-    "amountUSD": 45.0,
-    "basePrice": 45000000,
-    "overpriceTarget": 3000000,
+    "amountUSD": 3500.0,
+    "basePrice": 3500000000,
+    "overpriceTarget": 50000000,
     "currency": "USD",
-    "amountDisplay": "USD 25M - 50M",
+    "amountDisplay": "USD 3.500M (USD 3.5B)",
     "defaultStatus": "activo",
     "modality": "Venta / Socio Inversor",
     "roi": "Exploración Avanzada NI 43-101",
-    "statusProgress": "Concesión legal (2.708 ha) con canon 2025 al día, Plan Art. 217 aprobado, IIA Integrado y leyes de hasta 65.7 g/t Au (Oro Visible)",
+    "statusProgress": "Valuación estratégica de USD 3.500M (USD 3.5B) basada en potencial de 35,68M Oz Au in-situ (37 Mt @ 30 g/t Au). Venta total o socio inversor.",
     "isPrivatePlacement": false,
     "coverImage": "assets/images/logo_energy_cpy_cover_white.png",
     "totalSlides": 5,
@@ -1330,9 +1330,9 @@
       "categoryTag": "Minería Metalífera — Oro & Plata",
       "title": "Proyecto Minero de Oro 'Mina San Antonio'",
       "location": "Iglesia, San Juan, Argentina",
-      "statusLabel": "USD 25M-50M • Venta / Socio Inversor",
+      "statusLabel": "USD 3.500M (USD 3.5B) • Venta / Socio Inversor",
       "description": "Propiedad minera aurífera de 2.708,12 hectáreas (150 pertenencias) en el prolífico cinturón El Indio / Cordillera Frontal. Cuenta con informe técnico bajo estándar NI 43-101, leyes de hasta 65,7 g/t Au en ALS Global con oro visible comprobado, canon 2025 al día, mensura en trámite, plan de inversiones Art. 217 aprobado e IIA integrado.",
-      "thesis": "Oportunidad de adquisición o asociación estratégica en el epicentro de los mayores yacimientos de oro de Sudamérica (a 34 km de Del Carmen y 90 km de Veladero). Potencial multiepisódico de alta ley con infraestructura a 20 km del futuro Túnel de Agua Negra y estabilidad RIGI por 30 años.",
+      "thesis": "Oportunidad de adquisición total (USD 3.500M) o incorporación de socio inversor estratégico en un megayacimiento aurífero de clase mundial con potencial de 35,68 millones de Onzas Troy in-situ en el cinturón Veladero - Del Carmen. Valuación de USD 98/oz in-situ (3,8% del metal contenido a USD 2.600/oz) con estabilidad fiscal RIGI a 30 años.",
       "highlights": [
         "Concesión minera de 1° categoría (Expte. 1124.011-P-2011, 2.708,12 ha, 150 pertenencias) 100% titularidad de CBR Compañía Minera S.A.",
         "Ensayos certificados por ALS Global Lima con leyes excepcionales de hasta 65,7 g/t Au (Au-SCR21) y 9,98 g/t Au con presencia de oro visible dendrítico.",
@@ -1342,8 +1342,8 @@
       ],
       "metrics": [
         {
-          "label": "Rango Ticket",
-          "val": "USD 25M - 50M",
+          "label": "Valuación Activo",
+          "val": "USD 3.500M (USD 3.5B)",
           "color": "text-gold"
         },
         {
@@ -1371,9 +1371,9 @@
       "categoryTag": "Precious Metals — Gold & Silver",
       "title": "'San Antonio' Gold Mining Project",
       "location": "Iglesia, San Juan, Argentina",
-      "statusLabel": "USD 25M-50M • Asset Sale / JV Partner",
+      "statusLabel": "USD 3.5B (USD 3,500M) • Asset Sale / Equity Partner",
       "description": "Premium 2,708.12-hectare gold property (150 mining claims) in the world-class El Indio / Frontal Cordillera metallogenic belt. Features NI 43-101 technical report, assays up to 65.7 g/t Au at ALS Global with confirmed visible gold, 2025 mining fees fully paid, official boundary survey filed, Art. 217 investment plan approved, and integrated environmental baseline.",
-      "thesis": "Direct acquisition or joint-venture opportunity in the heart of South America's richest gold district (34 km from Del Carmen, 90 km from Veladero). High-grade epithermal upside 20 km from the Agua Negra Bi-Oceanic Tunnel portal with 30-year RIGI investment protections.",
+      "thesis": "100% asset sale (USD 3.5 Billion) or strategic joint-venture partnership in a Tier-1 world-class gold deposit boasting 35.68 million Troy Ounces of in-situ gold potential along the Veladero - Del Carmen metallogenic trend. Attractively valued at USD 98/oz in-situ (3.8% of gross contained gold at USD 2,600/oz) with 30-year RIGI investment protections.",
       "highlights": [
         "First-category mining concession (File 1124.011-P-2011, 2,708.12 ha, 150 claims) 100% owned by CBR Compañía Minera S.A.",
         "Certified ALS Global assays returning high-grade gold up to 65.7 g/t Au (metallic screen) and 9.98 g/t Au with dendritic visible gold.",
@@ -1383,8 +1383,8 @@
       ],
       "metrics": [
         {
-          "label": "Ticket Range",
-          "val": "USD 25M - 50M",
+          "label": "Asset Valuation",
+          "val": "USD 3.5B",
           "color": "text-gold"
         },
         {
@@ -1411,11 +1411,11 @@
     "dealType": "Venta / Socio Inversor",
     "tir": "38.5%",
     "tir_target": "TIR > 15%",
-    "ebitda": "USD 145.0M/año (Margen 56%)",
+    "ebitda": "USD 650M/año (Régimen Tier-1)",
     "capitalStructure": "100% Venta de Concesión Minera o Joint Venture (Earn-in exploratorio)",
     "regulatoryRegime": "Código de Minería de la Nación, Ley 24.196 & Régimen RIGI (Ley 27.742)",
-    "financialNote_es": "Cálculo de VAN y TIR modelado sobre un régimen de explotación de 100.000 Oz Au/año a USD 2.600/oz con AISC de USD 1.150/oz y CAPEX de planta de USD 120M. VAN al 12% de USD 412M y TIR del 38.5% superando holgadamente la tasa de corte del 15%.",
-    "financialNote_en": "NPV and IRR modeled on an operational baseline of 100,000 Oz Au/year at USD 2,600/oz gold with USD 1,150/oz AISC and USD 120M plant CAPEX. USD 412M NPV at 12% discount and 38.5% IRR well above the 15% hurdle rate."
+    "financialNote_es": "Valuación de USD 3.500M sustentada en el potencial in-situ de 35,68M Oz Au estimadas por dictamen mineralógico sobre 37 Mt a 30 g/t Au promedio. Múltiplo de USD 98/oz in-situ en el corredor aurífero más rico de Latinoamérica. Modelo de mega-operación escalable a 500.000 Oz Au/año generando > USD 650M EBITDA/año.",
+    "financialNote_en": "USD 3.5 Billion valuation underpinned by 35.68M Oz Au in-situ resource potential based on mineralogical assessment of 37 Mt at 30 g/t Au. Benchmark multiple of USD 98/oz in-situ along South America's premier gold belt. Scalable to a Tier-1 500k Oz Au/year operation generating > USD 650M EBITDA/year."
   },
   {
     "id": "refipampa-medanito",
