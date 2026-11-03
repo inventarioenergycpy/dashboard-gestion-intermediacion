@@ -5,7 +5,11 @@ echo =======================================================
 echo   PUBLICACION DE DASHBOARD EN GITHUB PAGES (BOVEDA)
 echo =======================================================
 echo.
-echo 1. Desbloqueando Boveda de Credenciales con Clave...
+echo 1. Compilando bundle universal...
+python "%~dp0scripts\build_bundle.py"
+
+echo.
+echo 2. Desbloqueando Boveda de Credenciales con Clave...
 for /f "tokens=1* delims=:" %%A in ('powershell -ExecutionPolicy Bypass -File "%~dp0scripts\vault_manager.ps1" -Action unlock') do (
     if "%%A"=="TOKEN" set "UNLOCKED_TOKEN=%%B"
 )
@@ -18,7 +22,7 @@ if "%UNLOCKED_TOKEN%"=="" (
 )
 
 echo.
-echo 2. Subiendo cambios a GitHub (origin/master)...
+echo 3. Subiendo cambios a GitHub (origin/master)...
 cd /d "%~dp0"
 git remote set-url origin https://inventarioenergycpy:%UNLOCKED_TOKEN%@github.com/inventarioenergycpy/dashboard-gestion-intermediacion.git
 git push -u origin master

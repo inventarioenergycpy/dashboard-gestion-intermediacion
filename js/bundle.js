@@ -1375,6 +1375,117 @@ const DEFAULT_PROJECTS = [
     }
   },
   {
+    "id": "mineria-oro-san-antonio-san-juan",
+    "title": "Proyecto Minero de Oro 'Mina San Antonio'",
+    "sector": "Minería",
+    "basePrice": 3500000000,
+    "overpriceTarget": 50000000,
+    "currency": "USD",
+    "status": "activo",
+    "ownerId": "user_javier",
+    "ownerName": "Javier Ignacio Díaz",
+    "ownerType": "mandatario_exclusivo",
+    "description": "Propiedad minera aurífera de 2.708,12 hectáreas (150 pertenencias) en el prolífico cinturón El Indio / Cordillera Frontal. Cuenta con informe técnico bajo estándar NI 43-101, leyes de hasta 65,7 g/t Au en ALS Global con oro visible comprobado, canon 2025 al día, mensura en trámite, plan de inversiones Art. 217 aprobado e IIA integrado.",
+    "modality": "Venta / Socio Inversor",
+    "roi": "Exploración Avanzada NI 43-101",
+    "statusProgress": "Valuación estratégica de USD 3.500M (USD 3.5B) basada en potencial de 35,68M Oz Au in-situ (37 Mt @ 30 g/t Au). Venta total o socio inversor.",
+    "driveFolderUrl": "https://drive.google.com/drive/u/0/folders/inventario-energycpy-mineria-oro-san-antonio-san-juan",
+    "createdAt": "2026-11-02",
+    "assignedAgent": "javier",
+    "amountDisplay": "USD 3.500M (USD 3.5B)",
+    "isPrivatePlacement": false,
+    "dealType": "Venta / Socio Inversor",
+    "tir": "38.5%",
+    "tir_target": "TIR > 15%",
+    "ebitda": "USD 650M/año (Régimen Tier-1)",
+    "capitalStructure": "100% Venta de Concesión Minera o Joint Venture (Earn-in exploratorio)",
+    "regulatoryRegime": "Código de Minería de la Nación, Ley 24.196 & Régimen RIGI (Ley 27.742)",
+    "financialNote_es": "Valuación de USD 3.500M sustentada en el potencial in-situ de 35,68M Oz Au estimadas por dictamen mineralógico sobre 37 Mt a 30 g/t Au promedio. Múltiplo de USD 98/oz in-situ en el corredor aurífero más rico de Latinoamérica. Modelo de mega-operación escalable a 500.000 Oz Au/año generando > USD 650M EBITDA/año.",
+    "financialNote_en": "USD 3.5 Billion valuation underpinned by 35.68M Oz Au in-situ resource potential based on mineralogical assessment of 37 Mt at 30 g/t Au. Benchmark multiple of USD 98/oz in-situ along South America's premier gold belt. Scalable to a Tier-1 500k Oz Au/year operation generating > USD 650M EBITDA/year.",
+    "es": {
+      "categoryTag": "Minería Metalífera — Oro & Plata",
+      "title": "Proyecto Minero de Oro 'Mina San Antonio'",
+      "location": "Iglesia, San Juan, Argentina",
+      "statusLabel": "USD 3.500M (USD 3.5B) — Venta / Socio Inversor",
+      "description": "Propiedad minera aurífera de 2.708,12 hectáreas (150 pertenencias) en el prolífico cinturón El Indio / Cordillera Frontal. Cuenta con informe técnico bajo estándar NI 43-101, leyes de hasta 65,7 g/t Au en ALS Global con oro visible comprobado, canon 2025 al día, mensura en trámite, plan de inversiones Art. 217 aprobado e IIA integrado.",
+      "thesis": "Oportunidad de adquisición total (USD 3.500M) o incorporación de socio inversor estratégico en un megayacimiento aurífero de clase mundial con potencial de 35,68 millones de Onzas Troy in-situ en el cinturón Veladero - Del Carmen. Valuación de USD 98/oz in-situ (3,8% del metal contenido a USD 2.600/oz) con estabilidad fiscal RIGI a 30 años.",
+      "highlights": [
+        "Concesión minera de 1ª categoría (Expte. 1124.011-P-2011, 2.708,12 ha, 150 pertenencias) 100% titularidad de CBR Compañía Minera S.A.",
+        "Ensayos certificados por ALS Global Lima con leyes excepcionales de hasta 65,7 g/t Au (Au-SCR21) y 9,98 g/t Au con presencia de oro visible dendrítico.",
+        "Cumplimiento legal pleno: Canon 2º semestre 2025 pago ($1.013.332,50), Plan de Inversiones Art. 217 aprobado por Resolución e IIA Integrado.",
+        "Ubicación estratégica a solo 20 km del acceso al Túnel de Agua Negra y 22 km de la frontera con Chile, en el corredor Veladero - El Indio.",
+        "Presupuesto técnico de exploración Fases 1 y 2 modelado en USD 1.242.000 (con 1.500m de perforación diamantina HQ) listo para ejecutar."
+      ],
+      "metrics": [
+        {
+          "label": "Valuación Activo",
+          "val": "USD 3.500M (USD 3.5B)",
+          "color": "text-gold"
+        },
+        {
+          "label": "Ley Máxima",
+          "val": "65.7 g/t Au",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Superficie",
+          "val": "2.708 Hectáreas",
+          "color": "text-green"
+        },
+        {
+          "label": "Jurisdicción",
+          "val": "San Juan (RIGI)",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "San Juan consolida su liderazgo nacional como la provincia con mayor seguridad jurídica e institucional para inversiones mineras bajo el régimen RIGI (Ley 27.742).",
+        "intl": "Cotización internacional del oro en máximos históricos (> USD 2.600/oz) impulsando la reactivación de proyectos auríferos de alta ley en cinturones probados de clase mundial."
+      }
+    },
+    "en": {
+      "categoryTag": "Precious Metals — Gold & Silver",
+      "title": "'San Antonio' Gold Mining Project",
+      "location": "Iglesia, San Juan, Argentina",
+      "statusLabel": "USD 3.5B (USD 3,500M) — Asset Sale / Equity Partner",
+      "description": "Premium 2,708.12-hectare gold property (150 mining claims) in the world-class El Indio / Frontal Cordillera metallogenic belt. Features NI 43-101 technical report, assays up to 65.7 g/t Au at ALS Global with confirmed visible gold, 2025 mining fees fully paid, official boundary survey filed, Art. 217 investment plan approved, and integrated environmental baseline.",
+      "thesis": "100% asset sale (USD 3.5 Billion) or strategic joint-venture partnership in a Tier-1 world-class gold deposit boasting 35.68 million Troy Ounces of in-situ gold potential along the Veladero - Del Carmen metallogenic trend. Attractively valued at USD 98/oz in-situ (3.8% of gross contained gold at USD 2,600/oz) with 30-year RIGI investment protections.",
+      "highlights": [
+        "First-category mining concession (File 1124.011-P-2011, 2,708.12 ha, 150 claims) 100% owned by CBR Compañía Minera S.A.",
+        "Certified ALS Global assays returning high-grade gold up to 65.7 g/t Au (metallic screen) and 9.98 g/t Au with dendritic visible gold.",
+        "Full legal standing: 2nd half 2025 canon paid ($1,013,332.50 ARS), Art. 217 Investment Plan approved, and active Environmental Impact Report.",
+        "Strategic logistics: 20 km to Agua Negra International Tunnel portal, 22 km to Chilean border on the Veladero-El Indio trend.",
+        "Phases 1 & 2 exploration program budgeted at USD 1,242,000 (including 1,500m HQ diamond core drilling) ready for deployment."
+      ],
+      "metrics": [
+        {
+          "label": "Asset Valuation",
+          "val": "USD 3.5B",
+          "color": "text-gold"
+        },
+        {
+          "label": "Top Grade",
+          "val": "65.7 g/t Au",
+          "color": "text-cyan"
+        },
+        {
+          "label": "Surface Area",
+          "val": "2,708 Hectares",
+          "color": "text-green"
+        },
+        {
+          "label": "Jurisdiction",
+          "val": "San Juan (RIGI)",
+          "color": "text-gold"
+        }
+      ],
+      "marketTrend": {
+        "local": "San Juan reinforces its status as Argentina's premier mining jurisdiction backed by provincial stability and the Federal RIGI incentive framework (Law 27,742).",
+        "intl": "Gold bullion trading near historic records (> USD 2,600/oz), catalyzing strong institutional M&A appetite for high-grade Andean deposits."
+      }
+    }
+  },
+  {
     "id": "refipampa-medanito",
     "title": "Oferta de Refineria y explotacion de pozos - La Pampa Argentina",
     "sector": "Petróleo, Gas & Infraestructura",
@@ -2968,9 +3079,11 @@ class Store {
 
             const existingMap = new Map(parsed.projects.map(p => [p.id, p]));
             DEFAULT_PROJECTS.forEach(dp => {
-              const existing = existingMap.get(dp.id);
+              let existing = existingMap.get(dp.id);
               if (!existing) {
-                parsed.projects.push(dp);
+                existing = JSON.parse(JSON.stringify(dp));
+                parsed.projects.push(existing);
+                existingMap.set(dp.id, existing);
                 modified = true;
               } else if (!existing.basePrice || Number(existing.basePrice) < Number(dp.basePrice)) {
                 existing.basePrice = dp.basePrice;
@@ -3452,7 +3565,6 @@ class Store {
 
 const store = new Store();
 
-
 /* --- FILE: auth.js --- */
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
@@ -3560,7 +3672,6 @@ class AuthManager {
 }
 
 const auth = new AuthManager();
-
 
 /* --- FILE: doc-templates.js --- */
 /**
@@ -3695,7 +3806,6 @@ const DOC_TEMPLATES = {
   }
 };
 
-
 /* --- FILE: templateManager.js --- */
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
@@ -3794,7 +3904,6 @@ class TemplateManager {
     XLSX.writeFile(wb, fileName);
   }
 }
-
 
 /* --- FILE: smartImporter.js --- */
 /**
@@ -4280,7 +4389,6 @@ class SmartImporter {
 
 const smartImporter = new SmartImporter();
 
-
 /* --- FILE: dashboard.js --- */
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
@@ -4527,7 +4635,6 @@ class DashboardModule {
     `;
   }
 }
-
 
 /* --- FILE: projects.js --- */
 /**
@@ -5222,7 +5329,6 @@ Atentamente.`;
 }
 
 
-
 /* --- FILE: deals.js --- */
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
@@ -5673,7 +5779,6 @@ class DealsModule {
   }
 }
 
-
 /* --- FILE: brokers.js --- */
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
@@ -6078,7 +6183,6 @@ class BrokersModule {
   }
 }
 
-
 /* --- FILE: compliance.js --- */
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
@@ -6201,7 +6305,6 @@ class ComplianceModule {
     `;
   }
 }
-
 
 /* --- FILE: inquiries.js --- */
 /**
@@ -6868,7 +6971,6 @@ class InquiriesModule {
   }
 }
 
-
 /* --- FILE: settings.js --- */
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
@@ -7305,7 +7407,6 @@ class SettingsModule {
   }
 }
 
-
 /* --- FILE: app.js --- */
 /**
  * DASHBOARD DE GESTIÓN DE INTERMEDIACIÓN FINANCIERA
@@ -7431,6 +7532,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.appRouter = new AppRouter();
   window.appRouter.init();
 });
-
 
 })();
