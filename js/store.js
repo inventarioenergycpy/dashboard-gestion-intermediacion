@@ -1376,7 +1376,7 @@ export const DEFAULT_PROJECTS = [
     "ownerId": "user_javier",
     "ownerName": "Javier Ignacio Díaz",
     "ownerType": "mandatario_exclusivo",
-    "description": "Propiedad minera aurífera de 2.708,12 hectáreas (150 pertenencias) en el prolífico cinturón El Indio / Cordillera Frontal. Cuenta con informe técnico bajo estándar NI 43-101, leyes de hasta 65,7 g/t Au en ALS Global con oro visible comprobado, canon 2025 al día, mensura en trámite, plan de inversiones Art. 217 aprobado e IIA integrado.",
+    "description": "Propiedad minera aurífera de gran escala (> 2.700 hectáreas, 150 pertenencias) emplazada en el prolífico cinturón aurífero andino de San Juan (Cordillera Frontal). Cuenta con informe técnico bajo estándar NI 43-101, leyes de hasta 65,7 g/t Au certificadas por laboratorio internacional con oro visible comprobado, amparo minero y canon al día, plan de inversiones aprobado por la autoridad e IIA vigente.",
     "modality": "Venta / Socio Inversor",
     "roi": "Exploración Avanzada NI 43-101",
     "statusProgress": "Valuación estratégica de USD 3.500M (USD 3.5B) basada en potencial de 35,68M Oz Au in-situ (37 Mt @ 30 g/t Au). Venta total o socio inversor.",
@@ -1396,16 +1396,16 @@ export const DEFAULT_PROJECTS = [
     "es": {
       "categoryTag": "Minería Metalífera — Oro & Plata",
       "title": "Proyecto Minero de Oro 'Mina San Antonio'",
-      "location": "Iglesia, San Juan, Argentina",
+      "location": "San Juan, Argentina",
       "statusLabel": "USD 3.500M (USD 3.5B) — Venta / Socio Inversor",
-      "description": "Propiedad minera aurífera de 2.708,12 hectáreas (150 pertenencias) en el prolífico cinturón El Indio / Cordillera Frontal. Cuenta con informe técnico bajo estándar NI 43-101, leyes de hasta 65,7 g/t Au en ALS Global con oro visible comprobado, canon 2025 al día, mensura en trámite, plan de inversiones Art. 217 aprobado e IIA integrado.",
+      "description": "Propiedad minera aurífera de gran escala (> 2.700 hectáreas, 150 pertenencias) emplazada en el prolífico cinturón aurífero andino de San Juan (Cordillera Frontal). Cuenta con informe técnico bajo estándar NI 43-101, leyes de hasta 65,7 g/t Au certificadas por laboratorio internacional con oro visible comprobado, amparo minero y canon al día, plan de inversiones aprobado por la autoridad e IIA vigente.",
       "thesis": "Oportunidad de adquisición total (USD 3.500M) o incorporación de socio inversor estratégico en un megayacimiento aurífero de clase mundial con potencial de 35,68 millones de Onzas Troy in-situ en el cinturón Veladero - Del Carmen. Valuación de USD 98/oz in-situ (3,8% del metal contenido a USD 2.600/oz) con estabilidad fiscal RIGI a 30 años.",
       "highlights": [
-        "Concesión minera de 1ª categoría (Expte. 1124.011-P-2011, 2.708,12 ha, 150 pertenencias) 100% titularidad de CBR Compañía Minera S.A.",
-        "Ensayos certificados por ALS Global Lima con leyes excepcionales de hasta 65,7 g/t Au (Au-SCR21) y 9,98 g/t Au con presencia de oro visible dendrítico.",
-        "Cumplimiento legal pleno: Canon 2º semestre 2025 pago ($1.013.332,50), Plan de Inversiones Art. 217 aprobado por Resolución e IIA Integrado.",
-        "Ubicación estratégica a solo 20 km del acceso al Túnel de Agua Negra y 22 km de la frontera con Chile, en el corredor Veladero - El Indio.",
-        "Presupuesto técnico de exploración Fases 1 y 2 modelado en USD 1.242.000 (con 1.500m de perforación diamantina HQ) listo para ejecutar."
+        "Concesión minera de 1ª categoría que consolida más de 2.700 ha (150 pertenencias). Titularidad 100% saneada bajo mandato exclusivo, libre de litigios y gravámenes.",
+        "Ensayos certificados por laboratorio internacional independiente (ISO 17025) con leyes excepcionales de hasta 65,7 g/t Au y presencia de oro visible dendrítico.",
+        "Cumplimiento legal pleno: Canon minero y amparo 100% al día, Plan de Inversiones (Art. 217 CM) ratificado por la autoridad minera e IIA aprobado y vigente.",
+        "Emplazamiento estratégico en el cinturón aurífero andino de San Juan (Cordillera Frontal / Corredor El Indio - Veladero) con acceso logístico troncal y RIGI 30 años.",
+        "Presupuesto técnico de exploración Fases 1 y 2 modelado en ~USD 1.240.000 (con 1.500m de perforación diamantina HQ) listo para ejecutar."
       ],
       "metrics": [
         {
@@ -1420,7 +1420,7 @@ export const DEFAULT_PROJECTS = [
         },
         {
           "label": "Superficie",
-          "val": "2.708 Hectáreas",
+          "val": "> 2.700 Hectáreas",
           "color": "text-green"
         },
         {
@@ -1437,16 +1437,16 @@ export const DEFAULT_PROJECTS = [
     "en": {
       "categoryTag": "Precious Metals — Gold & Silver",
       "title": "'San Antonio' Gold Mining Project",
-      "location": "Iglesia, San Juan, Argentina",
+      "location": "San Juan, Argentina",
       "statusLabel": "USD 3.5B (USD 3,500M) — Asset Sale / Equity Partner",
-      "description": "Premium 2,708.12-hectare gold property (150 mining claims) in the world-class El Indio / Frontal Cordillera metallogenic belt. Features NI 43-101 technical report, assays up to 65.7 g/t Au at ALS Global with confirmed visible gold, 2025 mining fees fully paid, official boundary survey filed, Art. 217 investment plan approved, and integrated environmental baseline.",
+      "description": "Large-scale gold mining asset (> 2,700 hectares across 150 claims) located in San Juan's world-class Andean gold belt (Frontal Cordillera). Features NI 43-101 technical report, certified assays up to 65.7 g/t Au with confirmed visible gold, statutory mining fees in full standing, approved investment plan, and active environmental baseline.",
       "thesis": "100% asset sale (USD 3.5 Billion) or strategic joint-venture partnership in a Tier-1 world-class gold deposit boasting 35.68 million Troy Ounces of in-situ gold potential along the Veladero - Del Carmen metallogenic trend. Attractively valued at USD 98/oz in-situ (3.8% of gross contained gold at USD 2,600/oz) with 30-year RIGI investment protections.",
       "highlights": [
-        "First-category mining concession (File 1124.011-P-2011, 2,708.12 ha, 150 claims) 100% owned by CBR Compañía Minera S.A.",
-        "Certified ALS Global assays returning high-grade gold up to 65.7 g/t Au (metallic screen) and 9.98 g/t Au with dendritic visible gold.",
-        "Full legal standing: 2nd half 2025 canon paid ($1,013,332.50 ARS), Art. 217 Investment Plan approved, and active Environmental Impact Report.",
-        "Strategic logistics: 20 km to Agua Negra International Tunnel portal, 22 km to Chilean border on the Veladero-El Indio trend.",
-        "Phases 1 & 2 exploration program budgeted at USD 1,242,000 (including 1,500m HQ diamond core drilling) ready for deployment."
+        "First-category mining concession consolidating over 2,700 ha (150 claims). 100% clean corporate ownership under exclusive mandate, free of liens and litigation.",
+        "Assays certified by an independent international laboratory (ISO 17025) with bonanza grades up to 65.7 g/t Au and confirmed dendritic visible gold.",
+        "Full statutory compliance: mining cadastre fees 100% up to date, formal Investment Plan (Mining Code Art. 217) approved, and active EIA in good standing.",
+        "Strategic setting in San Juan's world-class Andean gold belt (Frontal Cordillera / El Indio - Veladero trend) with arterial logistics and 30-year RIGI stability.",
+        "Phases 1 & 2 technical exploration budget modeled at ~USD 1.24M (including 1,500m of HQ diamond drilling) ready for immediate deployment."
       ],
       "metrics": [
         {
@@ -1461,7 +1461,7 @@ export const DEFAULT_PROJECTS = [
         },
         {
           "label": "Surface Area",
-          "val": "2,708 Hectares",
+          "val": "> 2,700 Hectares",
           "color": "text-green"
         },
         {

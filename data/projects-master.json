@@ -1329,7 +1329,7 @@
     "es": {
       "categoryTag": "Minería Metalífera — Oro & Plata",
       "title": "Proyecto Minero de Oro 'Mina San Antonio'",
-      "location": "Iglesia, San Juan, Argentina",
+      "location": "San Juan, Argentina",
       "statusLabel": "USD 3.500M (USD 3.5B) — Venta / Socio Inversor",
       "description": "Propiedad minera aurífera de 2.708,12 hectáreas (150 pertenencias) en el prolífico cinturón El Indio / Cordillera Frontal. Cuenta con informe técnico bajo estándar NI 43-101, leyes de hasta 65,7 g/t Au en ALS Global con oro visible comprobado, canon 2025 al día, mensura en trámite, plan de inversiones Art. 217 aprobado e IIA integrado.",
       "thesis": "Oportunidad de adquisición total (USD 3.500M) o incorporación de socio inversor estratégico en un megayacimiento aurífero de clase mundial con potencial de 35,68 millones de Onzas Troy in-situ en el cinturón Veladero - Del Carmen. Valuación de USD 98/oz in-situ (3,8% del metal contenido a USD 2.600/oz) con estabilidad fiscal RIGI a 30 años.",
@@ -1370,7 +1370,7 @@
     "en": {
       "categoryTag": "Precious Metals — Gold & Silver",
       "title": "'San Antonio' Gold Mining Project",
-      "location": "Iglesia, San Juan, Argentina",
+      "location": "San Juan, Argentina",
       "statusLabel": "USD 3.5B (USD 3,500M) — Asset Sale / Equity Partner",
       "description": "Premium 2,708.12-hectare gold property (150 mining claims) in the world-class El Indio / Frontal Cordillera metallogenic belt. Features NI 43-101 technical report, assays up to 65.7 g/t Au at ALS Global with confirmed visible gold, 2025 mining fees fully paid, official boundary survey filed, Art. 217 investment plan approved, and integrated environmental baseline.",
       "thesis": "100% asset sale (USD 3.5 Billion) or strategic joint-venture partnership in a Tier-1 world-class gold deposit boasting 35.68 million Troy Ounces of in-situ gold potential along the Veladero - Del Carmen metallogenic trend. Attractively valued at USD 98/oz in-situ (3.8% of gross contained gold at USD 2,600/oz) with 30-year RIGI investment protections.",
@@ -1416,7 +1416,8 @@
     "regulatoryRegime": "Código de Minería de la Nación, Ley 24.196 & Régimen RIGI (Ley 27.742)",
     "financialNote_es": "Valuación de USD 3.500M sustentada en el potencial in-situ de 35,68M Oz Au estimadas por dictamen mineralógico sobre 37 Mt a 30 g/t Au promedio. Múltiplo de USD 98/oz in-situ en el corredor aurífero más rico de Latinoamérica. Modelo de mega-operación escalable a 500.000 Oz Au/año generando > USD 650M EBITDA/año.",
     "financialNote_en": "USD 3.5 Billion valuation underpinned by 35.68M Oz Au in-situ resource potential based on mineralogical assessment of 37 Mt at 30 g/t Au. Benchmark multiple of USD 98/oz in-situ along South America's premier gold belt. Scalable to a Tier-1 500k Oz Au/year operation generating > USD 650M EBITDA/year.",
-    "title": "Proyecto Minero de Oro 'Mina San Antonio'"
+    "title": "Proyecto Minero de Oro 'Mina San Antonio'",
+    "description": "Propiedad minera aurífera de gran escala (> 2.700 hectáreas, 150 pertenencias) emplazada en el prolífico cinturón aurífero andino de San Juan (Cordillera Frontal). Cuenta con informe técnico bajo estándar NI 43-101, leyes de hasta 65,7 g/t Au certificadas por laboratorio internacional con oro visible comprobado, canon al día, plan de inversiones aprobado e IIA vigente."
   },
   {
     "id": "refipampa-medanito",
