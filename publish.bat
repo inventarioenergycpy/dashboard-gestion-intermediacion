@@ -9,6 +9,16 @@ echo 1. Sincronizando cartera y compilando bundle universal...
 python "%~dp0scripts\sync_portfolio.py"
 
 echo.
+echo 1.1 Ejecutando Rack de Comprobaciones de Integridad (QA Web Gate)...
+python "%~dp0scripts\test_sync_integrity.py"
+if %ERRORLEVEL% neq 0 (
+    echo.
+    echo [ERROR CRITICO] Fallo el Rack de Comprobaciones de Integridad. Despliegue cancelado.
+    pause
+    exit /b 1
+)
+
+echo.
 echo 2. Desbloqueando Boveda de Credenciales con Clave...
 for /f "tokens=1* delims=:" %%A in ('powershell -ExecutionPolicy Bypass -File "%~dp0scripts\vault_manager.ps1" -Action unlock') do (
     if "%%A"=="TOKEN" set "UNLOCKED_TOKEN=%%B"

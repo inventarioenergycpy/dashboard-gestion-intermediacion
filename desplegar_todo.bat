@@ -18,6 +18,14 @@ echo.
 
 echo [PASO 1/4] Verificando repositorio en GitHub y sincronizando cartera...
 python "%~dp0scripts\sync_portfolio.py"
+echo [QA GATE] Ejecutando Rack de Comprobaciones de Integridad del Agente 03...
+python "%~dp0scripts\test_sync_integrity.py"
+if %ERRORLEVEL% neq 0 (
+    echo.
+    echo ❌ Despliegue cancelado: El Rack de Comprobaciones detectó inconsistencias de integridad.
+    pause
+    exit /b 1
+)
 git ls-remote https://github.com/inventarioenergycpy/dashboard-gestion-intermediacion.git >nul 2>&1
 if %ERRORLEVEL% equ 0 (
     echo ✔ El repositorio 'dashboard-gestion-intermediacion' ya existe en GitHub.
