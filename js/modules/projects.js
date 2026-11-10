@@ -31,8 +31,10 @@ export class ProjectsModule {
 
     // Filtrar proyectos
     const filtered = projects.filter(p => {
-      const matchSearch = (p.title || '').toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-                          (p.description || '').toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      const pTitle = p.title || (p.es && p.es.title) || (p.en && p.en.title) || p.id || '';
+      const pDesc = p.description || (p.es && p.es.description) || (p.en && p.en.description) || '';
+      const matchSearch = pTitle.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+                          pDesc.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
                           (p.ownerName || '').toLowerCase().includes(this.searchTerm.toLowerCase());
       const matchStatus = this.statusFilter === 'all' || p.status === this.statusFilter;
       const matchSector = this.sectorFilter === 'all' || p.sector === this.sectorFilter;
@@ -111,12 +113,14 @@ export class ProjectsModule {
                 <tbody>
                   ${filtered.map(proj => {
                     const statusObj = statuses.find(s => s.id === proj.status) || { label: proj.status, color: '#94a3b8' };
+                    const projTitle = proj.title || (proj.es && proj.es.title) || (proj.en && proj.en.title) || proj.id;
+                    const projDesc = proj.description || (proj.es && proj.es.description) || (proj.en && proj.en.description) || '';
                     return `
                       <tr>
                         <td style="max-width: 260px;">
-                          <div style="font-weight: 700; color: var(--text-main); margin-bottom: 2px;">${proj.title}</div>
+                          <div style="font-weight: 700; color: var(--text-main); margin-bottom: 2px;">${projTitle}</div>
                           <div style="font-size: 11px; color: var(--text-muted); text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
-                            ${proj.description}
+                            ${projDesc}
                           </div>
                         </td>
                         <td>

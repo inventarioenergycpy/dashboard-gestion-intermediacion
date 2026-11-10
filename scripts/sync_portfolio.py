@@ -77,6 +77,9 @@ def sync_portfolio():
         default_projects_list = []
         for p in projects_master:
             proj_copy = json.loads(json.dumps(p))
+            es = p.get("es", {})
+            proj_copy["title"] = p.get("title") or es.get("title") or p["id"]
+            proj_copy["description"] = p.get("description") or es.get("description") or ""
             # Garantizar que status refleje defaultStatus
             proj_copy["status"] = p.get("defaultStatus", "activo")
             default_projects_list.append(proj_copy)
@@ -112,6 +115,9 @@ def sync_portfolio():
             projects_data_dict = {}
             for p in projects_master:
                 p_show = json.loads(json.dumps(p))
+                es = p.get("es", {})
+                p_show["title"] = p.get("title") or es.get("title") or p["id"]
+                p_show["description"] = p.get("description") or es.get("description") or ""
                 # Aplicar mapeo de estados
                 dash_status = p.get("defaultStatus", "activo")
                 p_show["defaultStatus"] = map_status_to_showroom(dash_status)
@@ -152,3 +158,4 @@ def sync_portfolio():
 
 if __name__ == "__main__":
     sync_portfolio()
+

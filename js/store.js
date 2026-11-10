@@ -141,6 +141,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Régimen RIGI (Ley 27.742) & PPA MATER (Res. 281/CAMMESA)",
     "financialNote_es": "Cálculo de TIR: Modelado DCF a 20 años con WACC 9.0% en USD y factor de planta del 31.5% en Mendoza. Supera holgadamente el TIR > 15%.",
     "financialNote_en": "IRR Methodology: 20-year DCF model with 9.0% USD WACC and 31.5% capacity factor in Mendoza. Comfortably exceeds the IRR > 15%.",
+    "title": "Parque Solar Sol de los Cuatro Vientos 300 MW",
+    "description": "Desarrollo solar fotovoltaico de gran escala (300 MW) en zona de radiación solar excepcional en Mendoza. Estructuración orientada a contratos PPA a largo plazo indexados en USD bajo el marco MATER / CAMMESA.",
     "status": "activo"
   },
   {
@@ -251,6 +253,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "PPA Privado B2B con Operadoras Petroleras en Boca de Pozo",
     "financialNote_es": "Cálculo de TIR: Modelado a 15 años sustituyendo generación térmica diésel en cuenca con tarifa dolarizada. Supera ampliamente la TIR > 15%.",
     "financialNote_en": "IRR Methodology: 15-year DCF displacing diesel generation with USD dollarized off-take price. Strongly exceeds the IRR > 15%.",
+    "title": "Parque Solar 30 MW Vaca Muerta",
+    "description": "Planta fotovoltaica de 30 MW emplazada en el corazón de la formación no convencional Vaca Muerta. Provisión directa de energía limpia y descarbonización para operaciones de operadoras petroleras y de servicios.",
     "status": "activo"
   },
   {
@@ -362,6 +366,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Contratos Llave en Mano EPC + Marco MATER/CAMMESA",
     "financialNote_es": "Cálculo de TIR: Estructura de co-inversión apalancada con crédito de proveedor que maximiza el retorno sobre capital propio. TIR > 15% holgadamente superada.",
     "financialNote_en": "IRR Methodology: Leveraged co-investment model with vendor credit maximizing equity IRR. Well above the IRR > 15%.",
+    "title": "Plantas Solares Llave en Mano con Financiamiento Asegurado",
+    "description": "Desarrollo estratégico de parques fotovoltaicos llave en mano con el 50% del CAPEX pre-financiado por fabricante líder global de paneles e inversores. Contratos PPA a 15-20 años indexados al USD.",
     "status": "activo"
   },
   {
@@ -472,6 +478,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Concesión Provincial de Juego Oficial y Habilitación Turística",
     "financialNote_es": "Cálculo de TIR: Flujo de caja diario intensivo generado por slots, mesas de juego y hotelería enológica. Recupero en 1 año con TIR muy superior al TIR > 15%.",
     "financialNote_en": "IRR Methodology: Daily intensive cash generation from gaming floor and wine tourism hotel. 1-year payback exceeding the IRR > 15%.",
+    "title": "Hotel 3 Estrellas + Casino + Salón de Eventos",
+    "description": "Complejo hotelero de 3 estrellas en funcionamiento pleno con sala de casino equipada y habilitación provincial. Cuenta con salón de eventos corporativos y sociales con alta demanda turística internacional.",
     "status": "activo"
   },
   {
@@ -582,6 +590,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Licencia Exclusiva de Casino 5 Estrellas & Habilitación Internacional",
     "financialNote_es": "Cálculo de TIR: Tarifa ADR dolarizada con clientes corporativos e internacionales de alta gama. Retorno en 1 año superando ampliamente la TIR > 15%.",
     "financialNote_en": "IRR Methodology: Dollarized ADR room rates and high-end international gaming clientele. 1-year payback exceeding the IRR > 15%.",
+    "title": "Hotel 5 Estrellas (72 Habitaciones) + Casino + Cocheras",
+    "description": "Exclusivo hotel de 5 estrellas con 72 habitaciones de alta gama, casino privado en operación, restaurante gourmet, spa y estacionamiento subterráneo en la mejor ubicación de Mendoza.",
     "status": "activo"
   },
   {
@@ -692,6 +702,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Dominio Privado Registrado con Habilitación Hotelera 5 Estrellas",
     "financialNote_es": "Cálculo de TIR: Ocupación en 4 estaciones en Bariloche con ADR promedio de USD 420/noche. TIR proyectada del 26.0% vs. TIR > 15%.",
     "financialNote_en": "IRR Methodology: 4-season prime occupancy with average USD 420 ADR. Projected 26.0% IRR vs. IRR > 15%.",
+    "title": "Venta Exclusiva a Invitación — Hotel de Lujo en Bariloche",
+    "description": "Emblemático hotel de ultra-lujo situado en un entorno natural privilegiado en Bariloche, Patagonia. Comercialización off-market reservada exclusivamente para inversores calificados bajo estricto acuerdo de confidencialidad (NDA).",
     "status": "activo"
   },
   {
@@ -802,6 +814,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Título Notarial Perfecto & Certificación Turística Provincial",
     "financialNote_es": "Cálculo de TIR: Centro de convenciones y golf resort con ingresos por eventos corporativos y escapadas de fin de semana. TIR del 25.5% frente al TIR > 15%.",
     "financialNote_en": "IRR Methodology: Convention center and golf resort with recurring corporate events cash flow. 25.5% IRR vs. IRR > 15%.",
+    "title": "Venta Exclusiva a Invitación — Hotel de Lujo en Córdoba",
+    "description": "Distinguido establecimiento hotelero de máxima jerarquía en la provincia de Córdoba. Operación off-market de colocación privada sin mención de estudios financieros públicos, orientada a grupos selectos.",
     "status": "activo"
   },
   {
@@ -912,6 +926,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Derechos Concesionados de Riego Definitivo y Título Escritural",
     "financialNote_es": "Cálculo de TIR: Renta agrícola-ganadera de alta precisión bajo pivotes centrales y plusvalía de suelo productivo. TIR del 38.0% superando el umbral TIR > 15%.",
     "financialNote_en": "IRR Methodology: High-precision pivot irrigation agriculture, livestock and land appreciation. 38.0% IRR well above the IRR > 15%.",
+    "title": "Estancia 17.000 Hectáreas con Riego en Zona Turística",
+    "description": "Extraordinario establecimiento agropecuario de 17.000 hectáreas con infraestructura completa de riego presurizado instalada. Emplazado en una comarca de alto valor paisajístico y turístico en la región centro del país.",
     "status": "activo"
   },
   {
@@ -1022,6 +1038,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Código de Minería de la Nación & Régimen RIGI (Ley 27.742)",
     "financialNote_es": "Cálculo de TIR: Costo de extracción All-In Sustaining Cost (AISC) de USD 1.050/oz frente a cotización internacional récord del oro. TIR del 34.0% vs. TIR > 15%.",
     "financialNote_en": "IRR Methodology: All-In Sustaining Cost (AISC) below USD 1,050/oz against peak gold prices. 34.0% IRR vs. IRR > 15%.",
+    "title": "Yacimiento de Oro 'Diente Oro Verde'",
+    "description": "Propiedad minera de oro a certificar bajo código internacional canadiense NI 43-101. Posee importantes estructuras de vetas hidrotermales con leyes superficiales y en profundidad de alto interés comercial.",
     "status": "bloqueado_por_gestion"
   },
   {
@@ -1132,6 +1150,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Derechos Mineros Concedidos e Impacto Ambiental Aprobado",
     "financialNote_es": "Cálculo de TIR: Extracción a cielo abierto de mármol y travertino con demanda cautiva en construcción de lujo. TIR del 30.0% superando el umbral de >9%.",
     "financialNote_en": "IRR Methodology: Open-pit extraction with captive luxury architectural demand. 30.0% IRR exceeding the IRR > 15%.",
+    "title": "Canteras y Yacimiento de Mármol Ornamental",
+    "description": "Depósitos masivos de mármoles y rocas de aplicación de altísima calidad estética para la industria de la construcción y revestimientos premium. Reservas cubicadas listas para corte y extracción en bloques.",
     "status": "activo"
   },
   {
@@ -1242,6 +1262,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Ley de Inversiones Mineras 24.196 & Estabilidad Fiscal San Juan",
     "financialNote_es": "Cálculo de TIR: Yacimiento operativo (28 ton/día) con ley media de 4.8 g/t Au, escalable a 100 ton/día. TIR proyectada del 42.0% superando la TIR > 15%.",
     "financialNote_en": "IRR Methodology: Operating mine (28 tpd) averaging 4.8 g/t Au, expandable to 100 tpd. 42.0% IRR well above the IRR > 15%.",
+    "title": "Yacimiento de Oro en Producción Inicial (28 ton/día)",
+    "description": "Mina de oro en producción operativa inicial a razón de 28 toneladas diarias procesadas. Convocatoria a socio inversor estratégico para inyectar entre USD 100M y USD 200M para escalamiento de planta y lixiviación.",
     "status": "activo"
   },
   {
@@ -1352,6 +1374,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Código Minero & Acuerdos Comunitarios Catamarca OK",
     "financialNote_es": "Cálculo de TIR: Modelo de exploración avanzada con recursos inferidos de carbonato de litio grado batería. TIR proyectada del 29.0% vs. TIR > 15%.",
     "financialNote_en": "IRR Methodology: Advanced brine exploration model with battery-grade lithium carbonate reserves. 29.0% IRR vs. IRR > 15%.",
+    "title": "Yacimiento de Litio — Estudios de Exploración OK",
+    "description": "Concesión minera de salmueras de litio en la puna de Catamarca (Triángulo del Litio). Campaña exploratoria inicial completada con éxito (geofísica y sondeos geoquímicos con excelentes relaciones Mg/Li).",
     "status": "activo"
   },
   {
@@ -1574,6 +1598,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Mercado Desregulado de Combustibles & Concesiones Hidrocarburíferas",
     "financialNote_es": "Cálculo de TIR: Integración vertical upstream-downstream que captura el crack spread completo sin intermediarios. TIR del 33.0% vs. TIR > 15%.",
     "financialNote_en": "IRR Methodology: Fully integrated upstream-downstream capturing complete crack spread margin. 33.0% IRR vs. IRR > 15%.",
+    "title": "Oferta de Refineria y explotacion de pozos - La Pampa Argentina",
+    "description": "Operación downstream y upstream integrada: refinería Refipampa procesando 750 m³/día con expansión proyectada a 3.000 m³/día y yacimiento Medanito con 500 pozos en producción activa. Data Room listo para auditoría inmediata.",
     "status": "activo"
   },
   {
@@ -1684,6 +1710,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Posición Monopólica Regulada de Transporte en el NOA",
     "financialNote_es": "Cálculo de TIR: Beneficiado por la reversión del Gasoducto Norte para fraccionar gas licuado hacia Brasil. TIR del 36.0% superando holgadamente el TIR > 15%.",
     "financialNote_en": "IRR Methodology: Leveraged by Northern Pipeline reversal for NGL fractionation towards Brazil. 36.0% IRR vs. IRR > 15%.",
+    "title": "Complejo de Refinación y Poliductos NOA - Salta Argentina",
+    "description": "Refinería estratégica en Campo Durán, Salta, con capacidad de procesamiento de 4.000 m³ diarios de crudo y condensados. Red troncal de poliductos y estaciones de carga asociadas para abastecimiento del NOA.",
     "status": "activo"
   },
   {
@@ -1794,6 +1822,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Concesión Provincial de Exploración No Convencional & RIGI",
     "financialNote_es": "Cálculo de TIR: Segunda reserva de shale de Argentina con costos de acceso por acre 80% menores a Neuquén. TIR del 27.5% vs. TIR > 15%.",
     "financialNote_en": "IRR Methodology: Argentina second-largest shale play with entry costs 80% below Vaca Muerta. 27.5% IRR vs. IRR > 15%.",
+    "title": "Desarrollo No Convencional Palermo Aike Chubut",
+    "description": "Proyecto exploratorio y de desarrollo no convencional en la formación Palermo Aike, considerada la segunda mayor reserva de shale de Argentina después de Vaca Muerta. Presentado oficialmente por la provincia de Chubut.",
     "status": "activo"
   },
   {
@@ -1904,6 +1934,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Habilitación Portuaria de Aguas Profundas & Régimen RIGI",
     "financialNote_es": "Cálculo de TIR: Tarifas de desahogo y exportación directa de crudo Medanito sin estrangulamiento de oleoductos. TIR del 45.0% frente al TIR > 15%.",
     "financialNote_en": "IRR Methodology: Direct offshore loading tariffs avoiding pipeline evacuation bottlenecks. 45.0% IRR well above the IRR > 15%.",
+    "title": "Paquete 3 Refinerías en Vaca Muerta + Puerto de Aguas Profundas",
+    "description": "Excepcional paquete accionario que incluye 3 unidades de negocio de refinación especializadas en Vaca Muerta y terminal marítima de aguas profundas con título de propiedad en Puerto Galván, Bahía Blanca. Reactivación llave en mano a 6 meses.",
     "status": "activo"
   },
   {
@@ -2014,6 +2046,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "15 Concesiones de Explotación Hidrocarburífera Vigentes",
     "financialNote_es": "Cálculo de TIR: Producción de crudo no convencional con break-even inferior a 35 USD/bbl y reservas P1 certificadas. TIR del 35.0% vs. TIR > 15%.",
     "financialNote_en": "IRR Methodology: Producing shale assets with sub-USD 35/bbl breakeven and certified 1P reserves. 35.0% IRR vs. IRR > 15%.",
+    "title": "Operadora de Pozos Petroleros en Vaca Muerta (15 Concesiones)",
+    "description": "Compañía operadora en marcha con 15 concesiones de explotación activas sobre una superficie de 3.000 km² en la Cuenca Neuquina. Bloque de 1.200 pozos y más de 500 empleados. Plan llave en mano de mejora con tecnología No Convencional.",
     "status": "activo"
   },
   {
@@ -2125,6 +2159,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Normativa Ambiental Mandatoria NOA & 25 Concesiones Vigentes",
     "financialNote_es": "Cálculo de TIR: Inversión estructurada de USD 1.860M con flexibilidad para socios inversores: planta de secado de cuttings mandatoria más 25 áreas conectadas a Brasil. TIR proyectada del 31.0% (TIR > 15%).",
     "financialNote_en": "IRR Methodology: Structured USD 1,860M investment with flexibility for partner investors: mandatory cuttings drying plant plus 25 blocks connected to Brazil. Projected 31.0% IRR (IRR > 15%).",
+    "title": "Proyecto Pozo Salta — Infraestructura & Secado de Cuttings",
+    "description": "Complejo integral hidrocarburífero y ambiental en Salta que combina: 1) Planta industrial de tratamiento térmico y secado de cuttings (500 m³/día) con demanda regulatoria mandatoria, y 2) Concesión oficial por 20 años sobre 25 áreas de explotación en Cuenca Noroeste con reservas certificadas de crudo y gas.",
     "status": "activo"
   },
   {
@@ -2235,6 +2271,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Contratos NCNDA, Mandatos Fiduciarios & Compliance Internacional",
     "financialNote_es": "Cálculo de TIR: Retorno continuo basado en honorarios de gestión y carry sobre valorización de activos. Supera cualquier tasa libre de riesgo objetivo (>9%).",
     "financialNote_en": "IRR Methodology: Ongoing returns from management fees and carried interest on deal execution. Substantially outperforms IRR > 15%.",
+    "title": "Gestión y Administración Integral de Grupos Inversores",
+    "description": "Acompañamiento integral para grupos inversores y fondos internacionales (FDI) que buscan estructurar y desplegar capital en activos estratégicos de la economía real argentina.",
     "status": "activo"
   },
   {
@@ -2345,6 +2383,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Régimen PPP Nacional/Provincial & Agencias Multilaterales",
     "financialNote_es": "Cálculo de TIR: Estructuración fiduciaria de obra pública sin compromiso de capital propio, con honorarios de éxito en dólares superiores al TIR > 9%.",
     "financialNote_en": "IRR Methodology: Zero-equity public-private partnership structuring yielding dollar success fees above >9% hurdle rate.",
+    "title": "Financiamiento de Proyectos Gubernamentales e Infraestructura",
+    "description": "Diseño y estructuración de instrumentos de financiamiento para estados provinciales, municipios y entes autárquicos destinados a infraestructura energética, vial, hídrica y de transporte.",
     "status": "activo"
   },
   {
@@ -2455,6 +2495,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Ley de Fideicomisos 24.441 & Crédito Hipotecario",
     "financialNote_es": "Cálculo de TIR: Flujos de preventa al costo más renta por revalorización en polos urbanos en expansión. TIR del 18.0% vs. TIR > 15%.",
     "financialNote_en": "IRR Methodology: Cost-based development pre-sales plus urban property capital appreciation. 18.0% IRR vs. IRR > 15%.",
+    "title": "Gestión de Proyectos de Bienes Raíces & Construcción",
+    "description": "Estructuración integral de vehículos de inversión inmobiliaria de renta corporativa (REITs), parques industriales, loteos turísticos y naves logísticas 'triple A' con flujos dolarizados.",
     "status": "activo"
   },
   {
@@ -2566,6 +2608,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Estructura Fiduciaria Blindada bajo Ley 24.441 & CNV",
     "financialNote_es": "Cálculo de TIR: Renta inmobiliaria institucional con distribución trimestral en USD y Cap Rate del 14%. TIR neta del 16.5% vs. TIR > 9%.",
     "financialNote_en": "IRR Methodology: Institutional real estate quarterly dollar dividend payouts yielding 14% Cap Rate. 16.5% net IRR vs. IRR > 9%.",
+    "title": "ENERGY CPY Argentina REIT Investment Strategy 2026",
+    "description": "Estrategia fiduciaria de inversión inmobiliaria de renta corporativa dolarizada (REIT) enfocada en oficinas premium y centros logísticos con contratos a largo plazo.",
     "status": "activo"
   },
   {
@@ -2678,6 +2722,8 @@ export const DEFAULT_PROJECTS = [
     "financialNote_es": "Cálculo de TIR: Venta integral por USD 310M con flujo de exportación consolidado de langostino y calamar en moneda dura. TIR proyectada del 28.0% (TIR > 15%).",
     "financialNote_en": "IRR Methodology: 100% asset sale at USD 310M with robust export cash flows in hard currency. Projected 28.0% IRR (IRR > 15%).",
     "pdfUrl": "assets/docs/Proyectos_de_Pesca_Industrial_en_Argentina.pdf",
+    "title": "Proyecto 6.6 — Pesca Industrial de Gran Escala en Patagonia",
+    "description": "Modelo consolidado de alta rentabilidad para captura y exportación de especies marinas premium (Merluza Hubbsi y Langostino Rojo) con flota activa de 16 buques de gran calado, cuotas federales CITP y planta de procesamiento en tierra. Venta integral por USD 310M.",
     "status": "activo"
   },
   {
@@ -2789,6 +2835,8 @@ export const DEFAULT_PROJECTS = [
     "regulatoryRegime": "Habilitación SENASA, Certificación HACCP & Unión Europea",
     "financialNote_es": "Cálculo de TIR: Procesamiento en tierra con valor agregado (congelado IQF) capturando primas del 35% en mercado gourmet. TIR del 32.5% vs. TIR > 15%.",
     "financialNote_en": "IRR Methodology: Value-added onshore IQF processing capturing 35% premium in global gourmet markets. 32.5% IRR vs. IRR > 15%.",
+    "title": "Proyecto 6.7 — Ecosistema Pesquero Integrado Patagonia",
+    "description": "Desarrollo boutique modular que integra buques tangoneros costeros, procesamiento en planta y logística de frío para exportación directa a mercados asiáticos y europeos.",
     "status": "activo"
   }
 ];
@@ -3064,9 +3112,18 @@ class Store {
                 existing.overpriceTarget = dp.overpriceTarget;
                 modified = true;
               }
-              // Auto-hydrate rich One-Pager master fields
-              existing.title = dp.title;
-              existing.description = dp.description;
+              // Auto-hydrate rich One-Pager master fields and defensively repair title/description
+              const targetTitle = dp.title || (dp.es && dp.es.title) || (dp.en && dp.en.title) || dp.id;
+              const targetDesc = dp.description || (dp.es && dp.es.description) || (dp.en && dp.en.description) || '';
+
+              if (!existing.title || existing.title === 'undefined' || existing.title !== targetTitle) {
+                existing.title = targetTitle;
+                modified = true;
+              }
+              if (!existing.description || existing.description === 'undefined' || (dp.description && existing.description !== targetDesc)) {
+                existing.description = targetDesc;
+                modified = true;
+              }
               existing.basePrice = dp.basePrice;
               existing.overpriceTarget = dp.overpriceTarget;
               existing.modality = dp.modality;
@@ -3084,6 +3141,12 @@ class Store {
               if (dp.modality && !existing.modality) existing.modality = dp.modality;
               if (dp.roi && !existing.roi) existing.roi = dp.roi;
               if (dp.statusProgress && !existing.statusProgress) existing.statusProgress = dp.statusProgress;
+
+              // Especial: Asegurar que mineria-diente-oro-verde inicie como bloqueado_por_gestion
+              if (dp.id === 'mineria-diente-oro-verde' && (!existing.status || existing.status === 'activo')) {
+                existing.status = 'bloqueado_por_gestion';
+                modified = true;
+              }
               modified = true;
             });
 

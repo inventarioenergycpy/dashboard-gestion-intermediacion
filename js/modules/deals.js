@@ -64,7 +64,7 @@ export class DealsModule {
             <div class="filter-selects" style="width: 100%;">
               <select id="dealProjectFilter" class="form-select" style="min-width: 250px;">
                 <option value="all">Todos los Proyectos</option>
-                ${projects.map(p => `<option value="${p.id}" ${this.projectFilter === p.id ? 'selected' : ''}>${p.title}</option>`).join('')}
+                ${projects.map(p => `<option value="${p.id}" ${this.projectFilter === p.id ? 'selected' : ''}>${p.title || (p.es && p.es.title) || p.id}</option>`).join('')}
               </select>
 
               <select id="dealStageFilter" class="form-select">
@@ -276,7 +276,7 @@ export class DealsModule {
                   <label>Proyecto de Inversión *</label>
                   <select id="inpDealProject" class="form-select" required>
                     <option value="">-- Seleccionar Proyecto --</option>
-                    ${projects.map(p => `<option value="${p.id}" ${deal && deal.projectId === p.id ? 'selected' : ''}>${p.title}</option>`).join('')}
+                    ${projects.map(p => `<option value="${p.id}" ${deal && deal.projectId === p.id ? 'selected' : ''}>${p.title || (p.es && p.es.title) || p.id}</option>`).join('')}
                   </select>
                 </div>
 
@@ -416,7 +416,7 @@ export class DealsModule {
 
       const dealData = {
         projectId,
-        projectTitle: projObj ? projObj.title : 'Proyecto',
+        projectTitle: projObj ? (projObj.title || (projObj.es && projObj.es.title) || projObj.id) : 'Proyecto',
         targetName,
         targetType,
         stage,
