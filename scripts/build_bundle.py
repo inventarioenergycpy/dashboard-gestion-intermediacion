@@ -2,7 +2,8 @@
 import os
 import re
 
-base_dir = r"C:\Users\majon\.gemini\antigravity-ide\scratch\dashboard-gestion-intermediacion"
+# Ruta dinámica al directorio raíz del proyecto
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 files_order = [
     ("store.js", os.path.join(base_dir, "js", "store.js")),

@@ -245,7 +245,9 @@ export class ProjectsModule {
     // Botón Editar
     this.container.querySelectorAll('.btn-edit-proj').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        const id = e.target.dataset.id;
+        const targetBtn = e.currentTarget || e.target.closest('.btn-edit-proj');
+        const id = targetBtn ? targetBtn.dataset.id : null;
+        if (!id) return;
         const proj = store.getProject(id);
         if (proj) {
           this.showProjectModal(proj);
@@ -256,7 +258,9 @@ export class ProjectsModule {
     // Botón Eliminar
     this.container.querySelectorAll('.btn-delete-proj').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        const id = e.target.dataset.id;
+        const targetBtn = e.currentTarget || e.target.closest('.btn-delete-proj');
+        const id = targetBtn ? targetBtn.dataset.id : null;
+        if (!id) return;
         if (confirm('¿Estás seguro de eliminar este proyecto y todas sus gestiones asociadas?')) {
           store.deleteProject(id);
           window.dispatchEvent(new CustomEvent('data-updated'));
@@ -373,6 +377,7 @@ export class ProjectsModule {
       const ownerObj = interlocutors.find(i => i.id === ownerId);
 
       const projectData = {
+        ...(project || {}),
         title,
         sector,
         status,

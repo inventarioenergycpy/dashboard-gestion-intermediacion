@@ -16,7 +16,8 @@ echo       🚀 PUBLICACIÓN AUTOMÁTICA DEL DASHBOARD EN GITHUB PAGES
 echo ==============================================================================
 echo.
 
-echo [PASO 1/4] Verificando repositorio en GitHub...
+echo [PASO 1/4] Verificando repositorio en GitHub y sincronizando cartera...
+python "%~dp0scripts\sync_portfolio.py"
 git ls-remote https://github.com/inventarioenergycpy/dashboard-gestion-intermediacion.git >nul 2>&1
 if %ERRORLEVEL% equ 0 (
     echo ✔ El repositorio 'dashboard-gestion-intermediacion' ya existe en GitHub.
@@ -53,7 +54,18 @@ if %ERRORLEVEL% neq 0 (
 git remote set-url origin https://github.com/inventarioenergycpy/dashboard-gestion-intermediacion.git
 
 echo.
-echo [PASO 4/4] Sincronizando repositorio central de agentes...
+echo [PASO 4/5] Sincronizando Showroom Web en GitHub...
+cd /d "%~dp0\..\showroom-energycpy"
+if exist ".git" (
+    git add -A
+    git commit -m "feat(sync): sincronización automática de cartera desde Dashboard de Gestión" >nul 2>&1
+    git remote set-url origin https://inventarioenergycpy:%UNLOCKED_TOKEN%@github.com/inventarioenergycpy/showroom-energycpy.git
+    git push origin main
+    git remote set-url origin https://github.com/inventarioenergycpy/showroom-energycpy.git
+)
+
+echo.
+echo [PASO 5/5] Sincronizando repositorio central de agentes...
 cd /d "%~dp0\..\antigravity-agents-repository"
 if exist ".git" (
     git remote set-url origin https://inventarioenergycpy:%UNLOCKED_TOKEN%@github.com/inventarioenergycpy/antigravity-agents-repository.git

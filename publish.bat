@@ -5,8 +5,8 @@ echo =======================================================
 echo   PUBLICACION DE DASHBOARD EN GITHUB PAGES (BOVEDA)
 echo =======================================================
 echo.
-echo 1. Compilando bundle universal...
-python "%~dp0scripts\build_bundle.py"
+echo 1. Sincronizando cartera y compilando bundle universal...
+python "%~dp0scripts\sync_portfolio.py"
 
 echo.
 echo 2. Desbloqueando Boveda de Credenciales con Clave...
