@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-
-  <!-- ========================================================================= -->
+<!-- ========================================================================= -->
   <!-- COMPUERTA DE SEGURIDAD MAPACHE91 (PASSWORD GATE OBLIGATORIA)               -->
   <!-- ========================================================================= -->
   <div id="securityGateOverlay" style="position: fixed; inset: 0; z-index: 999999; background: rgba(7, 10, 18, 0.97); backdrop-filter: blur(20px); display: flex; align-items: center; justify-content: center; padding: 20px;">
@@ -205,7 +204,7 @@
             <div class="user-name" id="userName">Javier</div>
             <div class="user-role" id="userRole">Admin & Consultor</div>
           </div>
-          <button class="btn-switch-user" id="btnSwitchUser" style="margin-right: 4px;" title="Cambiar de usuario">
+          <button class="btn-switch-user" id="btnSwitchUser" title="Cambiar de usuario">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 17l5-5-5-5M21 12H9M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/></svg>
           </button>
         </div>
@@ -227,6 +226,10 @@
         </div>
 
         <div class="header-actions">
+          <button id="btnTopSyncShowroom" class="btn btn-sm" title="Sincronizar estados con Showroom Web" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 6px; cursor: pointer;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 11-.57-8.38l5.67-5.67"/></svg>
+            Sincronizar Showroom
+          </button>
           <a href="https://drive.google.com" target="_blank" class="btn btn-drive btn-sm">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
             Google Drive Oficial
@@ -326,6 +329,47 @@
   </div>
 
   <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Modal de Sincronización con Showroom Web -->
+  <div class="modal-overlay" id="modalSyncShowroom" style="display: none; position: fixed; inset: 0; z-index: 10000; background: rgba(7, 10, 18, 0.88); backdrop-filter: blur(10px); align-items: center; justify-content: center; padding: 20px;">
+    <div class="modal-card" style="background: #0f1626; border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 16px; padding: 28px 24px; width: 100%; max-width: 480px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(16, 185, 129, 0.15); color: #f8fafc; font-family: 'Inter', sans-serif;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 42px; height: 42px; background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #10b981;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 11-.57-8.38l5.67-5.67"/></svg>
+          </div>
+          <div>
+            <h3 style="margin: 0; font-size: 17px; font-weight: 700; color: #f8fafc;">Sincronización con Showroom</h3>
+            <span style="font-size: 11px; color: #10b981; font-weight: 600;">BroadcastChannel &bull; Clave Compartida localStorage</span>
+          </div>
+        </div>
+        <button type="button" onclick="document.getElementById('modalSyncShowroom').style.display='none'" style="background: none; border: none; color: #94a3b8; font-size: 24px; cursor: pointer; line-height: 1;">&times;</button>
+      </div>
+
+      <div style="background: #0b1120; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 14px; margin-bottom: 16px;">
+        <p style="font-size: 13px; color: #94a3b8; margin: 0 0 10px 0; line-height: 1.4;">
+          Se han transmitido los estados y modificaciones de cartera para reflejarse inmediatamente en el Showroom Web:
+        </p>
+        <div id="syncModalStatsGrid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; text-align: center;">
+          <!-- Rellenado dinámicamente -->
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a href="https://inventarioenergycpy.github.io/showroom-energycpy/" target="_blank" class="btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; font-weight: 700; text-align: center; text-decoration: none; padding: 10px; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Abrir Showroom Web en Vivo
+        </a>
+        <button type="button" id="btnDownloadSyncJSON" class="btn btn-secondary" style="padding: 9px; font-size: 12px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Descargar Archivo de Estados JSON
+        </button>
+        <button type="button" onclick="document.getElementById('modalSyncShowroom').style.display='none'" style="background: transparent; border: 1px solid rgba(255, 255, 255, 0.1); color: #94a3b8; padding: 8px; border-radius: 8px; cursor: pointer; font-size: 12px;">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- SheetJS Library (Lectura y Escritura de Excel XLSX / CSV) -->
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>

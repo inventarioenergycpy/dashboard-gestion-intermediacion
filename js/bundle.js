@@ -3182,18 +3182,109 @@ class Store {
   addProject(project) {
     this.data.projects.unshift(project);
     this.saveData();
+    if (project.status) {
+      this.syncSingleStatusToShowroom(project.id, project.status);
+    }
   }
   updateProject(id, updated) {
     const idx = this.data.projects.findIndex(p => p.id === id);
     if (idx !== -1) {
       this.data.projects[idx] = { ...this.data.projects[idx], ...updated };
       this.saveData();
+      if (updated.status) {
+        this.syncSingleStatusToShowroom(id, updated.status);
+      }
     }
   }
   deleteProject(id) {
     this.data.projects = this.data.projects.filter(p => p.id !== id);
     this.data.deals = this.data.deals.filter(d => d.projectId !== id);
     this.saveData();
+  }
+
+  // Sincronización de Estados con Showroom Web
+  syncSingleStatusToShowroom(projectId, status) {
+    let mappedStatus = 'activo';
+    if (status === 'bloqueado_por_gestion' || status === 'suspendido') {
+      mappedStatus = 'tramite';
+    } else if (status === 'vendido') {
+      mappedStatus = 'vendido';
+    } else {
+      mappedStatus = 'activo';
+    }
+
+    try {
+      if (typeof localStorage !== 'undefined') {
+        const saved = localStorage.getItem('energycpy_project_statuses');
+        const parsed = saved ? JSON.parse(saved) : {};
+        parsed[projectId] = mappedStatus;
+        localStorage.setItem('energycpy_project_statuses', JSON.stringify(parsed));
+      }
+
+      if (typeof BroadcastChannel !== 'undefined') {
+        const channel = new BroadcastChannel('energycpy_projects_channel');
+        channel.postMessage({
+          type: 'PROJECT_STATUS_UPDATED',
+          projectId: projectId,
+          mappedStatus: mappedStatus,
+          timestamp: new Date().toISOString()
+        });
+      }
+      console.log(`⚡ [Dashboard] Estado sincronizado con Showroom: ${projectId} -> ${mappedStatus}`);
+    } catch (e) {
+      console.warn('Error emitiendo cambio individual a Showroom:', e);
+    }
+  }
+
+  syncStatusesToShowroom() {
+    const projects = this.getProjects();
+    const mappedStatuses = {};
+    let countActivos = 0;
+    let countTramite = 0;
+    let countVendidos = 0;
+
+    projects.forEach(p => {
+      let mapped = 'activo';
+      if (p.status === 'bloqueado_por_gestion' || p.status === 'suspendido') {
+        mapped = 'tramite';
+        countTramite++;
+      } else if (p.status === 'vendido') {
+        mapped = 'vendido';
+        countVendidos++;
+      } else {
+        mapped = 'activo';
+        countActivos++;
+      }
+      mappedStatuses[p.id] = mapped;
+    });
+
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('energycpy_project_statuses', JSON.stringify(mappedStatuses));
+      }
+
+      if (typeof BroadcastChannel !== 'undefined') {
+        const channel = new BroadcastChannel('energycpy_projects_channel');
+        channel.postMessage({
+          type: 'PROJECTS_SYNC_ALL',
+          allStatuses: mappedStatuses,
+          timestamp: new Date().toISOString()
+        });
+      }
+
+      console.log('⚡ [Dashboard] Lote completo sincronizado con Showroom:', mappedStatuses);
+      return {
+        success: true,
+        total: projects.length,
+        activos: countActivos,
+        tramite: countTramite,
+        vendidos: countVendidos,
+        statuses: mappedStatuses
+      };
+    } catch (e) {
+      console.error('Error sincronizando lote con Showroom:', e);
+      return { success: false, error: e };
+    }
   }
 
   // Interlocutores (Dueños, Brokers, Fondos)
@@ -4688,6 +4779,10 @@ class ProjectsModule {
             </p>
           </div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn btn-sm" id="btnSyncShowroom" title="Sincronizar estados y modificaciones con el Showroom Web" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; font-weight: 700; border: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 11-.57-8.38l5.67-5.67"/></svg>
+              Sincronizar con Showroom
+            </button>
             <button class="btn btn-secondary btn-sm" id="btnProjectsDownloadTemplate" title="Descargar plantilla Excel oficial">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Plantilla Excel
@@ -4849,6 +4944,14 @@ class ProjectsModule {
           smartImporter.processFile(file);
           e.target.value = '';
         }
+      });
+    }
+
+    // Botón Sincronizar con Showroom
+    const syncBtn = document.getElementById('btnSyncShowroom');
+    if (syncBtn) {
+      syncBtn.addEventListener('click', () => {
+        this.handleSyncWithShowroom();
       });
     }
 
@@ -5324,6 +5427,53 @@ Atentamente.`;
   toggleOnePagerLang(lang) {
     if (this.currentOnePagerProjectId) {
       this.openOnePager(this.currentOnePagerProjectId, lang);
+    }
+  }
+
+  handleSyncWithShowroom() {
+    const res = store.syncStatusesToShowroom();
+    if (!res || !res.success) {
+      alert('Hubo un inconveniente al sincronizar con el Showroom Web.');
+      return;
+    }
+
+    const modal = document.getElementById('modalSyncShowroom');
+    const grid = document.getElementById('syncModalStatsGrid');
+    if (grid) {
+      grid.innerHTML = `
+        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 10px;">
+          <div style="font-size: 20px; font-weight: 800; color: #10b981;">${res.activos}</div>
+          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Activos</div>
+        </div>
+        <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 10px;">
+          <div style="font-size: 20px; font-weight: 800; color: #f59e0b;">${res.tramite}</div>
+          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">En Trámite</div>
+        </div>
+        <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 8px; padding: 10px;">
+          <div style="font-size: 20px; font-weight: 800; color: #a855f7;">${res.vendidos}</div>
+          <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Vendidos</div>
+        </div>
+      `;
+    }
+
+    // Configurar descarga de archivo JSON
+    const btnDl = document.getElementById('btnDownloadSyncJSON');
+    if (btnDl) {
+      btnDl.onclick = () => {
+        const blob = new Blob([JSON.stringify(res.statuses, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `energycpy_project_statuses_${new Date().toISOString().slice(0, 10)}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+      };
+    }
+
+    if (modal) {
+      modal.style.display = 'flex';
+    } else {
+      alert(`✅ ¡Sincronizado! Se actualizaron los estados de los ${res.total} proyectos con el Showroom.`);
     }
   }
 }
@@ -7514,6 +7664,21 @@ class AppRouter {
   }
 
   attachGlobalEvents() {
+    // Sincronización Global con Showroom desde Top Header
+    const topSyncBtn = document.getElementById('btnTopSyncShowroom');
+    if (topSyncBtn) {
+      topSyncBtn.addEventListener('click', () => {
+        if (this.modules.projects && typeof this.modules.projects.handleSyncWithShowroom === 'function') {
+          this.modules.projects.handleSyncWithShowroom();
+        } else {
+          import('./store.js').then(({ store }) => {
+            store.syncStatusesToShowroom();
+            alert('✅ ¡Sincronizado! Estados enviados al Showroom Web.');
+          });
+        }
+      });
+    }
+
     window.addEventListener('data-updated', () => {
       if (this.modules[this.currentView]) {
         this.modules[this.currentView].render();
